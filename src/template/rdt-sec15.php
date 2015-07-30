@@ -164,7 +164,9 @@ function sec_theme_support() {
 function sec_register_nav_menus() {
 
     $locations = array(
-        'main-navi' => __( 'Site main navigations', 'text_domain' )
+        'main-navi' => __( 'Site main navigations', 'text_domain' ),
+        'mobile-navi' => __( 'Mobile main navigations', 'text_domain' ),
+        'footer-navi' => __( 'footer links', 'text_domain' )
     );
     register_nav_menus( $locations );
 }
