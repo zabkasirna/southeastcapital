@@ -31,14 +31,7 @@
     <?php // end analytics ?>
 </head>
 
-<?php
-    global $wp_query;
-    $post_id = $wp_query->post->ID;
-?>
-
-<body
-    <?php body_class( $body_class ); ?>
->
+<body>
 
 <div id="page" class="hfeed site">
 
