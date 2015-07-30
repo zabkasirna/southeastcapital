@@ -27,10 +27,12 @@ packages=(
     gulp-util
     jshint-stylish
     main-bower-files
+    node.extend
     pretty-hrtime
     run-sequence
     vinyl-source-stream
     watchify
+    yargs
 )
 
 is_npm()
