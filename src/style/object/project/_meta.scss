@@ -1,0 +1,127 @@
+.project-meta {
+
+    width: x(18);
+    margin: 0 auto;
+    padding: x(1) 0;
+
+    &.is-wide {
+        position: absolute;
+        width: 50%;
+        margin: 0;
+        padding: 0 r(1);
+
+        .project-meta-list {
+            max-width: x(18);
+            float: right;
+        }
+    }
+
+    .is_right &.is-wide {
+        left: 0; right: auto;
+        .project-meta-list { float: right; }
+    }
+
+    .is_left &.is-wide {
+        left: auto; right: 0;
+        .project-meta-list { float: left; }
+    }
+
+    .project-meta-list {
+
+        list-style: none outside none;
+
+        position: relative;
+        width: 100%;
+
+        padding: 0;
+        border: 1px solid currentColor;
+
+        font-family: $ff-sans-bold;
+
+        float: none;
+
+        // background-color: $white;
+
+        li {
+            @include clearfix;
+
+            counter-increment: pmeta-counter;
+            color: currentColor;
+
+            position: relative;
+
+            padding: x(.25) 0;
+            margin: 0;
+
+            border-bottom: 1px solid currentColor;
+
+            font-family: inherit;
+            text-transform: uppercase;
+
+            &:last-child { border-bottom: none; }
+
+            & > * {
+                display: inline-block;
+                float: left;
+                position: relative;
+                top: 0;
+                padding: 0 x(.5);
+                font-family: inherit;
+            }
+
+            .meta-key {
+                width: x(4);
+                text-transform: uppercase;
+            }
+
+            .meta-val {
+                width: x(10);
+                border-top: none;
+
+                &:before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: x(-0.25);
+                    bottom: x(-0.25);
+                    left: 0;
+                    width: 1px;
+                    background-color: currentColor;
+                }
+            }
+
+            &:before {
+                content: counter( pmeta-counter, decimal-leading-zero ) " ";
+                display: inline-block;
+                float: left;
+
+                font-size: inherit;
+                line-height: inherit;
+
+                width: x(1);
+                height: x(1);
+
+                padding: 0 x(.5);
+                font-family: inherit;
+            }
+        }
+    }
+
+    @media only screen and ( max-width: r(28) ) {
+        width: 100%;
+        margin: x(1) auto;
+        padding: 0 x(1);
+
+        .project-meta-list {
+            width: 100%;
+
+            li .meta-val {
+                width: 100%;
+                border-top: 1px solid currentColor;
+                padding-top: x(.5);
+
+                &:before { width: 0; background-color: transparent; }
+            }
+        }
+    }
+}
