@@ -1,42 +1,30 @@
 #main-header {
-    position: fixed;
-    top: r(1);
-    left: r(1);
-    z-index: $z-main-header;
+    // position: fixed;
+    // top: r(1);
+    // left: r(1);
+    // z-index: $z-main-header;
 }
 
 #header-inner {
-    @include clearfix;
-    height: x(3);
+    // @include clearfix;
+    // height: x(3);
 }
 
 #header-brand {
-    display: block;
-    float: left;
+    // display: block;
+    // float: left;
 
-    width: x(7);
-    height: x(3);
+    // width: x(7);
+    // height: x(3);
 
-    position: relative;
-
-    .fauxborder {
-        content: '';
-        display: block;
-        position: absolute;
-        top: 0; left: 0;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-
-        border: 1px solid currentColor;
-    }
+    // position: relative;
 }
 
 #header-nav {
 
-    display: block;
-    float: left;
-    height: 100%;
+    // display: block;
+    // float: left;
+    // height: 100%;
 
-    @media only screen and ( orientation: portrait ) { display: none; }
+    // @media only screen and ( orientation: portrait ) { display: none; }
 }
