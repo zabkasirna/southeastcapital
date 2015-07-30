@@ -66,6 +66,9 @@ content/themes/*
 # Re-include project theme #
 # !content/themes/rdt-randr15
 
+# Sample images #
+src/image/sample/*
+
 .htaccess
 sitemap.xml
 sitemap.xml.gz
