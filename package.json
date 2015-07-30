@@ -1,0 +1,22 @@
+{
+  "name": "sec",
+  "version": "0.0.0",
+  "description": "website for Southeast Capital",
+  "main": "./content/themes/rdt-sec/script/main.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/zabkasirna/sec-website.git"
+  },
+  "keywords": [
+    "SoutheastCapital"
+  ],
+  "author": "sirna",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/zabkasirna/sec-website/issues"
+  },
+  "homepage": "https://github.com/zabkasirna/sec-website#readme"
+}
