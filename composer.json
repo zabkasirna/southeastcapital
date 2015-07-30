@@ -1,0 +1,16 @@
+{
+    "name": "sirna/sec",
+    "description": "project package for southeast capital website",
+    "license": "proprietary",
+    "homepage": "http://sec.dev",
+    "authors": [
+        {
+            "name": "Zabka Sirna Gwen",
+            "email": "zabka.sirna.gwen@gmail.com",
+            "homepage": "http://sirna.id",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
