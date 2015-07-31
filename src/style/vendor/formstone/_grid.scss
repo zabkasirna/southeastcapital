@@ -100,13 +100,13 @@
 .fs-grid .fs-row [class*="fs-cell"][class*="-right"] {
   float: right;
 }
-* {
-  box-sizing: border-box;
-}
-*:before,
-*:after {
-  box-sizing: inherit;
-}
+// * {
+//   box-sizing: border-box;
+// }
+// *:before,
+// *:after {
+//   box-sizing: inherit;
+// }
 .fs-grid .fs-row .fs-all-fifth {
   width: 17.91666667%;
 }
