@@ -2,7 +2,7 @@ $font-url: 'font/';
 
 @include s-font-face( 'SansRegular', 'Raleway-Regular', $font-url, normal, normal );
 @include s-font-face( 'SansHeavy', 'Raleway-ExtraBold', $font-url, normal, normal );
-@include s-font-face( 'SansBold', 'BlenderPro-Medium', $font-url, normal, normal );
+@include s-font-face( 'SansBold', 'Raleway-Medium', $font-url, normal, normal );
 @include s-font-face( 'SansSemiBold', 'Raleway-SemiBold', $font-url, normal, normal );
 @include s-font-face( 'SansThin', 'Raleway-Thin', $font-url, normal, normal );
 @include s-font-face( 'SansLight', 'Raleway-Light', $font-url, normal, normal );
