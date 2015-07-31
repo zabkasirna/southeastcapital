@@ -52,5 +52,8 @@
     "compass-mixins": {
       "ignore": true
     }
+  },
+  "devDependencies": {
+    "mueller": "~1.2.0"
   }
 }
