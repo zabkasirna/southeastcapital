@@ -2,10 +2,12 @@
 
 /* ------ {{ Box Model }} ------ */
 
-*,
+* {
+  box-sizing: border-box;
+}
 *:before,
 *:after {
-    @include box-sizing(border-box);
+  box-sizing: inherit;
 }
 
 /* ------ {{ COMPASS BASELINE }} ------ */
