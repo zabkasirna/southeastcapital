@@ -11,8 +11,6 @@ get_header(); ?>
     <div id="inner-content">
         <main id="main" role="main">
 
-            <h1>READY to THEMING</h1>
-
         <?php if ( have_posts() ) : ?>
 
             <div class="loop-outer">

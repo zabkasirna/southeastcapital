@@ -35,4 +35,20 @@
 
 <div id="page" class="hfeed site">
 
-    <header id="main-header"></header>
+    <header id="main-header">
+        <?php 
+            $nav_main_defaults = array(
+                'theme_location'  => 'main-navi',
+                'container'       => 'nav',
+                'container_class' => '',
+                'container_id'    => 'header-nav',
+                'menu_class'      => '',
+                'menu_id'         => 'nav-lists',
+                'items_wrap'      => '<ul id="%1$s">%3$s</ul>',
+                'link_before'     => '',
+                'after'           => '',
+            );
+
+            wp_nav_menu( $nav_main_defaults );
+        ?>
+    </header>
