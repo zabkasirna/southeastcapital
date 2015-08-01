@@ -7,17 +7,29 @@
 
 get_header(); ?>
 
-    <div id="content">
-        <div id="inner-content">
-            <main id="main" role="main">
-            <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+    <main
+        class="<?php echo get_post_type(); ?>"
+        id="main"
+        role="main"
+    >
 
-                <?php the_content();?>
+    <?php if ( have_posts() ) : ?>
 
-            <?php // End the loop. ?>
-            <?php endwhile; endif; ?>
-            </main><!-- #main -->
-        </div><!-- #inner-content -->
-    </div>
+        <div class="loop-outer">
+            <?php while ( have_posts() ) : the_post(); ?>
+
+            <?php // LOOP ?>
+            <div class="loop" data-id="<?php echo the_id(); ?>">
+                <section>
+                    <?php the_content(); ?>
+                </section>
+            </div>
+            <?php endwhile; ?>
+        </div>
+
+    <?php endif; ?>
+
+    </main>
 
 <?php get_footer(); ?>
+
