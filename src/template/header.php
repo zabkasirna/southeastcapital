@@ -31,7 +31,32 @@
     <?php // end analytics ?>
 </head>
 
-<body>
+<?php
+    global $wp_query;
+    $post_id = $wp_query->post->ID;
+?>
+
+<?php
+
+    // Body css class modifiers
+
+    $body_class = array();
+
+    // Add preload toggler to body class
+    $body_class[] = 'is-preload';
+
+    // Add Debuggrr toggler to body class
+    if( get_field( 'field_debuggrr_toggler', 'options' ) ) :
+        $is_debugged = get_field( 'field_debuggrr_toggler', 'options' );
+
+        if ( $is_debugged ) $body_class[] = 'is-debugged';
+
+    endif;
+?>
+
+<body
+    <?php body_class( $body_class ); ?>
+>
 
 <div id="page" class="hfeed site">
 

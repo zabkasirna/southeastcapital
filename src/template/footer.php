@@ -22,7 +22,7 @@
     </nav>
 </div>
 
-<?php /* debuggrr(get_current_template()); */ ?>
+<?php debuggrr(get_current_template()); ?>
 
 <?php wp_footer(); ?>
 

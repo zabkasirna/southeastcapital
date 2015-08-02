@@ -24,6 +24,7 @@ var Signature = require('./signature')
 
         // Setup
         Signature.init();
+        PHPDebugger.init();
 
     });
 

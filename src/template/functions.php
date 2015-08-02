@@ -12,7 +12,7 @@ require_once( 'Debug/debuggrr.php' );
 require_once( 'rdt-sec15.php' );
 
 // Load theme's acf options page
-// require_once( 'Theme_Options/theme_options.php' );
+require_once( 'Theme_Options/theme_options.php' );
 
 // Conf at theme launch
 function sec_conf() {
@@ -40,7 +40,7 @@ function sec_conf() {
     add_action( 'post_submitbox_misc_actions', 'move_author_to_publish_metabox' );
 
     // ACF Options Page
-    // initThemeOptions();
+    initThemeOptions();
 
     // Debugger
     add_filter( 'template_include', 'var_template_include', 1000 );
