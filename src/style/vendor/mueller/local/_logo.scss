@@ -1,6 +1,9 @@
-#logo {
+// $media-min-width: 768px;
+// $media-max-width: 980px;
 
-    display: none;
+// @media screen and (min-width: $media-min-width) and (max-width: $media-max-width) {
+
+#logo {
 
     @extend .g-d-snap-6;
     @extend .g-hr-snap-6;

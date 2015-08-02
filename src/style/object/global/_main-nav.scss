@@ -2,6 +2,7 @@
 
     margin: 0;
     padding: 0;
+    list-style: none outside none;
 
 
     & > li {
@@ -14,9 +15,8 @@
             text-decoration: none;
             text-transform: uppercase;
             margin: 0;
-            padding: 0;
             position: relative;
-            overflow: hidden;
+            overflow: visible;
 
             // ------ {{* local *}} ------ //
             font-size: 10px;
@@ -24,8 +24,23 @@
             letter-spacing: .1em;
             line-height: x(1.5);
             height: x(1.5);
-            border-bottom: 1px solid $sc-copper;
             text-align: center;
+            // padding: 0 8px;
+
+            // border
+            &:before {
+                content: "";
+                display: block;
+                position: absolute;
+                bottom: 0; left: 5%;
+                width: 90%;
+                height: 1px;
+                @media screen and (min-width: 1799px) {
+                    left: 15%;
+                    width: 70%;
+                }
+                background-color: $sc-copper;
+            }
         }
 
         &.active,

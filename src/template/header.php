@@ -67,7 +67,15 @@
     <header id="main-header">
 
         <div id="logo">
-            <a class="logo-anchor" href="#">LOGO</a>
+            <div class="faux-bg"><div class="faux-arrow"></div></div>
+            <a class="logo-anchor" href="#">
+                <img
+                    class="js-svg-injector logo-img"
+                    src="<?php echo get_template_directory_uri() . '/uploads/images/logo/logo.svg'; ?>"
+                    alt="C"
+                >
+                <!-- <img class="inject-me" src="image-one.svg"> -->
+            </a>
         </div>
 
         <?php 

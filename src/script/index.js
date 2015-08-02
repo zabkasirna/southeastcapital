@@ -32,6 +32,7 @@ var Signature = require('./signature')
         MQ.init();
 
         // Logo
+        Logo.injectSVG();
         if ( MQ.getViewportW() > MQ.bp.tp.min ) Logo.insertToNav();
 
         // MQ Callback

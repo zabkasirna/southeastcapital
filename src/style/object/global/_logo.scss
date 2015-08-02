@@ -1,13 +1,51 @@
+$logo-offset-top: 6px;
+
 #logo {
     position: relative;
     background-color: transparent;
+    height: x(1.5);
+
+    .faux-bg {
+        position: absolute;
+        top: 0; right: x(1); bottom: 0; left: x(1);
+        @media screen and (max-width: 479px) {
+            top: -14px;
+        }
+        height: 100%;
+
+        background-color: $white;
+        pointer-events: none;
+        z-index: 2;
+
+        .faux-arrow {
+            position: absolute;
+            top:100%; left: 0;
+            background-color: inherit;
+            padding-bottom: 50%;
+            width: 57.7%;
+            z-index: -1;
+            transform-origin: 0 0;
+            transform: rotate(-30deg) skewX(30deg);
+        }
+    }
 
     .logo-anchor {
-        @include link-colors( $white );
+        @include link-colors( $sc-copper );
 
+        position: relative;
+        top: 6px;
+        @media screen and (min-width: 1799px) { top: 12px; }
         display: block;
-        width: 100%;
+        font-size: r(1);
+        line-height: x(1.5);
         height: 100%;
+        width: 100%;
         text-align: center;
+        z-index: 3;
+    }
+
+    .logo-img {
+        height: 160%;
+        @media screen and (min-width: 1799px) { height: 200%; }
     }
 }

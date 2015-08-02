@@ -1,7 +1,19 @@
 var Logo = {
+    injectSVG,
     insertToNav: insertToNav,
     releaseFromNav: releaseFromNav
 };
+
+function injectSVG() {
+    if ( !$('.logo-img').length ) return;
+
+    var $el = $( '#logo' ).find('img.js-svg-injector')
+    ;
+
+    if ( typeof SVGInjector === 'function' && $el.length ) {
+        SVGInjector( $el[0] );
+    }
+}
 
 function insertToNav() {
     if ( !$('#main-header').length ||
