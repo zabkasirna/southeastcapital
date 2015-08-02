@@ -18,6 +18,12 @@ $float-direction: left;
 $show-grid-background: false;
 
 // -----------------------------------------------------------------------------
+// CLEARFIX FOR ALL COLUMNS
+// [ added by @sirna ]
+*[class^="g-"],
+*[class^="c-"], { @include clearfix; }
+
+// -----------------------------------------------------------------------------
 // GENERAL MIXINS
 
 @mixin centered {
@@ -46,7 +52,7 @@ $show-grid-background: false;
 @mixin column-base {
     @include floated;
     // make this column floated to the left
-    @include pie-clearfix;
+    // @include pie-clearfix;
 }
 
 // generates the base classes needed for a grid system
