@@ -7,7 +7,7 @@ $font-url: 'font/';
 @include s-font-face( 'SansThin', 'Raleway-Thin', $font-url, normal, normal );
 @include s-font-face( 'SansLight', 'Raleway-Light', $font-url, normal, normal );
 @include s-font-face( 'SansCopy', 'Raleway-Regular', $font-url, normal, normal );
-@include s-font-face( 'SansAlt', 'Courier', $font-url, normal, normal );
+@include s-font-face( 'SansAlt', 'monospace', $font-url, normal, normal );
 
 $ff-sans-heavy:     SansHeavy, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $ff-sans-bold:      SansBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -16,5 +16,5 @@ $ff-sans-regular:   SansRegular, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $ff-sans-thin:      SansThin, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $ff-sans-light:     SansLight, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $ff-sans-copy:      SansCopy, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$ff-sans-alt:       SansAlt, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$ff-sans-alt:       monospace, sans-serif;
 $ff-sans-test:      SansBold, Georgia;
