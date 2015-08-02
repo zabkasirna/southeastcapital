@@ -13,3 +13,10 @@ gulp.task( 'watch', ['setWatch', 'script'], function() {
     gulp.watch(config.style.src + '**/*.scss', ['styles']);
     gulp.watch(config.image.src, ['image']);
 });
+
+gulp.task( 'watch:gs', ['setWatch'], function() {
+
+    gulp.watch(config.markup.template.src, ['markups']);
+    gulp.watch(config.markup.plugin.src, ['markups']);
+    gulp.watch(config.style.src + 'vendor/mueller/**/*.scss', ['style:gs']);
+});

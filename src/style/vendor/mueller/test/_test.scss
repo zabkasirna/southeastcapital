@@ -9,6 +9,7 @@ $test-box-color: #FF5247;
     @include clearfix;
 
     p {
+        display: block;
         margin: 0;
         text-align: center;
     }
