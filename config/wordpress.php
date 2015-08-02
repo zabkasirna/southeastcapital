@@ -27,7 +27,7 @@ define('APP_ENV', 'development');
 require APP_ROOT . '/config/env/development.php';
 
 /** Require Composer autoload file */
-// require APP_ROOT . '/vendor/autoload.php';
+require APP_ROOT . '/vendor/autoload.php';
 
 
 /**
