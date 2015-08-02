@@ -122,16 +122,17 @@ function sec_scripts_and_styles() {
         wp_deregister_script( 'jquery-migrate' );
         wp_deregister_script( 'jquery-core' );
 
+        // gs stylesheet
+        wp_register_style( 'sec-gs-stylesheet', get_stylesheet_directory_uri() . '/gs.css', array(), '' );
         // main stylesheet
-        wp_register_style( 'sec-stylesheet', get_stylesheet_directory_uri() . '/style.css', array(), '', 'all' );
-
+        wp_register_style( 'sec-stylesheet', get_stylesheet_directory_uri() . '/style.css', array( 'sec-gs-stylesheet' ), '', 'all' );
         // ie-only stylesheet
-        // @todo: Develop ie-only stylesheet
-        wp_register_style( 'sec-stylesheet', get_stylesheet_directory_uri() . '/style.ie.css', array(), '' );
+        wp_register_style( 'sec-ie-stylesheet', get_stylesheet_directory_uri() . '/style.ie.css', array(), '' );
 
         // enqueue styles
+        wp_enqueue_style( 'sec-gs-stylesheet' );
         wp_enqueue_style( 'sec-stylesheet' );
-        wp_enqueue_style( 'sec-ie-only' );
+        wp_enqueue_style( 'sec-ie-stylesheet' );
 
         $wp_styles->add_data( 'sec-ie-only', 'conditional', 'lt IE 9' ); // add conditional wrapper around ie stylesheet
     }

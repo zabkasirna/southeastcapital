@@ -54,7 +54,7 @@ get_header(); ?>
             </section>
             <section>
                 <h3>Layouts</h3>
-                <article id="example_layout_1" class="l-1c">
+                <article id="test_layout_1" class="l-1c">
                     <p>1-column layout</p>
                     <div class="c-1">
                         <div class="mueller-test-box">
@@ -62,7 +62,7 @@ get_header(); ?>
                         </div>
                     </div>
                 </article>
-                <article id="example_layout_2" class="l-2c">
+                <article id="test_layout_2" class="l-2c">
                     <p>2-column layout</p>
                     <div class="c-1">
                         <div class="mueller-test-box">
@@ -75,7 +75,7 @@ get_header(); ?>
                         </div>
                     </div>
                 </article>
-                <article id="example_layout_3" class="l-2cr">
+                <article id="test_layout_3" class="l-2cr">
                     <p>2-column layout, switched columns</p>
                     <div class="c-1">
                         <div class="mueller-test-box">
@@ -88,7 +88,7 @@ get_header(); ?>
                         </div>
                     </div>
                 </article>
-                <article id="example_layout_4" class="l-3c">
+                <article id="test_layout_4" class="l-3c">
                     <p>3-column layout</p>
                     <div class="c-1">
                         <div class="mueller-test-box">
@@ -106,10 +106,10 @@ get_header(); ?>
                         </div>
                     </div>
                 </article>
-                <article id="example_layout_5" class="l-4c">
+                <article id="test_layout_5" class="l-4c">
                     <p>
                         4-column layout<br />
-                        Note the shift with desktop, portrait & handheld.
+                        Note the shift with desktop, portrait &amp; handheld.
                     </p>
                     <div class="c-1">
                         <div class="mueller-test-box">

@@ -54,6 +54,22 @@ gulp.task('style:old', function() {
     ;
 });
 
+gulp.task('style:gs', function() {
+    var file = 'vendor/mueller/gs';
+
+    return gulp.src( config.style.src + file + '.scss' )
+        .pipe(sourcemaps.init())
+        .pipe(autoprefixer({
+            browsers: 'last 2 versions',
+        }))
+        .pipe( sass() )
+        .pipe( sourcemaps.write('./maps') )
+        .on( 'error', errors )
+        .pipe( gulp.dest( config.style.dest ) )
+        .pipe( size( { title: 'gs.css' } ) )
+    ;
+});
+
 gulp.task('style:wp-admin', function() {
 
     var file = 'wp-admin';
