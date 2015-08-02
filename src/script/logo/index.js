@@ -28,8 +28,6 @@ function releaseFromNav() {
     ;
 
     if ( $logo.parent().attr('id') === 'main-header' ) return;
-
-    console.log( $logo.parent(), $containerTarget );
     $logo.prependTo( $containerTarget );
 }
 
