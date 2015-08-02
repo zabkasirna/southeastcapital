@@ -17,6 +17,16 @@ get_header(); ?>
         <div class="g-all-c">
 
             <section id="examples" class="g-all-full">
+                <h3>Columns</h3>
+                <article id="example_media" class="g-d-24 g-hr-24 g-l-24 g-tp-12 g-hl-6 g-h-6">
+                    <div class="g-d-1 g-hr-1 g-l-1 g-tp-1 g-hl-1 g-h-1">
+                        <div class="mueller-test-box"><p>1C</p></div>
+                    </div>
+                    <div class="g-d-1 g-hr-1 g-l-1 g-tp-1 g-hl-1 g-h-1">
+                        <div class="mueller-test-box"><p>1C</p></div>
+                    </div>
+                </article>
+
                 <h3>Media</h3>
                 <article id="example_media" class="g-d-24 g-hr-24 g-l-24 g-tp-12 g-hl-6 g-h-6">
                     <p>Defining Columns with basic media-classes. The class&ndash;names are changed with visibility&ndash;selectors.</p>

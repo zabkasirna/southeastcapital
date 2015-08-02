@@ -17,13 +17,11 @@ $old: false;
 
 /* ------ {{ sirna-mixins }} ------ */
 @import "../../mixin/sirna-clearfix";
-@import "../../mixin/sirna-font-face";
 @import "../../mixin/sirna-font-icon";
 @import "../../mixin/sirna-media-query";
 @import "../../mixin/sirna-transition";
 
 /* ------ {{ base }} ------ */
-@import "../../base/font";
 @import "../../base/color";
 @import "../../base/setting";
 @import "../../base/z";

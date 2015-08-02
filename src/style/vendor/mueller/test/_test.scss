@@ -1,16 +1,19 @@
 $test-box-color: #FF5247;
-.sec-test-page .mueller-test-box {
-    display: block;
-    background: $test-box-color;
-    color: $background-color;
-    padding: 0 x(1);
-    margin-bottom: x(1);
-    @include border-radius(2px);
-    @include clearfix;
-
-    p {
+.sec-test-page {
+    .mueller-test-box {
         display: block;
-        margin: 0;
-        text-align: center;
+        background: $test-box-color;
+        color: $background-color;
+        padding: 0 x(1);
+        margin-bottom: x(1);
+        @include border-radius(2px);
+        @include clearfix;
+
+        p {
+            margin: 0;
+            text-align: center;
+        }
     }
+
+    *[class$="1"] .mueller-test-box { padding-left: 0; padding-right: 0; }
 }
