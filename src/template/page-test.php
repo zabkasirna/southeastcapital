@@ -20,31 +20,32 @@ get_header(); ?>
                 <h3>Site Specific Implementation *</h3>
                 <article class="g-d-24 g-hr-24 g-l-24 g-tp-12 g-hl-6 g-h-6">
                     <div class="g-d-3 g-hr-3 g-l-3 g-tp-12 g-hl-6 g-h-6">
-                        <div class="mueller-test-box"><p>x</p></div>
+                        <div class="mueller-test-box"><p>A</p></div>
                     </div>
                     <div class="g-d-3 g-hr-3 g-l-3 g-tp-12 g-hl-6 g-h-6">
-                        <div class="mueller-test-box"><p>x</p></div>
+                        <div class="mueller-test-box"><p>B</p></div>
                     </div>
                     <div class="g-d-3 g-hr-3 g-l-3 g-tp-12 g-hl-6 g-h-6">
-                        <div class="mueller-test-box"><p>x</p></div>
+                        <div class="mueller-test-box"><p>C</p></div>
                     </div>
                     <!--  -->
                     <div class="g-d-snap-6 g-hr-snap-6 g-l-snap-6 g-tp-12 g-hl-6 g-h-6">
-                        <div class="mueller-test-box"><p>xx</p></div>
+                        <div class="mueller-test-box"><p>LOGO</p></div>
                     </div>
                     <!--  -->
                     <div class="g-d-3 g-hr-3 g-l-3 g-tp-12 g-hl-6 g-h-6">
-                        <div class="mueller-test-box"><p>x</p></div>
+                        <div class="mueller-test-box"><p>D</p></div>
                     </div>
                     <div class="g-d-3 g-hr-3 g-l-3 g-tp-12 g-hl-6 g-h-6">
-                        <div class="mueller-test-box"><p>x</p></div>
+                        <div class="mueller-test-box"><p>E</p></div>
                     </div>
                     <div class="g-d-3 g-hr-3 g-l-3 g-tp-12 g-hl-6 g-h-6 g-d-l g-hr-l g-l-l g-tp-l g-hl-l g-h-l">
-                        <div class="mueller-test-box"><p>x</p></div>
+                        <div class="mueller-test-box"><p>F</p></div>
                     </div>
                 </article>
             </section>
 
+            <!--
             <section id="test_site" class="g-all-full">
                 <h3>TEST</h3>
                 <article class="g-d-24 g-hr-24 g-l-24 g-tp-12 g-hl-6 g-h-6">
@@ -59,6 +60,7 @@ get_header(); ?>
                     </div>
                 </article>
             </section>
+            -->
 
             <section id="examples" class="g-all-full">
                 <h3>Media</h3>
