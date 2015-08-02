@@ -36,11 +36,11 @@ module.exports = {
 
     markup: {
         template: {
-            src: [src + '/template/**/*.{php,html,svg}'],
+            src: [src + '/template/**/*'],
             dest: dest
         },
         plugin: {
-            src: src + '/plugin/**/*.php',
+            src: src + '/plugin/**/*',
             dest: dest_plugin            
         }
     },
