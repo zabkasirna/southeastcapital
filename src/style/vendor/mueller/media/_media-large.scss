@@ -42,7 +42,6 @@ $media-max-width: 1800px;
     .g-#{$media}-c {
         @include container;
         width: ($col-width) * $max-units + ($gutter-width) * ($max-units - 1);
-        test: ($col-width);
     }
     // let the media-specific grid-classes being rendered
     @include grids($media, $units, $max-units, ($col-width), ($gutter-width), $pad-units);
