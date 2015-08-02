@@ -16,6 +16,7 @@
 
 var Signature = require('./signature')
 ,   PHPDebugger = require('./php-debugger')
+,   Logo = require('./logo')
 ;
 
 (function( $ ) {
@@ -25,6 +26,9 @@ var Signature = require('./signature')
         // Setup
         Signature.init();
         PHPDebugger.init();
+
+        // Logo
+        Logo.init();
 
     });
 
