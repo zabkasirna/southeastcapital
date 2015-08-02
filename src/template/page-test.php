@@ -13,13 +13,7 @@ get_header(); ?>
         class="<?php echo get_post_type(); ?> sec-test-page"
         id="main"
         role="main"
-    >
-
-        <div class="ttt">
-            <h1>TEST</h1>
-        </div>
-
-    </main>
+    ></main>
 
 <?php get_footer(); ?>
 

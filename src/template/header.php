@@ -33,7 +33,11 @@
 
 <?php
     global $wp_query;
-    $post_id = $wp_query->post->ID;
+    $__post = $wp_query->post;
+    $__post_id = $__post->ID;
+    $__post_slug = $__post->post_name;
+
+    debuggrr( $__post_slug );
 ?>
 
 <?php
@@ -74,6 +78,8 @@
                 'after'           => '',
             );
 
-            wp_nav_menu( $nav_main_defaults );
+            if ( $__post_slug !== 'test' ) {
+                wp_nav_menu( $nav_main_defaults );
+            }
         ?>
     </header>
