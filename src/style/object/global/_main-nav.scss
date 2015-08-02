@@ -17,6 +17,15 @@
             padding: 0;
             position: relative;
             overflow: hidden;
+
+            // ------ {{* local *}} ------ //
+            font-size: 10px;
+            font-family: SansBold;
+            letter-spacing: .1em;
+            line-height: x(1.5);
+            height: x(1.5);
+            border-bottom: 1px solid $grey;
+            text-align: center;
         }
 
         &.active,
