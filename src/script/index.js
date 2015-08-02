@@ -37,7 +37,6 @@ var Signature = require('./signature')
         // MQ Callback
         $(window).on("mqchange.mediaquery", function(e, state) {
 
-            console.log( state );
             if ( state.maxWidth <= MQ.bp.tp.max ) {
                 Logo.releaseFromNav();
             }
@@ -46,7 +45,5 @@ var Signature = require('./signature')
                 Logo.insertToNav()
             }
         });
-
     });
-
 })(jQuery);
