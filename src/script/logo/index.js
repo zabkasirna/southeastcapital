@@ -1,8 +1,9 @@
 var Logo = {
-    init: init
+    insertToNav: insertToNav,
+    releaseFromNav: releaseFromNav
 };
 
-function init() {
+function insertToNav() {
     if ( !$('#main-header').length ||
         !$('#nav-lists').length ||
         !$('#logo').length
@@ -11,16 +12,25 @@ function init() {
     var $logo = $('#logo')
     ,   $siblingTarget = $('#nav-lists > .menu-item').eq(2)
     ;
-    
-    insertToNav();
 
-    $(window).on("mqchange.mediaquery", function(e, state) {
-        if ( state.maxWidth === 980 ) console.log( state );
-    });
+    if ( $logo.parent().attr('id') === 'nav-lists' ) return;
 
-    function insertToNav() {
-        $logo.insertAfter( $siblingTarget );
-    }
+    $logo.insertAfter( $siblingTarget );
+}
+
+function releaseFromNav() {
+    if ( !$('#main-header').length ||
+        !$('#logo').length
+    ) return;
+
+    var $logo = $('#logo')
+    ,   $containerTarget = $('#main-header')
+    ;
+
+    if ( $logo.parent().attr('id') === 'main-header' ) return;
+
+    console.log( $logo.parent(), $containerTarget );
+    $logo.prependTo( $containerTarget );
 }
 
 module.exports = Logo;

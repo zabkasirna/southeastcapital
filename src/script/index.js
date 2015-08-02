@@ -32,7 +32,20 @@ var Signature = require('./signature')
         MQ.init();
 
         // Logo
-        Logo.init();
+        if ( MQ.getViewportW() > MQ.bp.tp.min ) Logo.insertToNav();
+
+        // MQ Callback
+        $(window).on("mqchange.mediaquery", function(e, state) {
+
+            console.log( state );
+            if ( state.maxWidth <= MQ.bp.tp.max ) {
+                Logo.releaseFromNav();
+            }
+
+            else if ( state.maxWidth >= MQ.bp.l.max ) {
+                Logo.insertToNav()
+            }
+        });
 
     });
 
