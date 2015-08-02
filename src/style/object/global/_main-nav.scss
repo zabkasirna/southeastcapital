@@ -10,7 +10,7 @@
 
         & > a {
             display: block;
-            color: inherit;
+            color: $link-color;
             text-decoration: none;
             text-transform: uppercase;
             margin: 0;
@@ -24,7 +24,7 @@
             letter-spacing: .1em;
             line-height: x(1.5);
             height: x(1.5);
-            border-bottom: 1px solid $grey;
+            border-bottom: 1px solid $sc-copper;
             text-align: center;
         }
 

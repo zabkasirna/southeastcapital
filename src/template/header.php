@@ -82,4 +82,9 @@
                 wp_nav_menu( $nav_main_defaults );
             }
         ?>
+
+        <div id="logo">
+            <p>LOGO</p>
+        </div>
+
     </header>
