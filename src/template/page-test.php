@@ -16,17 +16,51 @@ get_header(); ?>
     >
         <div class="g-all-c">
 
-            <section id="examples" class="g-all-full">
-                <h3>Columns</h3>
-                <article id="example_media" class="g-d-24 g-hr-24 g-l-24 g-tp-12 g-hl-6 g-h-6">
-                    <div class="g-d-1 g-hr-1 g-l-1 g-tp-1 g-hl-1 g-h-1">
-                        <div class="mueller-test-box"><p>1C</p></div>
+            <section id="test_site" class="g-all-full">
+                <h3>Site Specific Implementation *</h3>
+                <article class="g-d-24 g-hr-24 g-l-24 g-tp-12 g-hl-6 g-h-6">
+                    <div class="g-d-3 g-hr-3 g-l-3 g-tp-12 g-hl-6 g-h-6">
+                        <div class="mueller-test-box"><p>x</p></div>
                     </div>
-                    <div class="g-d-1 g-hr-1 g-l-1 g-tp-1 g-hl-1 g-h-1">
-                        <div class="mueller-test-box"><p>1C</p></div>
+                    <div class="g-d-3 g-hr-3 g-l-3 g-tp-12 g-hl-6 g-h-6">
+                        <div class="mueller-test-box"><p>x</p></div>
+                    </div>
+                    <div class="g-d-3 g-hr-3 g-l-3 g-tp-12 g-hl-6 g-h-6">
+                        <div class="mueller-test-box"><p>x</p></div>
+                    </div>
+                    <!--  -->
+                    <div class="g-d-snap-6 g-hr-snap-6 g-l-snap-6 g-tp-12 g-hl-6 g-h-6">
+                        <div class="mueller-test-box"><p>xx</p></div>
+                    </div>
+                    <!--  -->
+                    <div class="g-d-3 g-hr-3 g-l-3 g-tp-12 g-hl-6 g-h-6">
+                        <div class="mueller-test-box"><p>x</p></div>
+                    </div>
+                    <div class="g-d-3 g-hr-3 g-l-3 g-tp-12 g-hl-6 g-h-6">
+                        <div class="mueller-test-box"><p>x</p></div>
+                    </div>
+                    <div class="g-d-3 g-hr-3 g-l-3 g-tp-12 g-hl-6 g-h-6 g-d-l g-hr-l g-l-l g-tp-l g-hl-l g-h-l">
+                        <div class="mueller-test-box"><p>x</p></div>
                     </div>
                 </article>
+            </section>
 
+            <section id="test_site" class="g-all-full">
+                <h3>TEST</h3>
+                <article class="g-d-24 g-hr-24 g-l-24 g-tp-12 g-hl-6 g-h-6">
+                    <div class="g-hr-snap-3 g-l-3 g-hr-f g-l-f">
+                        <div class="mueller-test-box"><p>T</p></div>
+                    </div>
+                    <div class="g-hr-snap-3 g-l-snap-3">
+                        <div class="mueller-test-box"><p>T</p></div>
+                    </div>
+                    <div class="g-hr-3 g-l-3">
+                        <div class="mueller-test-box"><p>T</p></div>
+                    </div>
+                </article>
+            </section>
+
+            <section id="examples" class="g-all-full">
                 <h3>Media</h3>
                 <article id="example_media" class="g-d-24 g-hr-24 g-l-24 g-tp-12 g-hl-6 g-h-6">
                     <p>Defining Columns with basic media-classes. The class&ndash;names are changed with visibility&ndash;selectors.</p>
@@ -62,6 +96,7 @@ get_header(); ?>
                     </div>
                 </article>
             </section>
+
             <section>
                 <h3>Layouts</h3>
                 <article id="test_layout_1" class="l-1c">

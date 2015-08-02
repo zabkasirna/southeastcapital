@@ -23,6 +23,9 @@ $show-grid-background: false;
 *[class^="g-"],
 *[class^="c-"], { @include clearfix; }
 
+// Reset Margin Left for snap columns sibling
+*[class*="-snap-"] + *[class*="-snap-"] { margin-left: 0; }
+
 // -----------------------------------------------------------------------------
 // GENERAL MIXINS
 
@@ -40,6 +43,11 @@ $show-grid-background: false;
 // the width of a column given the units and unit width of the grid.
 @function column-width($n, $col-width, $gutter-width: $gutter-width) {
     @return $col-width * $n + $gutter-width * ($n - 1);
+}
+
+// @TODO: DOCUMENTATION @sirna
+@function snap-column-width($n, $col-width, $gutter-width: $gutter-width) {
+    @return ($col-width * $n) + ($gutter-width * $n) + ($gutter-width * 1);
 }
 
 // a grid container. unlike most grid containers, this one does not have a width. that is assigned on a per-media basis.
@@ -113,6 +121,23 @@ $show-grid-background: false;
     width: column-width($n, $col-width, $gutter-width);
 }
 
+// @TODO: DOCUMENTATION @sirna
+@mixin snap-column($n, $max-unit, $col-width, $gutter-width, $first-column-class, $last-column-class) {
+    @include column-base;
+    @if $n == $max-unit {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        clear: both;
+        width: column-width($n, $col-width, $gutter-width);
+    }
+    @else {
+        margin-left: $gutter-width * -1;
+        margin-right: 0 !important;
+        clear: none;
+        width: snap-column-width($n, $col-width, $gutter-width);
+    }
+}
+
 // generate grid classes according to a common naming convention
 // $media is the media prefix. E.g. d (default), t (tablet), tp (tablet portrait), h (handheld), or hl (handheld landscape)
 // $max-unit is how many columns are in this grid system.
@@ -140,6 +165,9 @@ $show-grid-background: false;
     @each $n in $units {
         .g-#{$media}-#{$n} {
             @include column($n, $max-unit, $col-width, $gutter-width, $first-column-class, $last-column-class);
+        }
+        .g-#{$media}-snap-#{$n} {
+            @include snap-column($n, $max-unit, $col-width, $gutter-width, $first-column-class, $last-column-class);
         }
     }
     // establish the base classes
