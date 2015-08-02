@@ -1,0 +1,35 @@
+#header-nav #nav-list {
+    @extend .g-d-24;
+    @extend .g-hr-24;
+    @extend .g-l-24;
+    @extend .g-tp-12;
+    @extend .g-hl-6;
+    @extend .g-h-6;
+
+    & > .menu-item {
+        @extend .g-d-3;
+        @extend .g-hr-3;
+        @extend .g-l-3;
+        @extend .g-tp-12;
+        @extend .g-hl-6;
+        @extend .g-h-6;
+
+        &:last-of-type {
+            @extend .g-d-l;
+            @extend .g-hr-l;
+            @extend .g-l-l;
+            @extend .g-tp-l;
+            @extend .g-hl-l;
+            @extend .g-h-l;
+        }
+    }
+
+    & > #logo {
+        @extend .g-d-snap-6;
+        @extend .g-hr-snap-6;
+        @extend .g-l-snap-6;
+        @extend .g-tp-12;
+        @extend .g-hl-6;
+        @extend .g-h-6;
+    }
+}
