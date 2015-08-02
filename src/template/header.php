@@ -65,6 +65,11 @@
 <div id="page" class="hfeed site">
 
     <header id="main-header">
+
+        <div id="logo">
+            <a class="logo-anchor" href="#">LOGO</a>
+        </div>
+
         <?php 
             $nav_main_defaults = array(
                 'theme_location'  => 'main-navi',
@@ -82,9 +87,4 @@
                 wp_nav_menu( $nav_main_defaults );
             }
         ?>
-
-        <div id="logo">
-            <p>LOGO</p>
-        </div>
-
     </header>

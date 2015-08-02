@@ -11,8 +11,16 @@ function init() {
     var $logo = $('#logo')
     ,   $siblingTarget = $('#nav-lists > .menu-item').eq(2)
     ;
+    
+    insertToNav();
 
-    console.log( $logo, $siblingTarget );
+    $(window).on("mqchange.mediaquery", function(e, state) {
+        if ( state.maxWidth === 980 ) console.log( state );
+    });
+
+    function insertToNav() {
+        $logo.insertAfter( $siblingTarget );
+    }
 }
 
 module.exports = Logo;

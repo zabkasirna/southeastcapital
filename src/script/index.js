@@ -16,6 +16,7 @@
 
 var Signature = require('./signature')
 ,   PHPDebugger = require('./php-debugger')
+,   MQ = require('./mq')
 ,   Logo = require('./logo')
 ;
 
@@ -26,6 +27,9 @@ var Signature = require('./signature')
         // Setup
         Signature.init();
         PHPDebugger.init();
+
+        // MQ
+        MQ.init();
 
         // Logo
         Logo.init();
