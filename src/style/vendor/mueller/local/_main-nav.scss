@@ -23,13 +23,4 @@
             @extend .g-h-l;
         }
     }
-
-    & > #logo {
-        @extend .g-d-snap-6;
-        @extend .g-hr-snap-6;
-        @extend .g-l-snap-6;
-        @extend .g-tp-12;
-        @extend .g-hl-6;
-        @extend .g-h-6;
-    }
 }
