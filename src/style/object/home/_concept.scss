@@ -37,14 +37,14 @@
                 width: 50%;
                 height: 100%;
 
+                pointer-events: none;
+                display: none;
+                &.has-loaded { display: table; }
+
                 @media screen and ( max-width: 980px ) {
                     top: x(-6);
                     width: 100%;
                 }
-
-                display: table;
-
-                pointer-events: none;
 
                 .hsc-title-text {
                     display: table-cell;

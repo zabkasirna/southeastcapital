@@ -1,7 +1,26 @@
 #main-header {
     z-index: $z-main-header;
 
+
     &.on-layout {
         display: none;
     }
+}
+
+#main-header > .faux-bg {
+    z-index: -1;
+    pointer-events: none;
+
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: x(3);
+
+background: rgba(52,52,62,0.5);
+background: -moz-linear-gradient(top, rgba(52,52,62,0.5) 0%, rgba(52,52,62,0) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(52,52,62,0.5)), color-stop(100%, rgba(52,52,62,0)));
+background: -webkit-linear-gradient(top, rgba(52,52,62,0.5) 0%, rgba(52,52,62,0) 100%);
+background: -o-linear-gradient(top, rgba(52,52,62,0.5) 0%, rgba(52,52,62,0) 100%);
+background: -ms-linear-gradient(top, rgba(52,52,62,0.5) 0%, rgba(52,52,62,0) 100%);
+background: linear-gradient(to bottom, rgba(52,52,62,0.5) 0%, rgba(52,52,62,0) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#34343e', endColorstr='#34343e', GradientType=0 );
 }
