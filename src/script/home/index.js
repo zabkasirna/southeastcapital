@@ -17,7 +17,7 @@ function layout() {
 
     $fpEl.fullpage({
         sectionSelector: '.home-section',
-        anchors: ['concept', 'projects', 'exciting', 'updates', 'location', 'contact']
+        anchors: ['concept', 'projects', 'exciting', 'masterplan', 'updates', 'location', 'contact']
     });
 }
 

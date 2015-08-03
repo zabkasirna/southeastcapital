@@ -32,19 +32,25 @@ get_header(); ?>
                 </div>
                 <div class="hs-content">
                     <div class="inner">
-                        <p class="hsci-body">Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur.</p>
-                        <a class="hsci-btn" href="javascript:void(0);">Find More<span class="gt-btn">&gt;</span></a>
+                        <div class="hsc-title">
+                            <p class="hsc-title-text"><span
+                                class="t-1">Life</span><span
+                                class="t-2">Reimagined</span>
+                            </p>
+                        </div>
+                        <p class="hsc-body">Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur.</p>
+                        <a class="hsc-btn" href="javascript:void(0);">Find More<span class="gt">&gt;</span></a>
                     </div>
                 </div>
             </section>
             <section class="home-section" data-anchor="projects">
                 <h1>PROJECTS</h1>
             </section>
-            <section class="home-section" data-anchor="masterplan">
-                <h1>MASTERPLAN</h1>
-            </section>
             <section class="home-section" data-anchor="exciting">
                 <h1>EXCITING</h1>
+            </section>
+            <section class="home-section" data-anchor="masterplan">
+                <h1>MASTERPLAN</h1>
             </section>
             <section class="home-section" data-anchor="updates">
                 <h1>UPDATES</h1>

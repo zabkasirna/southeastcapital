@@ -30,21 +30,77 @@
             display: table-cell;
             vertical-align: middle;
 
-            .hsci-body {
+            .hsc-title {
+                position: fixed;
+                top: x(-5);
+                left: 0;
+                width: 50%;
+                height: 100%;
+
+                @media screen and ( max-width: 980px ) {
+                    top: x(-6);
+                    width: 100%;
+                }
+
+                display: table;
+
+                pointer-events: none;
+
+                .hsc-title-text {
+                    display: table-cell;
+                    vertical-align: middle;
+                    height: r(4);
+                    @media screen and ( max-width: 768px ) {
+                        text-align: center;
+                    }
+                }
+
+                .hsc-title-text > span {
+                    display: inline-block;
+
+                    font-size: r(3.75);
+                    line-height: r(4);
+                    letter-spacing: .05em;
+
+                    @media screen and ( max-width: 768px ) {
+                        font-size: r(3);
+                    }
+
+                    position: relative;
+
+                    &.t-2 {
+
+                        top: r(2.5);
+                        padding-top: r(.5);
+                        font-family: $ff-sans-thin;
+
+                        &:before {
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            top: 0; left: 0.2em; right: 0.15em;
+                            height: 2px;
+                            background-color: $white;
+                        }
+                    }
+                }
+            }
+
+            .hsc-body {
                 margin: 0 0 x(1) 0;
                 padding: 0 x(3);
                 font-family: $ff-sans-regular;
                 color: $white;
             }
 
-            .hsci-btn {
+            .hsc-btn {
                 font-size: 11px;
                 margin: 0 auto;
                 width: x(4.5);
 
                 @include sec-btn;
 
-                .gt-btn { margin-left: 1em; }
+                .gt { margin-left: 1em; }
             }
         }
     }
