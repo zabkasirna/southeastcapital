@@ -26,7 +26,7 @@ function initThemeOptions() {
         ) );
 
         // Sub Page
-        // initHomeOptions();
+        initHomeOptions();
     }
 
     // Fields
