@@ -4,6 +4,10 @@
     padding: 0;
     list-style: none outside none;
 
+    @media screen and ( max-width: 980px ) {
+        display: none;
+    }
+
 
     & > li {
 

@@ -2,7 +2,7 @@
 
     position: relative;
 
-    .faux-bg {
+    .hs-bg {
         position: absolute;
         top: 0;
         left: 50%;
@@ -10,9 +10,31 @@
         width: 100vw;
         height: 100vh;
 
-        background-color: $sc-copper;
-        border: 1px solid gold;
         z-index: -1;
+        pointer-events: none;
+
+        &.test {
+            background-color: $sc-copper;
+            border: 1px solid gold;
+        }
+    }
+}
+
+.home-section#hsConcept {
+    .bgi,
+    .content-faux-bg {
+        @include clearfix;
+        position: relative;
+        width: 100%;
     }
 
+    .bgi {
+        background-color: rgba( #fff, .5 );
+        height: 75%;
+    }
+
+    .content-faux-bg {
+        background-color: rgba( #000, .5 );
+        height: 25%;
+    }
 }
