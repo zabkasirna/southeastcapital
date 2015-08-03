@@ -1,0 +1,30 @@
+@mixin fixed-center {
+    position: fixed;
+    top: 0;
+
+    // BP: H
+    @media screen and (min-width: 480px) and (max-width: 767px) {
+        left: 50%;
+        margin-left: r(-13);
+    }
+    // Bp: TP
+    @media screen and (min-width: 768px) and (max-width: 980px) {
+        left: 50%;
+        margin-left: r(-17.5);
+    }
+    // Bp: D
+    @media screen and (min-width: 981px) and (max-width: 1249px) {
+        left: 50%;
+        margin-left: r(-29.5);
+    }
+    // BP: L
+    @media screen and (min-width: 1250px) and (max-width: 1800px) {
+        left: 50%;
+        margin-left: r(-35.5);
+    }
+    // Bp: HR
+    @media screen and (max-width: 6000px) and (min-width: 1801px) {
+        left: 50%;
+        margin-left: r(-47.5);
+    }
+}
