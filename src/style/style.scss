@@ -31,7 +31,7 @@ $old: false;
 @import "base/setting";
 @import "base/z";
 
-/* ------ {{ global object }} ------ */
+/* ------ {{ global }} ------ */
 @import "object/global/element";
 @import "object/global/typography";
 @import "object/global/page";
@@ -40,6 +40,9 @@ $old: false;
 @import "object/global/main-content";
 @import "object/global/logo";
 @import "object/global/preloader";
+
+/* ------ {{ home }} ------ */
+@import "object/home/section";
 
 /* ------ {{ vendors }} ------ */
 @import "vendor/fontawesome/font-awesome";

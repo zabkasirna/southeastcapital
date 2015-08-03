@@ -1,0 +1,18 @@
+.home-section {
+
+    position: relative;
+
+    .faux-bg {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-left: -50vw;
+        width: 100vw;
+        height: 100vh;
+
+        background-color: $sc-copper;
+        border: 1px solid gold;
+        z-index: -1;
+    }
+
+}

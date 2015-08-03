@@ -14,7 +14,8 @@ get_header(); ?>
     >
 
         <div id="js-fullpage">
-            <section class="home-section" data-anchor="concept">
+            <section class="home-section" id="hs-concept" data-anchor="concept">
+                <div class="faux-bg"></div>
                 <h1>CONCEPT</h1>
             </section>
             <section class="home-section" data-anchor="projects">
