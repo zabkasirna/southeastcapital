@@ -82,7 +82,7 @@
 
 <div id="page" class="hfeed site">
 
-    <header id="main-header">
+    <header id="main-header" class="on-layout">
 
         <div id="logo">
             <div class="faux-bg"><div class="faux-arrow"></div></div>

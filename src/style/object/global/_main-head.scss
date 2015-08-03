@@ -1,3 +1,7 @@
 #main-header {
     z-index: $z-main-header;
+
+    &.on-layout {
+        display: none;
+    }
 }

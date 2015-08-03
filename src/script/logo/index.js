@@ -15,7 +15,7 @@ function injectSVG() {
     }
 }
 
-function insertToNav() {
+function insertToNav( initial ) {
     if ( !$('#main-header').length ||
         !$('#nav-lists').length ||
         !$('#logo').length
@@ -28,6 +28,8 @@ function insertToNav() {
     if ( $logo.parent().attr('id') === 'nav-lists' ) return;
 
     $logo.insertAfter( $siblingTarget );
+
+    if ( initial ) $('#main-header').removeClass('on-layout');
 }
 
 function releaseFromNav() {
