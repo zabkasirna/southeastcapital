@@ -19,22 +19,3 @@
         }
     }
 }
-
-.home-section#hsConcept {
-    .bgi,
-    .content-faux-bg {
-        @include clearfix;
-        position: relative;
-        width: 100%;
-    }
-
-    .bgi {
-        background-color: rgba( $black, .5 );
-        height: 75%;
-    }
-
-    .content-faux-bg {
-        background-color: $sc-grey-dark;
-        height: 25%;
-    }
-}
