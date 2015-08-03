@@ -37,7 +37,7 @@
     $__post_id = $__post->ID;
     $__post_slug = $__post->post_name;
 
-    debuggrr( $__post_slug );
+    // debuggrr( $__post_slug );
 ?>
 
 <?php

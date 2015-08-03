@@ -37,7 +37,8 @@ var Signature = require('./signature')
         if ( MQ.getViewportW() > MQ.bp.tp.min ) Logo.insertToNav();
 
         // Home
-        Home.initFullpage();
+        Home.layout();
+        Home.init();
 
         // MQ Callback
         $(window).on("mqchange.mediaquery", function(e, state) {

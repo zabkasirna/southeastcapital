@@ -7,6 +7,12 @@
 
 get_header(); ?>
 
+<?php
+    /*---- {{ DATA: CONCEPT IMAGE }} ----*/
+    $concept_bgi = get_field( 'concept_bgi', 'option' )['url'];
+    debuggrr( $concept_bgi );
+?>
+
     <main
         class="<?php echo get_post_type(); ?>"
         id="main"
@@ -16,10 +22,11 @@ get_header(); ?>
         <div id="js-fullpage">
             <section class="home-section" id="hsConcept" data-anchor="concept">
                 <div class="hs-bg">
-                    <div class="bgi"></div>
+                    <div class="bgi"
+                        data-src="<?php echo $concept_bgi; ?>"
+                    ></div>
                     <div class="content-faux-bg"></div>
                 </div>
-                <h1>CONCEPT</h1>
             </section>
             <section class="home-section" data-anchor="projects">
                 <h1>PROJECTS</h1>
