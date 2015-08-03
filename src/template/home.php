@@ -33,7 +33,7 @@ get_header(); ?>
                 <div class="hs-content">
                     <div class="inner">
                         <p class="hsci-body">Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur.</p>
-                        <a class="sc-btn hsci-btn" href="javascript:void(0);">Find More</a>
+                        <a class="hsci-btn" href="javascript:void(0);">Find More<span class="gt-btn">&gt;</span></a>
                     </div>
                 </div>
             </section>

@@ -8,18 +8,21 @@
 
     .bgi {
         background-color: rgba( $black, .5 );
+        @media screen and (max-width: 981px) { height: 60%; }
         height: 75%;
     }
 
     .content-faux-bg {
         background-color: $sc-grey-dark;
+        @media screen and (max-width: 981px) { height: 40%; }
         height: 25%;
     }
 
     .hs-content {
         position: relative;
         height: 25%;
-        margin-top: 75%;
+        @media screen and (max-width: 981px) { margin-top: 60vh; }
+        margin-top: 75vh;
 
         display: table;
 
@@ -28,9 +31,20 @@
             vertical-align: middle;
 
             .hsci-body {
-                margin: 0;
+                margin: 0 0 x(1) 0;
+                padding: 0 x(3);
                 font-family: $ff-sans-regular;
                 color: $white;
+            }
+
+            .hsci-btn {
+                font-size: 11px;
+                margin: 0 auto;
+                width: x(4.5);
+
+                @include sec-btn;
+
+                .gt-btn { margin-left: 1em; }
             }
         }
     }
