@@ -8,7 +8,8 @@ function initFullpage() {
     var $fpEl = $('#js-fullpage');
 
     $fpEl.fullpage({
-        sectionSelector: '.home-section'
+        sectionSelector: '.home-section',
+        anchors: ['concept', 'projects', 'exciting', 'updates', 'location', 'contact']
     });
 }
 
