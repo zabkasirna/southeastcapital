@@ -26,6 +26,9 @@ get_header(); ?>
                         data-src="<?php echo $concept_bgi; ?>"
                     ></div>
                     <div class="content-faux-bg"></div>
+                    <div class="preloader" >
+                        <?php include_once( get_stylesheet_directory() . '/preloader.svg' ); ?>
+                    </div>
                 </div>
             </section>
             <section class="home-section" data-anchor="projects">
