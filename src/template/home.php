@@ -14,17 +14,26 @@ get_header(); ?>
     >
 
         <div id="js-fullpage">
-            <section class="home-section">
-                <h1>A</h1>
+            <section class="home-section" data-anchor="concept">
+                <h1>CONCEPT</h1>
             </section>
-            <section class="home-section">
-                <h1>B</h1>
+            <section class="home-section" data-anchor="projects">
+                <h1>PROJECTS</h1>
             </section>
-            <section class="home-section">
-                <h1>C</h1>
+            <section class="home-section" data-anchor="masterplan">
+                <h1>MASTERPLAN</h1>
             </section>
-            <section class="home-section">
-                <h1>D</h1>
+            <section class="home-section" data-anchor="exciting">
+                <h1>EXCITING</h1>
+            </section>
+            <section class="home-section" data-anchor="updates">
+                <h1>UPDATES</h1>
+            </section>
+            <section class="home-section" data-anchor="location">
+                <h1>LOCATION</h1>
+            </section>
+            <section class="home-section" data-anchor="contact">
+                <h1>CONTACT</h1>
             </section>
         </div>
 

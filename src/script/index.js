@@ -18,6 +18,7 @@ var Signature = require('./signature')
 ,   PHPDebugger = require('./php-debugger')
 ,   MQ = require('./mq')
 ,   Logo = require('./logo')
+,   Home = require('./home')
 ;
 
 (function( $ ) {
@@ -36,9 +37,7 @@ var Signature = require('./signature')
         if ( MQ.getViewportW() > MQ.bp.tp.min ) Logo.insertToNav();
 
         // Home
-        $('#js-fullpage').fullpage({
-            sectionSelector: '.home-section'
-        });
+        Home.initFullpage();
 
         // MQ Callback
         $(window).on("mqchange.mediaquery", function(e, state) {
