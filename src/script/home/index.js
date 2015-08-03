@@ -26,6 +26,7 @@ function initConcept() {
 
     var $el = $('#hsConcept .bgi')
     ,   _bgiSrc = $el.attr('data-src')
+    ,   $preloader = $el.closest('.hs-bg').find('.preloader')
     ;
 
     $el.background({
@@ -33,6 +34,10 @@ function initConcept() {
             "0px": _bgiSrc,
             "980px": _bgiSrc
         }
+    });
+
+    $el.on('loaded.background', function(e) {
+        $preloader.addClass('has-loaded');
     });
 }
 

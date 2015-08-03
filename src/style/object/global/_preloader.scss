@@ -10,7 +10,7 @@
     pointer-events: none;
 
     background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAG0lEQVQIW2NkYGD4z8DAwMgABXAGNgGwSgwVAFbmAgXxvZSoAAAAAElFTkSuQmCC) repeat;
-    background-color: rgba(#333, .99);
+    background-color: rgba($sc-grey-dark, .9);
     color: $sc-copper;
 
     .preloader-inner {
