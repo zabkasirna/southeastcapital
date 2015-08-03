@@ -13,21 +13,20 @@ get_header(); ?>
         role="main"
     >
 
-    <?php if ( have_posts() ) : ?>
-
-        <div class="loop-outer">
-            <?php while ( have_posts() ) : the_post(); ?>
-
-            <?php // LOOP ?>
-            <div class="loop" data-id="<?php echo the_id(); ?>">
-                <section>
-                    <?php the_content(); ?>
-                </section>
-            </div>
-            <?php endwhile; ?>
+        <div id="js-fullpage">
+            <section class="home-section">
+                <h1>A</h1>
+            </section>
+            <section class="home-section">
+                <h1>B</h1>
+            </section>
+            <section class="home-section">
+                <h1>C</h1>
+            </section>
+            <section class="home-section">
+                <h1>D</h1>
+            </section>
         </div>
-
-    <?php endif; ?>
 
     </main>
 
