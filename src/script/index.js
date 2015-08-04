@@ -48,7 +48,6 @@ if (SVGElement && SVGElement.prototype) {
             this.addClass(className);
         }
     };
-
 }
  
 var Signature = require('./signature')
@@ -56,6 +55,7 @@ var Signature = require('./signature')
 ,   MQ = require('./mq')
 ,   Logo = require('./logo')
 ,   Home = require('./home')
+,   Excitement = require('./excitement')
 ;
 
 (function( $ ) {
@@ -77,6 +77,9 @@ var Signature = require('./signature')
         // Home
         Home.layout();
         Home.init();
+
+        // Excitement
+        Excitement.Single.initImage();
 
         // MQ Callback
         $(window).on("mqchange.mediaquery", function(e, state) {
