@@ -1,8 +1,11 @@
+var Masterplan = require('../masterplan');
+
 var Home = {
     init: init,
     layout: layout,
     initConcept: initConcept,
-    initProject: initProject
+    initProject: initProject,
+    initMasterplan: initMasterplan
 };
 
 function init() {
@@ -10,6 +13,7 @@ function init() {
 
     _self.initConcept();
     _self.initProject();
+    // _self.initMasterplan();
 }
 
 function layout() {
@@ -79,6 +83,10 @@ function initProject() {
         $preloader.addClass('has-loaded');
         // $title.addClass('has-loaded');
     });
+}
+
+function initMasterplan() {
+    Masterplan.inject();
 }
 
 module.exports = Home;

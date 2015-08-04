@@ -51,7 +51,7 @@ get_header(); ?>
                     </div>
                 </div>
             </section>
-            <section class="home-section" id="hsProject"  data-anchor="projects">
+            <section class="home-section" id="hsProject" data-anchor="projects">
                 <div class="hs-bg">
                     <div class="bgi"
                         data-src="<?php echo $project_bgi; ?>"
@@ -83,14 +83,10 @@ get_header(); ?>
                     </div>
                 </div>
             </section>
-            <section class="home-section" data-anchor="masterplan">
+            <section class="home-section" id="hsMasterplan" data-anchor="masterplan">
                 <div class="hs-bg">
                     <div class="mp-svg-wrapper">
-                        <img
-                            src='<?php echo bloginfo("template_url") . "/uploads/images/masterplan/masterplan.svg"; ?>'
-                            alt=""
-                            class="mp-svg"
-                        >
+                        <?php include( get_stylesheet_directory() . '/masterplan-svg.php' ); ?>
                     </div>
                 </div>
             </section>
