@@ -36,9 +36,38 @@
         stroke-width: 1px;
     }
 
+    .mp_label {
+
+        transition: transform .3s ease-out;
+        transform: translate( 0, 48px );
+
+        .txt-rect-0 {
+            fill:#B05158;
+        }
+
+        .txt-rect-1 {
+            fill:none;
+            stroke:#B05158;
+            stroke-width:2;
+            stroke-miterlimit:10;
+        }
+
+        text {
+            fill: $white;
+            font-family: $ff-sans-bold;
+            font-size: 24px;
+            letter-spacing: 2;
+        }
+    }
+
     .is-hovered {
         .mp-path {
             stroke-width: 6px;
+        }
+
+        .mp_label {
+            transition: transform .3s ease-out;
+            transform: translate( 0, 0 );
         }
     }
 }
