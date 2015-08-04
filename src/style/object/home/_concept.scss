@@ -46,6 +46,10 @@
                     width: 100%;
                 }
 
+                @media screen and (max-height: 480px) {
+                    top: x(-4);
+                }
+
                 .hsc-title-text {
                     display: table-cell;
                     vertical-align: middle;
@@ -90,6 +94,17 @@
                 padding: 0 x(3);
                 font-family: $ff-sans-regular;
                 color: $white;
+
+                @media screen and (max-width: 769px) {
+                    padding: 0 x(1);
+                }
+
+                @media screen and (max-height: 480px) {
+                    font-size: 10px;
+                    letter-spacing: 0.1em;
+                    line-height: 1.5;
+                    text-align: center;
+                }
             }
 
             .hsc-btn {
