@@ -84,7 +84,7 @@ get_header(); ?>
                 </div>
             </section>
             <section class="home-section" id="hsMasterplan" data-anchor="masterplan">
-                <div class="hs-bg">
+                <div class="hsc-body">
                     <div class="mp-svg-wrapper">
                         <?php include( get_stylesheet_directory() . '/masterplan-svg.php' ); ?>
                     </div>

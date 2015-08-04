@@ -13,7 +13,7 @@ function init() {
 
     _self.initConcept();
     _self.initProject();
-    // _self.initMasterplan();
+    _self.initMasterplan();
 }
 
 function layout() {
@@ -86,7 +86,7 @@ function initProject() {
 }
 
 function initMasterplan() {
-    Masterplan.inject();
+    Masterplan.setup();
 }
 
 module.exports = Home;

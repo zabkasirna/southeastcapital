@@ -1,0 +1,44 @@
+.home-section#hsMasterplan {
+
+    .hsc-body {
+        width: 100%;
+        height: 100vh;
+        display: table;
+    }
+
+    .mp-svg-wrapper {
+        position: relative;
+        z-index: 9999;
+        display: table-cell;
+        vertical-align: middle;
+    }
+}
+
+.home-section#hsMasterplan .mp-svg-wrapper {
+
+    .spot:hover { cursor: pointer; }
+
+    .no-spot { pointer-events: none; }
+
+    .mp-area {
+        transition: opacity .5s ease-out;
+        opacity: 0;
+    }
+
+    .is-hovered {
+        transition: opacity .5s ease-out;
+        opacity: 1;
+    }
+
+    .mp-path {
+        fill: rgba($white, 1);
+        stroke: $white;
+        stroke-width: 1px;
+    }
+
+    .is-hovered {
+        .mp-path {
+            stroke-width: 6px;
+        }
+    }
+}

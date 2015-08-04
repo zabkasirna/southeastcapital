@@ -69,6 +69,9 @@ function sec_scripts_and_styles() {
         // svg-injector
         wp_register_script( 'sec-svg-injector', get_template_directory_uri() . '/script/vendor/svg-injector/svg-injector.js', array(), '', true );
 
+        // Snap.svg
+        wp_register_script( 'sec-snap', get_template_directory_uri() . '/script/vendor/Snap.svg/dist/snap.svg.js', array(), '', true );
+
         // chroma
         // wp_register_script( 'sec-chroma', get_template_directory_uri() . '/script/vendor/chroma-js/chroma.js', array(), '', true );
 
@@ -99,18 +102,13 @@ function sec_scripts_and_styles() {
         // enqueue scripts
         wp_enqueue_script( 'sec-modernizr' );
         wp_enqueue_script( 'sec-jquery' );
-        // wp_enqueue_script( 'sec-isotope' );
-        // wp_enqueue_script( 'sec-isotope-fitrows' );
-        // wp_enqueue_script( 'sec-isotope-masonry' );
-        // wp_enqueue_script( 'sec-isotope-vertical' );
         wp_enqueue_script( 'sec-svg-injector' );
-        // wp_enqueue_script( 'sec-chroma' );
+        wp_enqueue_script( 'sec-snap' );
         wp_enqueue_script( 'sec-waypoints' );
         wp_enqueue_script( 'sec-waypoints-inview' );
         wp_enqueue_script( 'sec-verge' );
         wp_enqueue_script( 'sec-transit' );
         wp_enqueue_script( 'sec-fullpagejs' );
-        // wp_enqueue_script( 'sec-flexslider' );
         wp_enqueue_script( 'sec-formstone-core' );
         wp_enqueue_script( 'sec-formstone-mediaquery' );
         wp_enqueue_script( 'sec-formstone-touch' );

@@ -1,5 +1,5 @@
 var Masterplan = {
-    inject: inject
+    setup: setup
 };
 
 function inject() {
@@ -10,6 +10,39 @@ function inject() {
 
     if ( typeof SVGInjector === 'function' && $el.length ) {
         SVGInjector( $el[0] );
+    }
+}
+
+function setup() {
+
+    if ( !$('#hsMasterplan').length ) return;
+
+    var $parentHTML = $('#hsMasterplan')
+    ,   $parentSVG = $parentHTML.find('.mp-svg')
+    ,   $spots = $parentSVG.find('.spot')
+    ;
+
+    $spots.each( function( i ) {
+        var $spot = $(this);
+        
+        $spot.hover(
+            function(e) {
+                spotEnter( $spot );
+            },
+            function(e) {
+                spotLeave( $spot );
+            }
+        );
+    });
+
+    function spotEnter( $el ) {
+        var $parent = $el.closest('.mp-area');
+        $parent[0].addClass('is-hovered');
+    }
+
+    function spotLeave( $el ) {
+        var $parent = $el.closest('.mp-area');
+        $parent[0].removeClass('is-hovered');
     }
 }
 
