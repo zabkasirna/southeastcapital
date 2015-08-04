@@ -19,7 +19,7 @@ function layout() {
 
     $fpEl.fullpage({
         sectionSelector: '.home-section',
-        anchors: ['concept', 'projects', 'exciting', 'masterplan', 'updates', 'location', 'contact'],
+        anchors: ['concept', 'projects', 'masterplan', 'exciting', 'updates', 'location', 'contact'],
         // autoScrolling: false,
         normalScrollElements: '.bodycopy'
     });

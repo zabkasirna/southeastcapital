@@ -76,18 +76,18 @@ get_header(); ?>
                                         <p class="bodycopy"><?php echo $project_body; ?></p>
                                     </div>
 
-                                    <a class="hsc-btn" href="javascript:void(0);">Find More<span class="gt">&gt;</span></a>
+                                    <a class="hsc-btn" href="#masterplan">Find More<span class="gt">&gt;</span></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="home-section" data-anchor="exciting">
-                <h1>EXCITING</h1>
-            </section>
             <section class="home-section" data-anchor="masterplan">
                 <h1>MASTERPLAN</h1>
+            </section>
+            <section class="home-section" data-anchor="exciting">
+                <h1>EXCITING</h1>
             </section>
             <section class="home-section" data-anchor="updates">
                 <h1>UPDATES</h1>
