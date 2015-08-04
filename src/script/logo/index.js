@@ -32,7 +32,7 @@ function insertToNav( initial ) {
     if ( initial ) $('#main-header').removeClass('on-layout');
 }
 
-function releaseFromNav() {
+function releaseFromNav( initial ) {
     if ( !$('#main-header').length ||
         !$('#logo').length
     ) return;
@@ -41,8 +41,12 @@ function releaseFromNav() {
     ,   $containerTarget = $('#main-header')
     ;
 
+    if ( initial ) $('#main-header').removeClass('on-layout');
+    
     if ( $logo.parent().attr('id') === 'main-header' ) return;
     $logo.prependTo( $containerTarget );
+
+    console.log(initial);
 }
 
 module.exports = Logo;

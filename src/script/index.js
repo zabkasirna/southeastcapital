@@ -35,6 +35,7 @@ var Signature = require('./signature')
         // Logo
         Logo.injectSVG();
         if ( MQ.getViewportW() > MQ.bp.tp.min ) Logo.insertToNav( true );
+        else Logo.releaseFromNav( true );
 
         // Home
         Home.layout();
