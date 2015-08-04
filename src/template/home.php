@@ -12,9 +12,13 @@ get_header(); ?>
     $concept_bgi = get_field( 'concept_bgi', 'option' )['url'];
     // debuggrr( $concept_bgi );
 
-    /*---- {{ DATA: CONCEPT IMAGE }} ----*/
+    /*---- {{ DATA: PROJECT IMAGE }} ----*/
     $project_bgi = get_field( 'project_bgi', 'option' )['url'];
     // debuggrr( $project_bgi );
+    
+    /*---- {{ DATA: PROJECT BODY }} ----*/
+    $project_body = get_field( 'project_body', 'option' );
+    // debuggrr( $project_body );
 ?>
 
     <main
@@ -68,7 +72,10 @@ get_header(); ?>
                         <div class="hsc-body-outer">
                             <div class="hsc-body-inner">
                                 <div class="hsc-body">
-                                    <div class="hsc-body-content"></div>
+                                    <div class="hsc-body-content">
+                                        <p class="bodycopy"><?php echo $project_body; ?></p>
+                                        <a class="hsc-btn" href="javascript:void(0);">Find More<span class="gt">&gt;</span></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
