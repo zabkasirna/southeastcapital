@@ -1,13 +1,15 @@
 var Home = {
     init: init,
     layout: layout,
-    initConcept: initConcept
+    initConcept: initConcept,
+    initProject: initProject
 };
 
 function init() {
     var _self = this;
 
     _self.initConcept();
+    _self.initProject();
 }
 
 function layout() {
@@ -40,6 +42,22 @@ function initConcept() {
     $el.on('loaded.background', function(e) {
         $preloader.addClass('has-loaded');
         $title.addClass('has-loaded');
+    });
+}
+
+function initProject() {
+    if ( !$('#hsProject').length ) return;
+
+    var $el = $('#hsProject .bgi')
+    ,   _bgiSrc = $el.attr('data-src')
+    // ,   $preloader = $el.closest('.hs-bg').find('.preloader')
+    ;
+
+    $el.background({
+        "source": {
+            "0px": _bgiSrc,
+            "980px": _bgiSrc
+        }
     });
 }
 
