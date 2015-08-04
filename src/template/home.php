@@ -74,8 +74,9 @@ get_header(); ?>
                                 <div class="hsc-body">
                                     <div class="hsc-body-content">
                                         <p class="bodycopy"><?php echo $project_body; ?></p>
-                                        <a class="hsc-btn" href="javascript:void(0);">Find More<span class="gt">&gt;</span></a>
                                     </div>
+
+                                    <a class="hsc-btn" href="javascript:void(0);">Find More<span class="gt">&gt;</span></a>
                                 </div>
                             </div>
                         </div>

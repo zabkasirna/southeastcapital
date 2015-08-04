@@ -86,6 +86,26 @@
             }
         }
     }
+
+    .hsc-btn {
+        font-size: 11px;
+        margin: 0;
+        position: absolute !important;
+
+        width: 50%;
+        right: 25%;
+        bottom: x(1);
+
+        @media screen and (min-width: 980px) {
+            width: 30%;
+            right: 10%;
+            bottom: x(1);
+        }
+
+        @include sec-btn;
+
+        .gt { margin-left: 1em; }
+    }
 }
 
 .home-section#hsProject {
