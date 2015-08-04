@@ -50,7 +50,7 @@ function initProject() {
 
     var $el = $('#hsProject .bgi')
     ,   _bgiSrc = $el.attr('data-src')
-    // ,   $preloader = $el.closest('.hs-bg').find('.preloader')
+    ,   $preloader = $el.closest('.hs-bg').find('.preloader')
     ;
 
     $el.background({
@@ -58,6 +58,11 @@ function initProject() {
             "0px": _bgiSrc,
             "980px": _bgiSrc
         }
+    });
+
+    $el.on('loaded.background', function(e) {
+        $preloader.addClass('has-loaded');
+        $title.addClass('has-loaded');
     });
 }
 

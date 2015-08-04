@@ -1,0 +1,9 @@
+.home-section#hsProject {
+    .bgi {
+        @include clearfix;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-color: rgba( $black, .5 );
+    }
+}
