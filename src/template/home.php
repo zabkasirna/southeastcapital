@@ -14,7 +14,7 @@ get_header(); ?>
 
     /*---- {{ DATA: CONCEPT IMAGE }} ----*/
     $project_bgi = get_field( 'project_bgi', 'option' )['url'];
-    debuggrr( $project_bgi );
+    // debuggrr( $project_bgi );
 ?>
 
     <main
@@ -59,7 +59,11 @@ get_header(); ?>
                 <div class="hs-content">
                     <div class="inner">
                         <div class="hsc-title">
-                            <!--  -->
+                            <div class="bgi-outer">
+                                <div class="bgi"
+                                    data-src='<?php echo bloginfo('template_url') . "/uploads/images/living/connected.png"; ?>'
+                                ></div>
+                            </div>
                         </div>
                     </div>
                 </div>

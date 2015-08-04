@@ -48,21 +48,34 @@ function initConcept() {
 function initProject() {
     if ( !$('#hsProject').length ) return;
 
-    var $el = $('#hsProject .bgi')
-    ,   _bgiSrc = $el.attr('data-src')
-    ,   $preloader = $el.closest('.hs-bg').find('.preloader')
+    var $el1 = $('#hsProject .hs-bg .bgi')
+    ,   _bgi1Src = $el1.attr('data-src')
+    ,   $preloader = $el1.closest('.hs-bg').find('.preloader')
+    ,   $title = $el1.closest('#hsProject').find('.hs-content .hsc-title')
+    ,   $el2 = $title.find('.bgi')
+    ,   _bgi2Src = $el2.attr('data-src')
     ;
 
-    $el.background({
+    $el1.background({
         "source": {
-            "0px": _bgiSrc,
-            "980px": _bgiSrc
+            "0px": _bgi1Src,
+            "980px": _bgi1Src
         }
     });
 
-    $el.on('loaded.background', function(e) {
+    // console.log( $title, $el2, _bgi2Src );
+    // console.log( $el1.closest('#hsProject').find('.hs-content') );
+
+    $el2.background({
+        "source": {
+            "0px": _bgi2Src,
+            "980px": _bgi2Src
+        }
+    });
+
+    $el1.on('loaded.background', function(e) {
         $preloader.addClass('has-loaded');
-        $title.addClass('has-loaded');
+        // $title.addClass('has-loaded');
     });
 }
 
