@@ -82,6 +82,8 @@
 
 <div id="page" class="hfeed site">
 
+<?php if ( $__post_slug !== 'test' ) : ?>
+
     <header id="main-header" class="on-layout">
 
         <div class="faux-bg"></div>
@@ -110,8 +112,8 @@
                 'after'           => '',
             );
 
-            if ( $__post_slug !== 'test' ) {
-                wp_nav_menu( $nav_main_defaults );
-            }
+            wp_nav_menu( $nav_main_defaults );
         ?>
+
     </header>
+<?php endif; ?>

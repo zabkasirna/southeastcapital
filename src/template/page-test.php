@@ -15,8 +15,8 @@ get_header(); ?>
         role="main"
     >
 
-        <section id="test_site" class="g-all-full">
-            <h3>Site Specific Implementation *</h3>
+        <section id="header_nav_test" class="g-all-full">
+            <h3>Header Nav Layout *</h3>
             <!--
             <article class="g-d-24 g-hr-24 g-l-24 g-tp-12 g-hl-6 g-h-6">
                 <div class="g-d-3 g-hr-3 g-l-3 g-tp-12 g-hl-6 g-h-6">
@@ -56,11 +56,9 @@ get_header(); ?>
                         <div class="mueller-test-box"><p>C</p></div>
                     </div>
                     
-                    
                     <div id="logo">
                         <div class="mueller-test-box"><p>LOGO</p></div>
                     </div>
-                    
                     
                     <div class="menu-item">
                         <div class="mueller-test-box"><p>D</p></div>
@@ -73,6 +71,28 @@ get_header(); ?>
                     </div>
                 </article>
             </div>
+        </section>
+
+        <section id="project_content_test" class="g-all-full">
+            <h3>Project Content *</h3>
+            
+            <!--
+            <article class="g-d-24 g-hr-24 g-l-24 g-tp-12 g-hl-6 g-h-6">
+                <div
+                    class="g-d-16 g-hr-16 g-l-16 g-tp-10 g-hl-4 g-h-4 g-d-push8 g-hr-push8 g-l-push8 g-tp-push0 g-hl-push0 g-h-push0 g-all-fl"
+                >
+                    <div class="mueller-test-box"><p>CONTENT</p></div>
+                </div>
+            </article>
+            -->
+            <article class="hsc-body-outer">
+                <div class="hsc-body-inner">
+                    <div class="hsc-body" >
+                        <div class="mueller-test-box"><p>CONTENT</p></div>
+                    </div>
+                </div>
+            </article>
+
         </section>
 
         <!--
@@ -92,6 +112,7 @@ get_header(); ?>
         </section>
         -->
 
+        <!--
         <section id="examples" class="g-all-full">
             <h3>Media</h3>
             <article id="example_media" class="g-d-24 g-hr-24 g-l-24 g-tp-12 g-hl-6 g-h-6">
@@ -128,6 +149,7 @@ get_header(); ?>
                 </div>
             </article>
         </section>
+        -->
 
         <!--
         <section>

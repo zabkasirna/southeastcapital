@@ -1,0 +1,26 @@
+.hsc-body-outer > .hsc-body-inner {
+
+    @extend .g-d-24;
+    @extend .g-hr-24;
+    @extend .g-l-24;
+    @extend .g-tp-12;
+    @extend .g-hl-6;
+    @extend .g-h-6;
+
+    .hsc-body {
+        @extend .g-d-16;
+        @extend .g-hr-16;
+        @extend .g-l-16;
+        @extend .g-tp-10;
+        @extend .g-hl-4;
+        @extend .g-h-4;
+        @extend .g-d-push8;
+        @extend .g-hr-push8;
+        @extend .g-l-push8;
+        @extend .g-tp-push0;
+        @extend .g-hl-push0;
+        @extend .g-h-push0;
+        @extend .g-all-fl;
+    }
+
+}
