@@ -11,7 +11,7 @@
 <?php get_header(); ?>
 
     <main
-        class="<?php echo get_post_type(); ?>"
+        class="type-<?php echo get_post_type(); ?>"
         id="main"
         role="main"
     >
@@ -49,11 +49,22 @@
 
         <?php if ( isset( $_x_galls ) && array_filter( $_x_galls ) ) : ?>
 
-            <div class="loop-excitement-gall" style="position: absolute; top: 50vh;">
+            <div class="loop-excitement-gall">
                 
                 <?php foreach ( $_x_galls as $_x_gall_key => $_x_gall_val ) : ?>
                     
-                    <a href="<?php echo $_x_gall_val['url']; ?>">AAA</a>
+                    <a class="gall-link" href="javascript:void(0);">
+                        <div
+                            class="gall-img"
+                            data-src="<?php echo $_x_gall_val['url']; ?>"
+                        ></div>
+                        <div class="gall-title">
+                            <p><?php echo $_x_gall_val['title']; ?></p>
+                        </div>
+                        <div class="gall-caption">
+                            <?php echo $_x_gall_val['caption']; ?>
+                        </div>
+                    </a>
 
                 <?php endforeach; ?>
             </div>

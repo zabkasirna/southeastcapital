@@ -1,0 +1,39 @@
+.type-excitement .loop-excitement-gall {
+
+    @include clearfix;
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    
+    .gall-link {
+        position: relative;
+        display: block;
+        float: left;
+        width: 25%;
+        height: x(6);
+        margin: 0;
+        padding: 0 x(1);
+
+        .gall-img {
+            width: 100%;
+            height: x(4);
+        }
+
+        .gall-title {
+            width: 100%;
+            height: x(2);
+            background-color: $sc-copper;
+            color: $white;
+        }
+
+        .js-gall-caption {
+            position: absolute;
+            top: 0; left: 0;
+            pointer-events: none;
+            z-index: -1;
+            width: 1px; height: 1px;
+            overflow: hidden;
+            display: none;
+        }
+    }
+}
