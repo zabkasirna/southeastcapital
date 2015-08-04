@@ -10,7 +10,11 @@ get_header(); ?>
 <?php
     /*---- {{ DATA: CONCEPT IMAGE }} ----*/
     $concept_bgi = get_field( 'concept_bgi', 'option' )['url'];
-    debuggrr( $concept_bgi );
+    // debuggrr( $concept_bgi );
+
+    /*---- {{ DATA: CONCEPT IMAGE }} ----*/
+    $project_bgi = get_field( 'project_bgi', 'option' )['url'];
+    debuggrr( $project_bgi );
 ?>
 
     <main
@@ -43,8 +47,19 @@ get_header(); ?>
                     </div>
                 </div>
             </section>
-            <section class="home-section" data-anchor="projects">
-                <h1>PROJECTS</h1>
+            <section class="home-section" id="hsProject"  data-anchor="projects">
+                <div class="hs-bg">
+                    <div class="bgi"
+                        data-src="<?php echo $project_bgi; ?>"
+                    ></div>
+                </div>
+                <div class="hs-content">
+                    <div class="inner">
+                        <div class="hsc-title">
+                            <!--  -->
+                        </div>
+                    </div>
+                </div>
             </section>
             <section class="home-section" data-anchor="exciting">
                 <h1>EXCITING</h1>
