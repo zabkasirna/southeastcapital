@@ -85,10 +85,12 @@ get_header(); ?>
                 </div>
             </article>
             -->
-            <article class="hsc-body-outer">
-                <div class="hsc-body-inner">
-                    <div class="hsc-body" >
-                        <div class="mueller-test-box"><p>CONTENT</p></div>
+            <article class="home-section" id="hsProject">
+                <div class="hsc-body-outer">
+                    <div class="hsc-body-inner">
+                        <div class="hsc-body" >
+                            <div class="mueller-test-box"><p>CONTENT</p></div>
+                        </div>
                     </div>
                 </div>
             </article>

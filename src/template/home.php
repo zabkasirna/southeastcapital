@@ -67,7 +67,9 @@ get_header(); ?>
                         </div>
                         <div class="hsc-body-outer">
                             <div class="hsc-body-inner">
-                                <div class="hsc-body"></div>
+                                <div class="hsc-body">
+                                    <div class="hsc-body-content"></div>
+                                </div>
                             </div>
                         </div>
                     </div>

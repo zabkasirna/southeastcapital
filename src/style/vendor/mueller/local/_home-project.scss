@@ -1,4 +1,4 @@
-.hsc-body-outer > .hsc-body-inner {
+.home-section#hsProject .hsc-body-outer > .hsc-body-inner {
 
     @extend .g-d-24;
     @extend .g-hr-24;
@@ -13,7 +13,7 @@
         @extend .g-l-16;
         @extend .g-tp-10;
         @extend .g-hl-4;
-        @extend .g-h-4;
+        @extend .g-h-6;
         @extend .g-d-push8;
         @extend .g-hr-push8;
         @extend .g-l-push8;
@@ -22,5 +22,4 @@
         @extend .g-h-push0;
         @extend .g-all-fl;
     }
-
 }
