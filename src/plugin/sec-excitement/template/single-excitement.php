@@ -41,6 +41,8 @@
             endif;
         ?>
 
+            <div class="excitement-header"></div>
+
         <?php
             /**------------------------------------------------------**\
              * TEMPLATE: EXCITEMENT GALLERY
@@ -50,6 +52,8 @@
         <?php if ( isset( $_x_galls ) && array_filter( $_x_galls ) ) : ?>
 
             <div class="loop-excitement-gall">
+
+                <div class="inner">
                 
                 <?php foreach ( $_x_galls as $_x_gall_key => $_x_gall_val ) : ?>
                     
@@ -61,12 +65,27 @@
                         <div class="gall-title">
                             <p><?php echo $_x_gall_val['title']; ?></p>
                         </div>
-                        <div class="gall-caption">
+                        <div class="js-gall-caption">
                             <?php echo $_x_gall_val['caption']; ?>
                         </div>
                     </a>
 
                 <?php endforeach; ?>
+                </div>
+            </div>
+
+            <div class="excitement-modal">
+                <div class="modal-overlay"></div>
+                <div class="modal-content">
+                    <div class="modal-close"></div>
+                    <div class="modal-img"></div>
+                    <div class="modal-body">
+                        <div class="title">
+                            <p></p>
+                        </div>
+                        <div class="desc"></div>
+                    </div>
+                </div>
             </div>
 
         <?php endif; ?>
