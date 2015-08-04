@@ -84,7 +84,15 @@ get_header(); ?>
                 </div>
             </section>
             <section class="home-section" data-anchor="masterplan">
-                <h1>MASTERPLAN</h1>
+                <div class="hs-bg">
+                    <div class="mp-svg-wrapper">
+                        <img
+                            src='<?php echo bloginfo("template_url") . "/uploads/images/masterplan/masterplan.svg"; ?>'
+                            alt=""
+                            class="mp-svg"
+                        >
+                    </div>
+                </div>
             </section>
             <section class="home-section" data-anchor="exciting">
                 <h1>EXCITING</h1>
