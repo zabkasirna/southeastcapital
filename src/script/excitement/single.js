@@ -1,12 +1,26 @@
 var ExcitementSingle = {
-    initImage: initImage
+    initGallery: initGallery
 };
 
-function initImage() {
+function initGallery() {
 
     if ( !$('.loop-excitement-gall').length || !$('.gall-img').length ) return;
 
-    console.log('EXCITING!');
+    var $imgs = $('.gall-img');
+
+    $imgs.each( function( i ) {
+        var $el = $(this)
+        ,   _dataSrc = $(this).data('src')
+        ;
+
+        $el.background({
+            "source": {
+                "0px": _dataSrc
+            }
+        });
+    });
+
+    // 
 
 }
 

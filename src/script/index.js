@@ -79,7 +79,7 @@ var Signature = require('./signature')
         Home.init();
 
         // Excitement
-        Excitement.Single.initImage();
+        Excitement.Single.initGallery();
 
         // MQ Callback
         $(window).on("mqchange.mediaquery", function(e, state) {
