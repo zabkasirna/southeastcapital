@@ -8,7 +8,6 @@
 get_header(); ?>
 
     <main
-        class="<?php echo get_post_type(); ?>"
         id="main"
         role="main"
     >

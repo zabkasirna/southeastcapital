@@ -19,16 +19,16 @@ get_header(); ?>
     /*---- {{ DATA: PROJECT BODY }} ----*/
     $project_body = get_field( 'project_body', 'option' );
     // debuggrr( $project_body );
+    
+    /*---- {{ DATA: POST TYPES }} ----*/
+    $sec_post_types = get_post_types();
+    // debuggrr( $sec_post_types );
 ?>
 
     <main
         id="main"
         role="main"
     >
-        <?php
-            $sec_post_types = get_post_types();
-            debuggrr( $sec_post_types );
-        ?>
 
         <div id="js-fullpage">
             <section class="home-section" id="hsConcept" data-anchor="concept">
@@ -94,7 +94,26 @@ get_header(); ?>
                 </div>
             </section>
             <section class="home-section" data-anchor="exciting">
-                <h1>EXCITING</h1>
+
+                <?php
+                    if ( have_posts() ) :
+
+                        while ( have_posts() ) : the_post();
+
+                            if ( get_post_type() === "excitement" ) :
+                ?>
+
+                    <?php debuggrr( get_the_title() ); ?>
+
+                <?php
+
+                            endif;
+
+                        endwhile;
+
+                    endif;
+                ?>
+
             </section>
             <section class="home-section" data-anchor="updates">
                 <h1>UPDATES</h1>
