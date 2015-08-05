@@ -33,6 +33,9 @@ function sec_conf() {
     // theme support after theme setup
     sec_theme_support();
 
+    // change post type query on home page
+    add_filter( 'pre_get_posts', 'sec_get_posts' );
+
     // clean up random code around images
     add_filter( 'the_content', 'sec_filter_ptags_on_images' );
 

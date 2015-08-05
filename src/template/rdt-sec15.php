@@ -204,4 +204,11 @@ function move_author_to_publish_metabox() {
     echo '</div>';
 }
 
+function sec_get_posts( $query ) {
+    if ( is_home() && $query->is_main_query() || is_feed() )
+        $query->set( 'post_type', array( 'post', 'page', 'excitement', 'update' ) );
+
+    return $query;
+}
+
 ?>

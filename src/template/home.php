@@ -22,10 +22,13 @@ get_header(); ?>
 ?>
 
     <main
-        class="<?php echo get_post_type(); ?>"
         id="main"
         role="main"
     >
+        <?php
+            $sec_post_types = get_post_types();
+            debuggrr( $sec_post_types );
+        ?>
 
         <div id="js-fullpage">
             <section class="home-section" id="hsConcept" data-anchor="concept">
