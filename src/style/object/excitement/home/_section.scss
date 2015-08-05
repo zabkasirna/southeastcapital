@@ -19,8 +19,13 @@
         width: 50%;
         overflow: hidden;
 
-        // &.test {
-        //     border: 1px solid gold;
-        // }
+        &.test {
+            border: 1px solid gold;
+        }
+
+        .bgi {
+            width: 100%;
+            height: 100%;
+        }
     }
 }

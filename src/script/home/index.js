@@ -5,7 +5,8 @@ var Home = {
     layout: layout,
     initConcept: initConcept,
     initProject: initProject,
-    initMasterplan: initMasterplan
+    initMasterplan: initMasterplan,
+    initExcitement: initExcitement
 };
 
 function init() {
@@ -14,6 +15,7 @@ function init() {
     _self.initConcept();
     _self.initProject();
     _self.initMasterplan();
+    _self.initExcitement();
 }
 
 function layout() {
@@ -93,7 +95,23 @@ function initExcitement() {
     if ( !$('#hsExcitement').length ) return;
 
     var $sectionWrapper = $('#hsExcitement')
-    ,   $loopItems;
+    ,   $loopWrapper = $sectionWrapper.find('.hsc-body-outer')
+    ,   $postItems = $sectionWrapper.find('.hsc-body')
+    ;
+
+    $postItems.each( function( i ) {
+
+        var $el = $(this)
+        ,   $bgi = $el.find('.bgi')
+        ,   _dataSrc = $bgi.data('src')
+        ;
+
+        $bgi.background({
+            "source": {
+                "0px": _dataSrc
+            }
+        });
+    });
 }
 
 module.exports = Home;
