@@ -2,10 +2,10 @@
     display: block;
     text-align: center;
     color: $sc-copper;
-    position: relative;
+    // position: relative;
     text-transform: uppercase;
 
-    transition-property: background-color, color;
+    transition-property: all;
     transition-duration: .1s;
     transition-delay: .2s;
     transition-easing-function: ease-out;

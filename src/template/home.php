@@ -119,12 +119,26 @@ get_header(); ?>
                         data-src='<?php echo $_excitement_thumb[0]; ?>'
                     ></div>
 
+                    <div class="faux-hit js-hit">
+
+                        <a href="<?php echo the_permalink(); ?>"
+                            class="hsex-btn">
+                            <svg class="high-arrow-svg"
+                                width="48px" height="60px"
+                                x="0px" y="0px"
+                                viewBox="0 0 48 60"
+                                >
+                                <polyline class="high-arrow-line" points="29,12.179 19,29.5 29,46.821 "/>
+                            </svg>
+                            <span class="hsex-text"><?php echo the_title(); ?></span>
+                        </a>
+
+                    </div>
                 </div>
 
                 <?php endif; ?>
 
                 <?php
-
                             endif;
 
                         endwhile;

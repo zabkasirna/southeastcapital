@@ -111,6 +111,28 @@ function initExcitement() {
                 "0px": _dataSrc
             }
         });
+
+        var $hit = $el.find('.js-hit');
+        $hit.hover(
+            function() {
+                $hit.closest('.hsc-body')
+                    .attr('class', 'hsc-body has-entered')
+                    .siblings()
+                    .attr('class', 'hsc-body has-leave')
+                ;
+
+                console.log( 'enter', $hit.closest('.hsc-body').index() );
+            },
+            function() {
+                $hit.closest('.hsc-body')
+                    .attr('class', 'hsc-body has-leave')
+                    .siblings()
+                    .attr('class', 'hsc-body has-entered')
+                ;
+
+                console.log( 'leave', $hit.closest('.hsc-body').index() );
+            }
+        );
     });
 }
 
