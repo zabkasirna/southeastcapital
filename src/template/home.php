@@ -94,6 +94,7 @@ get_header(); ?>
                 </div>
             </section>
             <section class="home-section" id="hsExcitement" data-anchor="exciting">
+                <div class="hsc-body-outer">
 
                 <?php
                     if ( have_posts() ) :
@@ -108,7 +109,17 @@ get_header(); ?>
                     if ( $_excitement_slug === "features" || $_excitement_slug === "public-spaces" ) :
                 ?>
 
-                <div class="hsc-body"></div>
+                <div class="hsc-body">
+                    <?php
+                        $_excitement_thumb = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' );
+                        debuggrr( $_excitement_thumb );
+                    ?>
+
+                    <div class="bgi"
+                        data-src='<?php echo $_excitement_thumb[0]; ?>'
+                    ></div>
+
+                </div>
 
                 <?php endif; ?>
 
@@ -120,7 +131,7 @@ get_header(); ?>
 
                     endif;
                 ?>
-
+                </div>
             </section>
             <section class="home-section" data-anchor="updates">
                 <h1>UPDATES</h1>

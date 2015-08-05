@@ -89,4 +89,11 @@ function initMasterplan() {
     Masterplan.setup();
 }
 
+function initExcitement() {
+    if ( !$('#hsExcitement').length ) return;
+
+    var $sectionWrapper = $('#hsExcitement')
+    ,   $loopItems;
+}
+
 module.exports = Home;
