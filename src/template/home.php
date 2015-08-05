@@ -93,7 +93,7 @@ get_header(); ?>
                     </div>
                 </div>
             </section>
-            <section class="home-section" data-anchor="exciting">
+            <section class="home-section" id="hsExcitement" data-anchor="exciting">
 
                 <?php
                     if ( have_posts() ) :
@@ -103,7 +103,14 @@ get_header(); ?>
                             if ( get_post_type() === "excitement" ) :
                 ?>
 
-                    <?php debuggrr( get_the_title() ); ?>
+                <?php
+                    $_excitement_slug = basename( get_permalink() );
+                    if ( $_excitement_slug === "features" || $_excitement_slug === "public-spaces" ) :
+                ?>
+
+                <div class="hsc-body"></div>
+
+                <?php endif; ?>
 
                 <?php
 
