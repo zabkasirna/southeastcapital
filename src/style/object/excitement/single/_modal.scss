@@ -1,0 +1,108 @@
+.excitement-modal {
+
+    position: fixed;
+    top: 0; right: 0; bottom: 0; left: 0;
+    z-index: 999;
+    pointer-events: none;
+    transition: opacity .5s ease-out;
+    opacity: 0;
+
+    .modal-overlay {
+        position: absolute;
+        top: 0;  left: 0;
+        width: 100vw;
+        height: 100vh;
+        // pointer-events: none;
+        // z-index: -1;
+    }
+
+    .modal-content {
+        transition: top .5s ease-out;
+        @include clearfix;
+        position: absolute;
+        max-width: x(37.5);
+        width: x(37.5);
+        max-height: x(12.5);
+        height: x(12.5);
+        overflow: hidden;
+        top: -100%; left: 50%;
+        margin: x(-6.25) 0 0 x(-18.75);
+        padding: x(.5);
+        background-color: rgba( $sc-copper, .95 );
+    }
+
+    .modal-close {
+        display: block;
+        position: absolute;
+        top: 0;  right: 0;
+        height: x(1);
+        width: x(1);
+        margin: 0;
+        background-color: $white;
+        line-height: x(1);
+        font-size: x(1);
+        text-align: center;
+        color: $sc-copper;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        & > span {
+            display: block;
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .modal-img,
+    .modal-body {
+        width: 50%;
+        max-width: 50%;
+        height: 100%;
+        max-height: 100%;
+        overflow: hidden;
+        float: right;
+    }
+
+    .modal-img {
+        border: 1px solid rgba($sc-grey, .5);
+    }
+
+    .modal-body {
+        padding: x(1);
+
+        .title {
+            width: 100%;
+            height: x(2);
+            overflow: hidden;
+            border-bottom: 1px solid $white;
+            margin-bottom: x(1);
+            p {
+                width: 100%;
+                line-height: x(2);
+                height: 100%;
+                font-size: 20px;
+                font-family: $ff-sans-semibold;
+                margin: 0;
+            }
+        }
+
+        .desc {
+            max-height: x(7);
+            overflow: scroll;
+        }
+    }
+
+    &.is-active {
+        display: block;
+        opacity: 1;
+        transition: opacity .5s ease-out;
+        pointer-events: visible;
+
+        .modal-content {
+            transition: top .5s ease-out;
+            top: 50%;
+        }
+    }
+}

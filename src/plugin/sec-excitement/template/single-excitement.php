@@ -77,13 +77,16 @@
             <div class="excitement-modal">
                 <div class="modal-overlay"></div>
                 <div class="modal-content">
-                    <div class="modal-close"></div>
-                    <div class="modal-img"></div>
+                    <a href="#"
+                        class="modal-close"
+                    ><span>&times;</span></a>
                     <div class="modal-body">
                         <div class="title">
                             <p></p>
                         </div>
-                        <div class="desc"></div>
+                        <div class="desc">
+                            <p></p>
+                        </div>
                     </div>
                 </div>
             </div>
