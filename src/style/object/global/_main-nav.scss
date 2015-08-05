@@ -82,3 +82,9 @@
     & > .menu-item {
     }
 }
+
+.single-excitement #nav-lists {
+    & > .menu-item {
+        visibility: hidden;
+    }
+}

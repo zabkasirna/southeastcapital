@@ -54,8 +54,9 @@
     $__post = $wp_query->post;
     $__post_id = $__post->ID;
     $__post_slug = $__post->post_name;
+    $__post_type = $__post->post_type;
 
-    // debuggrr( $__post_slug );
+    // debuggrr( $__post );
 ?>
 
 <?php
@@ -90,7 +91,8 @@
 
         <div id="logo">
             <div class="faux-bg"><div class="faux-arrow"></div></div>
-            <a class="logo-anchor" href="#">
+
+            <a class="logo-anchor" href="<?php echo home_url( '/' ); ?>">
                 <img
                     class="js-svg-injector logo-img"
                     src="<?php echo get_template_directory_uri() . '/uploads/images/logo/logo.svg'; ?>"

@@ -36,7 +36,7 @@
 
                 endforeach;
 
-                debuggrr( $_x_galls );
+                // debuggrr( $_x_galls );
 
             endif;
         ?>
