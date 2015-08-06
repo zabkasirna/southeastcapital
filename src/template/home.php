@@ -54,6 +54,7 @@ get_header(); ?>
                     </div>
                 </div>
             </section>
+
             <section class="home-section" id="hsProject" data-anchor="projects">
                 <div class="hs-bg">
                     <div class="bgi"
@@ -86,6 +87,7 @@ get_header(); ?>
                     </div>
                 </div>
             </section>
+
             <section class="home-section" id="hsMasterplan" data-anchor="masterplan">
                 <div class="hsc-body">
                     <div class="mp-svg-wrapper">
@@ -93,6 +95,7 @@ get_header(); ?>
                     </div>
                 </div>
             </section>
+
             <section class="home-section" id="hsExcitement" data-anchor="exciting">
                 <div class="hsc-body-outer">
 
@@ -237,11 +240,14 @@ get_header(); ?>
                     endif;
                 ?>
             </section>
+
             <section class="home-section" id="hsLocation" data-anchor="location">
                 <div id="sec_map"></div>
             </section>
-            <section class="home-section" data-anchor="contact">
-                <?php echo do_shortcode( '[contact-form-7 id="40" title="SC Contact Form"]' ); ?>
+
+            <section class="home-section" id="hsContact" data-anchor="contact">
+                <?php /*echo do_shortcode( '[contact-form-7 id="40" title="SC Contact Form"]' );*/ ?>
+                <div class="faux-bg"></div>
             </section>
         </div>
 
