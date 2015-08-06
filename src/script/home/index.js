@@ -27,7 +27,7 @@ function layout() {
         sectionSelector: '.home-section',
         anchors: ['concept', 'projects', 'masterplan', 'exciting', 'updates', 'location', 'contact'],
         // autoScrolling: false,
-        normalScrollElements: '.bodycopy'
+        normalScrollElements: '.bodycopy, .home-section#hsUpdate .loop'
     });
 }
 

@@ -155,6 +155,16 @@ get_header(); ?>
             </section>
 
             <section class="home-section" id="hsUpdate" data-anchor="updates">
+                
+                <div class="faux-bg"></div>
+
+                <div class="update-header">
+                    <h2 class="update-title"
+                        ><span class="first">NEWS &amp;</span
+                        ><span class="second">UPDATES</span></h2
+                    >
+                </div>
+
                 <?php
 
                     /**------------------------------------------------------**\
@@ -164,7 +174,6 @@ get_header(); ?>
 
                     if ( have_posts() ) :
                 ?>
-
                 <div class="loops">
 
                 <?php
@@ -178,22 +187,31 @@ get_header(); ?>
                      * DATA: POST WP PT.
                      **------------------------------------------------------**/
 
-                    $__update_thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'thumbnail' );
+                    $__update_thumb = 
+                        wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'thumbnail' ) ?:
+                        ''
+                    ;
+                    // debuggrr( $__update_thumb );
 
                 ?>
 
                     <div class="loop-item">
-                        <a class="item-img-outer"
+                        <?php if ( $__update_thumb !== '' ) : ?>
+                        <a class="item-thumb-outer"
                             href="<?php echo the_permalink(); ?>"
                             >
-                            <img src='<?php echo $__update_thumb[0]; ?>' alt="">
+                            <img
+                                class="item-thumb"
+                                width="100%"
+                                src='<?php echo $__update_thumb[0]; ?>'
+                                alt=""
+                            >
                         </a>
+                        <?php endif; ?>
 
                         <div class="item-header">
-                            <p class="item-time"><?php echo the_time(); ?></p>
-                            <a class="item-title-link"
-                                href="<?php echo the_permalink(); ?>"
-                                >
+                            <p class="item-time"><?php echo the_time('F jS, Y'); ?></p>
+                            <a class="item-title-link" href="<?php echo the_permalink(); ?>" >
                                 <h3 class="item-title"><?php echo the_title(); ?></h3>
                             </a>
                         </div>
@@ -201,6 +219,10 @@ get_header(); ?>
                         <div class="item-body">
                             <?php echo the_excerpt(); ?>
                         </div>
+
+                        <a class="item-link"
+                            href="<?php echo the_permalink(); ?>"
+                        >Read more &nbsp;&gt;</a>
                     </div>
 
                 <?php
