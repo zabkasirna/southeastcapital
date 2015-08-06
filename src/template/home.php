@@ -165,7 +165,7 @@ get_header(); ?>
                     if ( have_posts() ) :
                 ?>
 
-                <div class="loop-wrapper">
+                <div class="loops">
 
                 <?php
                         while ( have_posts() ) : the_post();
@@ -174,8 +174,34 @@ get_header(); ?>
                 ?>
 
                 <?php
-                    debuggrr( get_the_title() );
+                    /**------------------------------------------------------**\
+                     * DATA: POST WP PT.
+                     **------------------------------------------------------**/
+
+                    $__update_thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'thumbnail' );
+
                 ?>
+
+                    <div class="loop-item">
+                        <a class="item-img-outer"
+                            href="<?php echo the_permalink(); ?>"
+                            >
+                            <img src='<?php echo $__update_thumb[0]; ?>' alt="">
+                        </a>
+
+                        <div class="item-header">
+                            <p class="item-time"><?php echo the_time(); ?></p>
+                            <a class="item-title-link"
+                                href="<?php echo the_permalink(); ?>"
+                                >
+                                <h3 class="item-title"><?php echo the_title(); ?></h3>
+                            </a>
+                        </div>
+
+                        <div class="item-body">
+                            <?php echo the_excerpt(); ?>
+                        </div>
+                    </div>
 
                 <?php
                             endif;
