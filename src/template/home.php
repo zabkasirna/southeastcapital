@@ -153,6 +153,7 @@ get_header(); ?>
                 ?>
                 </div>
             </section>
+
             <section class="home-section" id="hsUpdate" data-anchor="updates">
                 <?php
 
@@ -162,7 +163,11 @@ get_header(); ?>
                      **------------------------------------------------------**/
 
                     if ( have_posts() ) :
+                ?>
 
+                <div class="loop-wrapper">
+
+                <?php
                         while ( have_posts() ) : the_post();
 
                             if ( get_post_type() === "post" ) :
@@ -176,7 +181,11 @@ get_header(); ?>
                             endif;
 
                         endwhile;
+                ?>
 
+                </div>
+
+                <?php
                     endif;
                 ?>
             </section>
