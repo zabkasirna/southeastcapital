@@ -97,6 +97,12 @@ get_header(); ?>
                 <div class="hsc-body-outer">
 
                 <?php
+
+                    /**------------------------------------------------------**\
+                     * LOOP: EXCITEMENT CPT.
+                     * Check if current post type is "excitement"
+                     **------------------------------------------------------**/
+
                     if ( have_posts() ) :
 
                         while ( have_posts() ) : the_post();
@@ -112,7 +118,7 @@ get_header(); ?>
                 <div class="hsc-body">
                     <?php
                         $_excitement_thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
-                        debuggrr( $_excitement_thumb );
+                        // debuggrr( $_excitement_thumb );
                     ?>
 
                     <div class="bgi"
@@ -147,8 +153,32 @@ get_header(); ?>
                 ?>
                 </div>
             </section>
-            <section class="home-section" data-anchor="updates">
-                <h1>UPDATES</h1>
+            <section class="home-section" id="hsUpdate" data-anchor="updates">
+                <?php
+
+                    /**------------------------------------------------------**\
+                     * LOOP: POST WP PT.
+                     * Check if current post type is "post"
+                     **------------------------------------------------------**/
+
+                    if ( have_posts() ) :
+
+                        while ( have_posts() ) : the_post();
+
+                            if ( get_post_type() === "post" ) :
+                ?>
+
+                <?php
+                    debuggrr( get_the_title() );
+                ?>
+
+                <?php
+                            endif;
+
+                        endwhile;
+
+                    endif;
+                ?>
             </section>
             <section class="home-section" data-anchor="location">
                 <h1>LOCATION</h1>
