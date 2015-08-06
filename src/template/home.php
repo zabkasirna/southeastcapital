@@ -237,7 +237,7 @@ get_header(); ?>
                     endif;
                 ?>
             </section>
-            <section class="home-section" data-anchor="location">
+            <section class="home-section" id="hsLocation" data-anchor="location">
                 <div id="sec_map"></div>
             </section>
             <section class="home-section" data-anchor="contact">

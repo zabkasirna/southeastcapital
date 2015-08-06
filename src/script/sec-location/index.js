@@ -23,7 +23,7 @@ function init() {
                         "gamma": 0.01
                     },
                     {
-                        "lightness": 20
+                        "lightness": 100
                     }
                 ]
             },
@@ -190,12 +190,13 @@ function init() {
     ;
 
     var mapOptions = {
-        zoom: 11,
-        center: new google.maps.LatLng(40.6700, -73.9400),
-        styles: mapStyles
+        zoom: 15,
+        center: new google.maps.LatLng(-6.187222, 106.819202),
+        styles: mapStyles,
+        scrollwheel: false
     };
 
-    var mapElement = $('#sec_map');
+    var mapElement = $('#sec_map')[0];
 
     var map = new google.maps.Map(mapElement, mapOptions);
 
