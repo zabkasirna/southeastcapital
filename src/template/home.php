@@ -238,7 +238,7 @@ get_header(); ?>
                 ?>
             </section>
             <section class="home-section" data-anchor="location">
-                <h1>LOCATION</h1>
+                <div id="sec_map"></div>
             </section>
             <section class="home-section" data-anchor="contact">
                 <h1>CONTACT</h1>

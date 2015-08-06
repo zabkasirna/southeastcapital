@@ -15,11 +15,11 @@
  */
 
 //
-// SVG — hasClass, addClass, removeClass, toggleClass
+//  SVG — hasClass, addClass, removeClass, toggleClass
 //  Source:
-//   https://gist.github.com/branneman/8436956
+//  https://gist.github.com/branneman/8436956
 //  Taken and adapted from:
-//   http://toddmotto.com/hacking-svg-traversing-with-ease-addclass-removeclass-toggleclass-functions/
+//  http://toddmotto.com/hacking-svg-traversing-with-ease-addclass-removeclass-toggleclass-functions/
 //
 
 if (SVGElement && SVGElement.prototype) {
@@ -56,6 +56,7 @@ var Signature = require('./signature')
 ,   Logo = require('./logo')
 ,   Home = require('./home')
 ,   Excitement = require('./excitement')
+,   SECLocation = require('./sec-location')
 ;
 
 (function( $ ) {
@@ -80,6 +81,9 @@ var Signature = require('./signature')
 
         // Excitement
         Excitement.Single.initGallery();
+
+        // SECLocation
+        SECLocation.init();
 
         // MQ Callback
         $(window).on("mqchange.mediaquery", function(e, state) {
