@@ -83,7 +83,7 @@ var Signature = require('./signature')
         Excitement.Single.initGallery();
 
         // SECLocation
-        SECLocation.init();
+        // SECLocation.init();
 
         // MQ Callback
         $(window).on("mqchange.mediaquery", function(e, state) {
