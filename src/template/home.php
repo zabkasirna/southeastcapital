@@ -241,7 +241,7 @@ get_header(); ?>
                 <div id="sec_map"></div>
             </section>
             <section class="home-section" data-anchor="contact">
-                <h1>CONTACT</h1>
+                <?php echo do_shortcode( '[contact-form-7 id="40" title="SC Contact Form"]' ); ?>
             </section>
         </div>
 
