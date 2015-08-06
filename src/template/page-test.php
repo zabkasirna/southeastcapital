@@ -99,33 +99,71 @@ get_header(); ?>
 
         <section id="home_contact_test" class="g-all-full">
             <h3>Contact *</h3>
+            <article class="home-section" id="hsContact">
+                <div class="hsc-head">
+                    <div class="hsch-first">
+                        <div class="mueller-test-box"><p>hsch-first</p></div>
+                    </div>
+                    <div class="hsch-second">
+                        <div class="mueller-test-box"><p>hsch-second</p></div>
+                    </div>
+                </div>
+                <div class="hsc-body">
+                    <div>
+                        <div class="control-size-narrow">
+                            <div class="mueller-test-box"><p>first name</p></div>
+                        </div>
+                        <div class="control-size-narrow">
+                            <div class="mueller-test-box"><p>last name</p></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="control-size-narrow">
+                            <div class="mueller-test-box"><p>Email</p></div>
+                        </div>
+                        <div class="control-size-narrow">
+                            <div class="mueller-test-box"><p>Subject</p></div>
+                        </div>
+                    </div>
+                    <div class="control-size-large">
+                        <div class="mueller-test-box"><p>message</p></div>
+                    </div>
+                </div>
+            </article>
+
+            <!--
             <article class="g-d-24 g-hr-24 g-l-24 g-tp-12 g-hl-6 g-h-6 g-all-l">
                 <div class="g-d-10 g-hr-10 g-l-10 g-tp-6 g-hl-6 g-h-6">
                     <div class="g-d-10 g-hr-10 g-l-10 g-tp-6 g-hl-6 g-h-6 g-all-fl">
                         <div class="mueller-test-box"><p>hsch-first</p></div>
                     </div>
-                    <div class="g-d-9 g-hr-9 g-l-9 g-tp-5 g-hl-5 g-h-5 g-d-push1 g-hr-push1 g-l-push1 g-all-fl">
+                    <div class="g-d-10 g-hr-10 g-l-10 g-tp-6 g-hl-6 g-h-6 g-d-prepend1 g-hr-prepend1 g-l-prepend1 g-all-fl">
                         <div class="mueller-test-box"><p>hsch-second</p></div>
                     </div>
                 </div>
                 <div class="g-d-14 g-hr-14 g-l-14 g-tp-6 g-hl-6 g-h-6 g-all-l">
-                    <div class="g-d-7 g-hr-7 g-l-7 g-tp-6 g-hl-6 g-h-6 g-d-prepend1 g-l-prepend1 g-hr-prepend1 g-all-f">
-                        <div class="mueller-test-box"><p>first name</p></div>
+                    <div>
+                        <div class="g-d-7 g-hr-7 g-l-7 g-tp-6 g-hl-6 g-h-6 g-d-prepend1 g-l-prepend1 g-hr-prepend1 g-all-f">
+                            <div class="mueller-test-box"><p>first name</p></div>
+                        </div>
+                        <div class="g-d-7 g-hr-7 g-l-7 g-tp-6 g-hl-6 g-h-6 g-d-prepend1 g-l-prepend1 g-hr-prepend1 g-all-l">
+                            <div class="mueller-test-box"><p>last name</p></div>
+                        </div>
                     </div>
-                    <div class="g-d-7 g-hr-7 g-l-7 g-tp-6 g-hl-6 g-h-6 g-d-prepend1 g-l-prepend1 g-hr-prepend1 g-all-l">
-                        <div class="mueller-test-box"><p>last name</p></div>
+                    <div>
+                        <div class="g-d-7 g-hr-7 g-l-7 g-tp-6 g-hl-6 g-h-6 g-d-prepend1 g-l-prepend1 g-hr-prepend1 g-all-f">
+                            <div class="mueller-test-box"><p>Email</p></div>
+                        </div>
+                        <div class="g-d-7 g-hr-7 g-l-7 g-tp-6 g-hl-6 g-h-6 g-d-prepend1 g-l-prepend1 g-hr-prepend1 g-all-l">
+                            <div class="mueller-test-box"><p>Subject</p></div>
+                        </div>
                     </div>
-                    <div class="g-d-7 g-hr-7 g-l-7 g-tp-6 g-hl-6 g-h-6 g-d-prepend1 g-l-prepend1 g-hr-prepend1 g-all-f">
-                        <div class="mueller-test-box"><p>Email</p></div>
-                    </div>
-                    <div class="g-d-7 g-hr-7 g-l-7 g-tp-6 g-hl-6 g-h-6 g-d-prepend1 g-l-prepend1 g-hr-prepend1 g-all-l">
-                        <div class="mueller-test-box"><p>Subject</p></div>
-                    </div>
-                    <div class="g-d-13 g-hr-13 g-l-13 g-tp-6 g-hl-6 g-h-6 g-d-prepend1 g-hr-prepend1 g-l-prepend1 g-all-l">
+                    <div class="g-d-14 g-hr-14 g-l-14 g-tp-6 g-hl-6 g-h-6 g-d-prepend1 g-hr-prepend1 g-l-prepend1 g-all-l">
                         <div class="mueller-test-box"><p>message</p></div>
                     </div>
                 </div>
             </article>
+            -->
         </section>
 
         <!--

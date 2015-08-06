@@ -57,6 +57,7 @@ var Signature = require('./signature')
 ,   Home = require('./home')
 ,   Excitement = require('./excitement')
 ,   SECLocation = require('./sec-location')
+,   Contact = require('./contact')
 ;
 
 (function( $ ) {
@@ -84,6 +85,9 @@ var Signature = require('./signature')
 
         // SECLocation
         // SECLocation.init();
+        
+        // Contact
+        Contact.init();
 
         // MQ Callback
         $(window).on("mqchange.mediaquery", function(e, state) {

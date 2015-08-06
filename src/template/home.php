@@ -249,66 +249,20 @@ get_header(); ?>
                 <?php /*echo do_shortcode( '[contact-form-7 id="40" title="SC Contact Form"]' );*/ ?>
                 <div class="faux-bg"></div>
                 <div class="hsc-head">
-                    <h2 class="hsch-first">CONNECT WITH US!</h2>
+                    <div class="hsch-first">
+                        <h2>CONNECT WITH US!</h2>
+                    </div>
                     <p class="hsch-second">Please complete your contact details <br/>we'll get back to you soon!</p>
                 </div>
-                <div class="hsc-body" style="display: none;">
+                <div class="hsc-body" >
                     <div class="control-group-row">
-                        <div class="control-wrapper control-size-small">
-                            <div class="faux-label">FIRST NAME</div>
-                            <label for="first-name">
-                                <span clas="control-label-inner">First Name</span>
-                                <input class="control-input" type="text" placeholder="First Name">
+                        <div class="control-wrapper control-size-narrow">
+                            <div class="faux-label"><span class="faux-label-inner">First Name</span></div>
+                            <label class="control-group one-liner" for="first-name">
+                                <span class="control-label-inner">First Name</span>
+                                <input class="control-input" type="text" placeholder="">
                             </label>
                         </div>
-                        <div class="control-wrapper control-size-small">
-                            <div class="faux-label">LAST NAME</div>
-                            <label for="last-name">
-                                <span clas="control-label-inner">Last Name</span>
-                                <input class="control-input" type="text" placeholder="Last Name">
-                            </label>
-                        </div>
-                    </div>
-                    <div class="control-group-row">
-                        <div class="control-wrapper control-size-small">
-                            <div class="faux-label">E-MAIL</div>
-                            <label for="last-name">
-                                <span clas="control-label-inner">E-mail</span>
-                                <input class="control-input" type="email" placeholder="E-mail">
-                            </label>
-                        </div>
-                        <div class="control-wrapper control-size-small">
-                            <div class="faux-label">SUBJECT</div>
-                            <label for="last-name">
-                                <span clas="control-label-inner">Subject</span>
-                                <select class="control-input"
-                                    name="your-subject">
-                                    <option value="General Inquiries">General Inquiries</option>
-                                    <option value="Lorem Ipsum">Lorem Ipsum</option>
-                                    <option value="Sample Subject">Sample Subject</option>
-                                    <option value="Consectetur">Consectetur</option>
-                                    <option value="Other">Other</option>
-                                </select>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="control-group-row">
-                        <div class="faux-label">MESSAGE</div>
-                        <label for="your-message">
-                            <span clas="control-label-inner">Message</span>
-                            <textarea name="your-message"
-                                class=""
-                                cols="40" rows="10"
-                                placeholder="Message"
-                                ></textarea>
-                        </label>
-                    </div>
-                    <div class="control-group-row">
-                        <input
-                            class="control-submit"
-                            type="submit"
-                            value="Send"
-                            >
                     </div>
                 </div>
             </section>

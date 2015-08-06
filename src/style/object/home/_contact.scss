@@ -1,4 +1,13 @@
+.hidden {
+    display: none !important;
+}
+
+$line1: x(1.5);
+
 .home-section#hsContact {
+
+    padding: x(6) 0 0 0;
+
     .faux-bg {
         position: absolute;
         top: 0;
@@ -7,5 +16,89 @@
         width: 100vw;
         height: 100vh;
         background-color: $white;
+        z-index: -1;
+    }
+
+    * {
+        color: $sc-copper;
+    }
+
+    .control-group-row {
+        @include clearfix;
+        &.test { background-color: aliceblue; }
+    }
+
+    .faux-label {
+        position: relative;
+        height: $line1;
+        margin-bottom: -$line1;
+
+        .faux-label-inner {
+            position: relative;
+            top: 0;
+            transition: top .1s linear;
+            display: block;
+            position: relative;
+            line-height: $line1;
+            font-size: 10px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: $sc-copper;
+        }
+
+        &.is-focus {
+            .faux-label-inner {
+                transition: top .1s linear;
+                top: -$line1;
+            }
+        }
+    }
+
+    .control-group {
+        display: block;
+        position: relative;
+        width: 100%;
+
+        border: 2px solid rgba($sc-copper, 1);
+
+        &.test { background-color: antiquewhite; }
+
+        &.one-liner {
+            max-height: $line1;
+            height: $line1;
+            overflow: hidden;
+        }
+
+        .control-label-inner {
+            transition: top .1s linear;
+            position: absolute;
+            top: 0;
+            padding: 0 r(.5);
+            height: x(1.5);
+            width: 100%;
+            line-height: x(1.5);
+            background-color: $white;
+            // border: 2px solid rgba($white, 0);
+            pointer-events: none;
+        }
+
+        &.one-liner.is-focus {
+            .control-label-inner {
+                transition: top .1s linear;
+                top: x(-1.5);
+            }
+        }
+    }
+
+    .control-input {
+        display: block;
+        min-height: x(1.5);
+        padding: 6px r(.5) 10px;
+        border: 0;
+        outline: 0;
+        @include border-radius(0);
+        width: 100%;
+        background-color: $sc-copper;
+        color: $white;
     }
 }
