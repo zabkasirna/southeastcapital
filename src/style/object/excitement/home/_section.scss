@@ -12,25 +12,25 @@
 
     .hsc-body {
         display: block;
-        float: left;
+        // float: left;
         height: 100%;
         max-height: 100%;
-        max-width: 50%;
+        // max-width: 50%;
         width: 50%;
         overflow: hidden;
-        position: relative;
+        position: absolute;
 
-        // transition: width .1s linear;
+        transition: width .3s linear;
 
         &.has-entered {
-            // transition: width .1s linear;
+            transition: width .3s linear;
             width: 65%;
-            max-width: 65%;
+            // max-width: 65%;
         }
         &.has-leave {
-            // transition: width .1s linear;
+            transition: width .3s linear;
             width: 35%;
-            max-width: 35%;
+            // max-width: 35%;
         }
 
         &.test {
@@ -119,26 +119,11 @@
         }
     }
 
-    .hsc-body:last-child {
-        .hsex-btn {
-            left: 0;
-            right: auto;
-        }
-
-        .faux-hit {
-            left: 0;
-            right: auto;
-
-            &:hover {
-                .hsex-btn {
-                    left: 50%;
-                    margin: 0 0 0 x(-4);
-                    background-color: $sc-copper;
-                }
-            }
-        }
-    }
     .hsc-body:first-child {
+
+        left: 0;
+        right: auto;
+
         .hsex-btn {
             right: 0;
             left: auto;
@@ -153,6 +138,30 @@
                 .hsex-btn {
                     right: 50%;
                     margin: 0 x(-4) 0 0;
+                    background-color: $sc-copper;
+                }
+            }
+        }
+    }
+
+    .hsc-body:last-child {
+
+        left: auto;
+        right: 0;
+
+        .hsex-btn {
+            left: 0;
+            right: auto;
+        }
+
+        .faux-hit {
+            left: 0;
+            right: auto;
+
+            &:hover {
+                .hsex-btn {
+                    left: 50%;
+                    margin: 0 0 0 x(-4);
                     background-color: $sc-copper;
                 }
             }
