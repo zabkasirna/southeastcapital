@@ -8,6 +8,13 @@
 get_header(); ?>
 
 <?php
+    $is_sec_slideshow = get_field( 'is_sec_slideshow', 'option' );
+    debuggrr( $is_sec_slideshow );
+?>
+
+<?php if ( !is_sec_slideshow ) : ?>
+
+<?php
     /*---- {{ DATA: CONCEPT IMAGE }} ----*/
     $concept_bgi = get_field( 'concept_bgi', 'option' )['url'];
     // debuggrr( $concept_bgi );
@@ -307,5 +314,25 @@ get_header(); ?>
         </div>
 
     </main>
+
+<?php else: ?>
+
+    <?php
+        $__sec_slideshow_gall = get_field('sec_slide_gall', 'option');
+        debuggrr( $__sec_slideshow_gall );
+    ?>
+
+    <div id="sec_slides">
+        <?php
+            if ( array_filter( $__sec_slideshow_gall ) ) :
+            foreach ( $__sec_slideshow_gall as $secs_key => $secs_val ) :
+        ?>
+        <div class="slide-item"
+            data-src='<?php echo $secs_val['url'];?>'
+        ></div>
+        <?php endforeach; endif; ?>
+    </div>
+
+<?php endif; ?>
 
 <?php get_footer(); ?>
