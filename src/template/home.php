@@ -50,7 +50,7 @@ get_header(); ?>
                             </p>
                         </div>
                         <p class="hsc-body">Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur.</p>
-                        <a class="hsc-btn" href="javascript:void(0);">Find More<span class="gt">&gt;</span></a>
+                        <!-- <a class="hsc-btn" href="javascript:void(0);">Find More<span class="gt">&gt;</span></a> -->
                     </div>
                 </div>
             </section>
@@ -250,7 +250,7 @@ get_header(); ?>
                 <div class="faux-bg"></div>
                 <div class="hsc-head">
                     <div class="hsch-first">
-                        <h2>CONNECT WITH US!</h2>
+                        <h3 class="h2 text">CONNECT <br>WITH US!</h3>
                     </div>
                     <p class="hsch-second">Please complete your contact details <br/>we'll get back to you soon!</p>
                 </div>

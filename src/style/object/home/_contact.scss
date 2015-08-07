@@ -23,6 +23,19 @@ $line1: x(1.5);
         color: $sc-copper;
     }
 
+    .hsch-first {
+        min-height: x(4);
+        height: x(4);
+        .text {
+            position: fixed;
+            left: 0;
+            font-family: $ff-sans-heavy;
+            letter-spacing: 0.05em;
+        }
+    }
+
+    // FORM
+
     .control-group-row {
         @include clearfix;
         margin-bottom: x(1.5);
@@ -181,7 +194,7 @@ $line1: x(1.5);
             box-shadow: 0;
             background-color: $white;
             // display: none;
-            margin: -2px 0 0 0;
+            margin: 0 0 0 0;
             overflow: auto;
             overflow-x: hidden;
             padding: 0;
@@ -198,6 +211,7 @@ $line1: x(1.5);
             padding: 0 7px;
             &:last-of-type {
                 border-bottom: 0;
+                @include border-radius(0);
             }
         }
 
