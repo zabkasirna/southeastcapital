@@ -98,7 +98,7 @@ function sec_scripts_and_styles() {
         wp_register_script( 'sec-formstone-dropdown', get_template_directory_uri() . '/script/vendor/formstone/dist/js/dropdown.js', array( 'sec-jquery', 'sec-formstone-core', 'sec-formstone-touch' ), '', true );
 
         // google map API
-        // wp_register_script('sec-google-maps-api', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCtOSYUVdF-oELojMbyd_WD73PiRbBV5gk&sensor=true', array(), '3.15', true);
+        wp_register_script('sec-google-maps-api', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCtOSYUVdF-oELojMbyd_WD73PiRbBV5gk&sensor=true', array(), '3.15', true);
 
         // site
         wp_register_script( 'sec-js', get_template_directory_uri() . '/script/main.js', array( 'sec-jquery' ), '', true );

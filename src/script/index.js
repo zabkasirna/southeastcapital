@@ -58,7 +58,7 @@ var Signature = require('./signature')
 ,   Excitement = require('./excitement')
 ,   SECLocation = require('./sec-location')
 ,   Contact = require('./contact')
-,   SECSlideshow = require('./sec-slideshow')
+// ,   SECSlideshow = require('./sec-slideshow')
 ;
 
 (function( $ ) {
@@ -90,8 +90,8 @@ var Signature = require('./signature')
         });
 
         // SECSlideshow
-        SECSlideshow.initImage();
-        SECSlideshow.initSlideshow();
+        // SECSlideshow.initImage();
+        // SECSlideshow.initSlideshow();
 
         // Home
         Home.layout();
@@ -101,7 +101,7 @@ var Signature = require('./signature')
         Excitement.Single.initGallery();
 
         // SECLocation
-        // SECLocation.init();
+        SECLocation.init();
         
         // Contact
         Contact.init();
