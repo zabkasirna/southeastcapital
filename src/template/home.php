@@ -263,6 +263,34 @@ get_header(); ?>
                                 <input class="control-input" type="text" placeholder="">
                             </label>
                         </div>
+                        <div class="control-wrapper control-size-narrow">
+                            <div class="faux-label"><span class="faux-label-inner">Last Name</span></div>
+                            <label class="control-group one-liner" for="first-name">
+                                <span class="control-label-inner">Last Name</span>
+                                <input class="control-input" type="text" placeholder="">
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="control-group-row">
+                        <div class="control-wrapper control-size-narrow">
+                            <div class="faux-label"><span class="faux-label-inner">E-mail</span></div>
+                            <label class="control-group one-liner" for="e-mail">
+                                <span class="control-label-inner">E-mail</span>
+                                <input class="control-input" type="text" placeholder="">
+                            </label>
+                        </div>
+                        <div class="control-wrapper control-size-narrow">
+                            <div class="faux-label"><span class="faux-label-inner">Subject</span></div>
+                            <label class="control-group borderless xx" for="subject">
+                                <select class="control-input" name="subject" >
+                                    <option value="General Inquiries">General Inquiries</option>
+                                    <option value="Lorem Ipsum">Lorem Ipsum</option>
+                                    <option value="Sample Text">Sample Text</option>
+                                </select>
+                                <span class="control-label-xx-inner"><span>Subject</span></span>
+                            </label>
+                        </div>
                     </div>
                 </div>
             </section>

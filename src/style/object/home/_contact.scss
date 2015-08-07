@@ -6,7 +6,7 @@ $line1: x(1.5);
 
 .home-section#hsContact {
 
-    padding: x(6) 0 0 0;
+    // padding: x(3) 0 0 0;
 
     .faux-bg {
         position: absolute;
@@ -25,6 +25,7 @@ $line1: x(1.5);
 
     .control-group-row {
         @include clearfix;
+        margin-bottom: x(1.5);
         &.test { background-color: aliceblue; }
     }
 
@@ -41,9 +42,11 @@ $line1: x(1.5);
             position: relative;
             line-height: $line1;
             font-size: 10px;
+            padding: r(.5) 0 0 0;
             letter-spacing: 0.08em;
             text-transform: uppercase;
             color: $sc-copper;
+            pointer-events: none;
         }
 
         &.is-focus {
@@ -69,6 +72,8 @@ $line1: x(1.5);
             overflow: hidden;
         }
 
+        &.borderless { border: 0; }
+
         .control-label-inner {
             transition: top .1s linear;
             position: absolute;
@@ -90,7 +95,7 @@ $line1: x(1.5);
         }
     }
 
-    .control-input {
+    .control-input[type="text"] {
         display: block;
         min-height: x(1.5);
         padding: 6px r(.5) 10px;
@@ -100,5 +105,117 @@ $line1: x(1.5);
         width: 100%;
         background-color: $sc-copper;
         color: $white;
+    }
+    
+    .fs-dropdown {
+        margin: 0;
+
+        .fs-dropdown-selected {
+            @include border-radius(0);
+            border: 2px solid $sc-copper;
+            padding: 6px r(.5) 10px;
+            outline: 0;
+            height: x(1.5);
+            line-height: 20px;
+            letter-spacing: 0.08em;
+            font-size: 12px;
+
+            &:after {
+                border-left: 8px solid transparent;
+                border-right: 8px solid transparent;
+                border-top: 8px solid #CCCCCC;
+            }
+            // &:after {
+            //     content: "";
+            //     position: absolute;
+            //     top: 0;
+            //     right: 0;
+            //     max-height: x(1.5);
+            //     height: x(1.5);
+            //     max-width: x(1.5);
+            //     width: x(1.5);
+            //     border: 0;
+            //     margin: 0;
+            //     background: url('uploads/images/arrow/select-arrow_v.png') no-repeat;
+            //     background-color: aliceblue;
+            // }
+        }
+
+        .fs-dropdown-open,
+        .fs-dropdown-focus, {
+            .fs-dropdown-selected {
+                box-shadow: none;
+                @include border-radius(0);
+                border: 2px solid $sc-copper;
+                outline: 0;
+            }   
+        }
+
+        .fs-dropdown-options {
+            width: 100%;
+            max-height: x(9);
+            position: absolute;
+            top: 100%;
+            left: 0;
+            border: 2px solid $sc-copper;
+            border-width: 0 2px 2px;
+            @include border-radius(0);
+            box-shadow: 0;
+            background-color: $white;
+            // display: none;
+            margin: -2px 0 0 0;
+            overflow: auto;
+            overflow-x: hidden;
+            padding: 0;
+            z-index: 50;
+        }
+
+        .fs-dropdown-item {
+            width: 100%;
+            height: $line1;
+            border: 0;
+            border-bottom: 2px solid $sc-copper;
+            font-size: 12px;
+            line-height: $line1;
+            padding: 0 7px;
+            &:last-of-type {
+                border-bottom: 0;
+            }
+        }
+
+        .fs-dropdown-item_selected {
+            background-color: $sc-copper;
+            color: $white;
+        }
+    }
+
+    .control-label-xx-inner {
+        position: absolute;
+        top: 0;
+        padding: 0 8px;
+        max-height: $line1;
+        height: $line1;
+        width: 100%;
+        overflow: hidden;
+        line-height: $line1;
+        background-color: $white;
+        border: 2px solid $sc-copper;
+        z-index: 10;
+        pointer-events: none;
+
+        & > span {
+            transition: top 0.1s linear;
+            position: absolute;
+            top: 0;
+            height: 100%;
+            width: 100%;
+        }
+    }
+    .is-focus .control-label-xx-inner {
+        background-color: transparent;
+        & > span {
+            transition: top 0.1s linear;
+            top: -100%;
+        }
     }
 }
