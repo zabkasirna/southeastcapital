@@ -322,7 +322,7 @@ get_header(); ?>
         // debuggrr( $__sec_slideshow_gall );
     ?>
 
-    <div id="sec_slides" style="display: none;">
+    <div id="sec_slides">
         <?php
             if ( array_filter( $__sec_slideshow_gall ) ) :
             foreach ( $__sec_slideshow_gall as $secs_key => $secs_val ) :

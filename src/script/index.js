@@ -58,6 +58,7 @@ var Signature = require('./signature')
 ,   Excitement = require('./excitement')
 ,   SECLocation = require('./sec-location')
 ,   Contact = require('./contact')
+,   SECSlideshow = require('./sec-slideshow')
 ;
 
 (function( $ ) {
@@ -76,6 +77,22 @@ var Signature = require('./signature')
         if ( MQ.getViewportW() > MQ.bp.tp.min ) Logo.insertToNav( true );
         else Logo.releaseFromNav( true );
 
+        // MQ Callback
+        $(window).on("mqchange.mediaquery", function(e, state) {
+
+            if ( state.maxWidth <= MQ.bp.tp.max ) {
+                Logo.releaseFromNav();
+            }
+
+            else if ( state.maxWidth >= MQ.bp.l.max ) {
+                Logo.insertToNav()
+            }
+        });
+
+        // SECSlideshow
+        SECSlideshow.initImage();
+        SECSlideshow.initSlideshow();
+
         // Home
         Home.layout();
         Home.init();
@@ -88,17 +105,5 @@ var Signature = require('./signature')
         
         // Contact
         Contact.init();
-
-        // MQ Callback
-        $(window).on("mqchange.mediaquery", function(e, state) {
-
-            if ( state.maxWidth <= MQ.bp.tp.max ) {
-                Logo.releaseFromNav();
-            }
-
-            else if ( state.maxWidth >= MQ.bp.l.max ) {
-                Logo.insertToNav()
-            }
-        });
     });
 })(jQuery);
