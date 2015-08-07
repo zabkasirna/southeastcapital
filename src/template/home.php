@@ -318,9 +318,52 @@ get_header(); ?>
 <?php else: ?>
 
     <?php
-        $__ssis = get_field('sec_slide_items', 'option');
-        debuggrr( $__ssis );
+
+        /**------------------------------------------------------**\
+         * DATA: SEC_SLIDESHOW
+         **------------------------------------------------------**/
+
+        $_sec_slide_items = get_field('sec_slide_items', 'option');
+        $_ssi = array();
+
+        foreach ( $_sec_slide_items as $_ssi_key => $_ssi_val ) {
+            $_ssi[] = array(
+                'src'  => $_ssi_val['ssi_image']['url'],
+                'text' => $_ssi_val['ssi_text'],
+                'fz' => "si-text " . $_ssi_val['ssi_fz'],
+                'overlay_hex' => "background-color: " . $_ssi_val['ssi_overlay_hex'] . "; ",
+                'overlay_opacity' => "opacity: " . $_ssi_val['ssi_overlay_opacity'] . ";"
+            );
+        }
+
+        debuggrr( $_ssi );
     ?>
+
+    <?php if ( array_filter( $_ssi ) ) : ?>
+
+    <div id="sec_slides" >
+
+    <?php foreach ( $_ssi as $_item_key => $_item_val ) : ?>
+
+        <div class="slide-item"
+            data-src='<?php echo $_item_val[ "src" ] ?>'
+            >
+            <div class="bgi"></div>
+            <div class="si-body hidden">
+                <div class="faux-bg"
+                    style="<?php echo $_item_val['overlay_hex'] . $_item_val['overlay_opacity'] ?>"
+                ></div>
+                <div class="<?php echo $_item_val['fz'] ?>">
+                    <p><?php echo $_item_val[ 'text' ] ?></p>
+                </div>
+            </div>
+        </div>
+
+    <?php endforeach; ?>
+
+    </div>
+
+    <?php endif ?>
 
 <?php endif; ?>
 

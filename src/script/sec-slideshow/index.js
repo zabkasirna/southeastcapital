@@ -12,10 +12,11 @@ function initImage() {
 
     $items.each( function( i ) {
         var $item = $(this)
+        ,   $bgi = $item.find('.bgi')
         ,   _dataSrc = $item.data( 'src' )
         ;
 
-        $item.background({
+        $bgi.background({
             "source": {
                 "0px": _dataSrc
             }

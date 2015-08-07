@@ -120,7 +120,7 @@ function sec_scripts_and_styles() {
         wp_enqueue_script( 'sec-formstone-carousel' );
         wp_enqueue_script( 'sec-formstone-bg' );
         wp_enqueue_script( 'sec-formstone-dropdown' );
-        wp_enqueue_script( 'sec-google-maps-api' );
+        // wp_enqueue_script( 'sec-google-maps-api' );
         wp_enqueue_script( 'sec-js' );
 
         // dequeue scripts
