@@ -292,6 +292,16 @@ get_header(); ?>
                             </label>
                         </div>
                     </div>
+                    <div class="control-group-row">
+                        <div class="control-wrapper control-size-large">
+                            <textarea class="control-input"
+                                name="sc_message"
+                                id="sc_message"
+                                rows="6"
+                                placeholder="MESSAGE"
+                                ></textarea>
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>

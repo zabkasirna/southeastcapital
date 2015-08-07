@@ -106,6 +106,24 @@ $line1: x(1.5);
         background-color: $sc-copper;
         color: $white;
     }
+
+    textarea.control-input {
+        display: block;
+        min-height: x(1.5);
+        padding: 6px r(.5) 10px;
+        border: 2px solid $sc-copper;
+        outline: 0;
+        @include border-radius(0);
+        width: 100%;
+        background-color: $white;
+        color: $sc-copper;
+        &::-webkit-input-placeholder,
+        &:-moz-placeholder,
+        &::-moz-placeholder,
+        &:-ms-input-placeholder {  
+           color: $sc-copper;
+        }
+    }
     
     .fs-dropdown {
         margin: 0;
@@ -121,9 +139,9 @@ $line1: x(1.5);
             font-size: 12px;
 
             &:after {
-                border-left: 8px solid transparent;
-                border-right: 8px solid transparent;
-                border-top: 8px solid #CCCCCC;
+                border-left: 6px solid transparent;
+                border-right: 6px solid transparent;
+                border-top: 6px solid $sc-copper;
             }
             // &:after {
             //     content: "";
