@@ -28,9 +28,12 @@ function initSlideshow() {
 
     var _self = this
     ,   $el = $('#sec_slides')
+    ,   _carouselOptions = {
+            infinite: true
+        }
     ;
 
-    $el.carousel();
+    $el.carousel( _carouselOptions );
     $el.on('update.carousel', function(e) {
         console.log(e);
     });
