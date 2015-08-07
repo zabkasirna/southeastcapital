@@ -98,7 +98,7 @@
 
         <div class="faux-bg"></div>
 
-        <div id="logo">
+        <div id="logo" >
             <div class="faux-bg"><div class="faux-arrow"></div></div>
 
             <a class="logo-anchor" href="<?php echo home_url( '/' ); ?>">

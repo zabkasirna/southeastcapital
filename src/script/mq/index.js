@@ -2,7 +2,7 @@ var bp = {
     'h'    : { min: 0, max: 479 },
     'hl'   : { min: 480, max: 767 },
     'tp'   : { min: 768, max: 980 },
-    'l'    : { min: 1250, max: 1800 },
+    'l'    : { min: 981, max: 1800 },
     'hr'   : { min: 1801, max: 6000 },
     'minH' : { min: 400, max: 800 },
     'maxH' : { min: 800, max: 400 }

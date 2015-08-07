@@ -8,9 +8,12 @@
     @extend .g-d-snap-6;
     @extend .g-hr-snap-6;
     @extend .g-l-snap-6;
-    @extend .g-tp-12;
-    @extend .g-hl-6;
-    @extend .g-h-6;
+    @extend .g-tp-push3;
+    @extend .g-tp-6;
+    @extend .g-hl-push1;
+    @extend .g-hl-4;
+    @extend .g-h-push1;
+    @extend .g-h-4;
 
     #header-nav #nav-lists & { display: block; }
 }

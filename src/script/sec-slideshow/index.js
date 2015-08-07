@@ -38,7 +38,7 @@ function initSlideshow() {
 
     $el.carousel( _carouselOptions );
     $el.on('update.carousel', function(e) {
-        console.log(e);
+        // console.log(e);
     });
 
     return true;

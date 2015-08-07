@@ -4,13 +4,13 @@ $logo-offset-top: 6px;
     position: relative;
     background-color: transparent;
     height: x(1.5);
+    @media screen and (max-width: 400px) {
+        height: x(1.25);
+    }
 
     .faux-bg {
         position: absolute;
         top: 0; right: x(1); bottom: 0; left: x(1);
-        @media screen and (max-width: 479px) {
-            top: -14px;
-        }
         height: 100%;
 
         background-color: $white;

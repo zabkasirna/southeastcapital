@@ -46,7 +46,7 @@ function releaseFromNav( initial ) {
     if ( $logo.parent().attr('id') === 'main-header' ) return;
     $logo.prependTo( $containerTarget );
 
-    console.log(initial);
+    // console.log(initial);
 }
 
 module.exports = Logo;

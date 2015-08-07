@@ -74,19 +74,17 @@ var Signature = require('./signature')
 
         // Logo
         Logo.injectSVG();
-        if ( MQ.getViewportW() > MQ.bp.tp.min ) Logo.insertToNav( true );
+        console.log(MQ.bp.l.min, MQ.getViewportW() );
+        if ( MQ.getViewportW() > 980 ) Logo.insertToNav( true );
         else Logo.releaseFromNav( true );
 
         // MQ Callback
-        $(window).on("mqchange.mediaquery", function(e, state) {
-
-            if ( state.maxWidth <= MQ.bp.tp.min ) {
-                Logo.releaseFromNav();
-            }
-
-            else if ( state.maxWidth >= MQ.bp.l.max ) {
-                Logo.insertToNav()
-            }
+        $(window).on("resize", function(e, state) {
+            clearTimeout(resizeTimer);
+            var resizeTimer = setTimeout(function() {
+                if ( MQ.getViewportW() > 980 ) Logo.insertToNav();
+                else Logo.releaseFromNav();
+            });
         });
 
         // SECSlideshow
