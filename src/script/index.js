@@ -80,7 +80,7 @@ var Signature = require('./signature')
         // MQ Callback
         $(window).on("mqchange.mediaquery", function(e, state) {
 
-            if ( state.maxWidth <= MQ.bp.tp.max ) {
+            if ( state.maxWidth <= MQ.bp.tp.min ) {
                 Logo.releaseFromNav();
             }
 
@@ -91,7 +91,7 @@ var Signature = require('./signature')
 
         // SECSlideshow
         SECSlideshow.initImage();
-        // SECSlideshow.initSlideshow();
+        SECSlideshow.initSlideshow();
 
         // Home
         Home.layout();

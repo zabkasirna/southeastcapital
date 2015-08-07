@@ -8,6 +8,52 @@
 get_header(); ?>
 
 <?php
+    /**
+     * [http://mekshq.com/how-to-convert-hexadecimal-color-code-to-rgb-or-rgba-using-php/]
+     * @param  String  $color   the hex
+     * @param  boolean $opacity 0 to 1
+     * @return String           rgba( r, g, b, a )
+     */
+    function hex2rgba($color, $opacity = false) {
+     
+        $default = 'rgb(0,0,0)';
+     
+        //Return default if no color provided
+        if(empty($color))
+              return $default; 
+     
+        //Sanitize $color if "#" is provided 
+            if ($color[0] == '#' ) {
+                $color = substr( $color, 1 );
+            }
+     
+            //Check if color has 6 or 3 characters and get values
+            if (strlen($color) == 6) {
+                    $hex = array( $color[0] . $color[1], $color[2] . $color[3], $color[4] . $color[5] );
+            } elseif ( strlen( $color ) == 3 ) {
+                    $hex = array( $color[0] . $color[0], $color[1] . $color[1], $color[2] . $color[2] );
+            } else {
+                    return $default;
+            }
+     
+            //Convert hexadec to rgb
+            $rgb =  array_map('hexdec', $hex);
+     
+            //Check if opacity is set(rgba or rgb)
+            if($opacity){
+                if(abs($opacity) > 1)
+                    $opacity = 1.0;
+                $output = 'rgba('.implode(",",$rgb).','.$opacity.')';
+            } else {
+                $output = 'rgb('.implode(",",$rgb).')';
+            }
+     
+            //Return rgb(a) color string
+            return $output;
+    }
+?>
+
+<?php
     $is_sec_slideshow = get_field( 'is_sec_slideshow', 'option' );
     // debuggrr( $is_sec_slideshow );
 ?>
@@ -329,10 +375,9 @@ get_header(); ?>
         foreach ( $_sec_slide_items as $_ssi_key => $_ssi_val ) {
             $_ssi[] = array(
                 'src'  => $_ssi_val['ssi_image']['url'],
-                'text' => $_ssi_val['ssi_text'],
-                'fz' => "si-text " . $_ssi_val['ssi_fz'],
-                'overlay_hex' => "background-color: " . $_ssi_val['ssi_overlay_hex'] . "; ",
-                'overlay_opacity' => "opacity: " . $_ssi_val['ssi_overlay_opacity'] . ";"
+                'title' => $_ssi_val['ssi_title'],
+                'body' => $_ssi_val['ssi_body'],
+                'bgc' => "background-color: " . hex2rgba( $_ssi_val['ssi_overlay_hex'], $_ssi_val['ssi_overlay_opacity'] ) . "; ",
             );
         }
 
@@ -349,12 +394,13 @@ get_header(); ?>
             data-src='<?php echo $_item_val[ "src" ] ?>'
             >
             <div class="bgi"></div>
-            <div class="si-body hidden">
-                <div class="faux-bg"
-                    style="<?php echo $_item_val['overlay_hex'] . $_item_val['overlay_opacity'] ?>"
-                ></div>
-                <div class="<?php echo $_item_val['fz'] ?>">
-                    <p><?php echo $_item_val[ 'text' ] ?></p>
+
+            <div class="si-content-outer">
+                <div class="si-content"
+                     style="<?php echo $_item_val[ 'bgc' ] ?>"
+                    >
+                    <h2 class="sic-title"><?php echo $_item_val[ 'title' ]; ?></h2>
+                    <p class="sic-body"><?php echo $_item_val[ 'body' ]; ?></p>
                 </div>
             </div>
         </div>

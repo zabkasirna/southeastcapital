@@ -30,7 +30,9 @@ function initSlideshow() {
     var _self = this
     ,   $el = $('#sec_slides')
     ,   _carouselOptions = {
-            infinite: true
+            infinite: true,
+            autoAdvance: true,
+            controls: false
         }
     ;
 

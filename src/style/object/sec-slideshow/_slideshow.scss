@@ -1,13 +1,3 @@
-/*
-    #sec_slides
-        .slide-item
-            .bgi
-            .si-body
-                .faux-bg
-                .si-text[.h2]
-                    p
- */
-
 #sec_slides {
 
     position: fixed;
@@ -21,7 +11,9 @@
     max-height: 100vh;
     height: 100vh;
 
-    .hidden { display: none; }
+    margin-bottom: 100px;
+
+    // .hidden { display: none; }
 
     .slide-item {
         position: relative;
@@ -36,6 +28,41 @@
         overflow: hidden;
     }
 
+    .si-content-outer {
+        position: absolute;
+        width: x(14);
+        height: 100vh;
+        top: 0; left: x(1);
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
+
+        @media screen and ( max-width: 480px ) {
+            width: x(12);
+            left: 50%;
+            margin: 0 0 0 x(-6);
+            padding: x(3) 0 0 0;
+        }
+
+        .si-content {
+            width: 100%;
+            padding: x(1);
+
+            position: relative;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+
+            p, h2 {
+                margin: 0;
+            }
+
+            .sic-title {
+                margin-bottom: x(.5);
+            }
+        }
+    }
+
     // Formstone
     .fs-carousel-controls {
         .fs-carousel-control {
@@ -47,5 +74,4 @@
         position: fixed;
         bottom: x(1);
     }
-
 }
