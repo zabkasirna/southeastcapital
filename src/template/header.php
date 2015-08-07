@@ -85,7 +85,16 @@
 
 <?php if ( $__post_slug !== 'test' ) : ?>
 
-    <header id="main-header" class="on-layout">
+    <?php
+        $_secss_class = "";
+        if ( get_field( 'is_sec_slideshow', 'option' ) ) {
+            $_secss_class .= 'on-layout  is-secss';
+        } else {
+            $_secss_class .= 'on-layout';
+        }
+    ?>
+
+    <header id="main-header" class='<?php echo $_secss_class; ?>'>
 
         <div class="faux-bg"></div>
 
