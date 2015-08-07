@@ -9,7 +9,7 @@ get_header(); ?>
 
 <?php
     $is_sec_slideshow = get_field( 'is_sec_slideshow', 'option' );
-    debuggrr( $is_sec_slideshow );
+    // debuggrr( $is_sec_slideshow );
 ?>
 
 <?php if ( !is_sec_slideshow ) : ?>
@@ -319,10 +319,10 @@ get_header(); ?>
 
     <?php
         $__sec_slideshow_gall = get_field('sec_slide_gall', 'option');
-        debuggrr( $__sec_slideshow_gall );
+        // debuggrr( $__sec_slideshow_gall );
     ?>
 
-    <div id="sec_slides">
+    <div id="sec_slides" style="display: none;">
         <?php
             if ( array_filter( $__sec_slideshow_gall ) ) :
             foreach ( $__sec_slideshow_gall as $secs_key => $secs_val ) :
