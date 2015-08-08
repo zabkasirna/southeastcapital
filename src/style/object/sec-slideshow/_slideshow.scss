@@ -11,14 +11,20 @@
     max-height: 100vh;
     height: 100vh;
 
-    margin-bottom: 100px;
-
     // .hidden { display: none; }
 
     .slide-item {
         position: relative;
         width: 100vw;
         height: 100vh;
+        padding: 0 0 x(5) 0;
+
+        @media screen and ( min-height: 480px ) and ( orientation: portrait ){
+            padding: 0 0 x(1) 0;
+        }
+        @media screen and ( orientation: portrait ) and ( min-height: 1024px ) {
+            padding: 0 0 x(6) 0;
+        }
     }
 
     .bgi {
@@ -72,6 +78,183 @@
 
     .fs-carousel-pagination {
         position: fixed;
-        bottom: x(1);
+        bottom: x(5.5);
+        @media screen and (max-width: 767px) { bottom: x(1.5); }
+        @media screen and ( orientation: portrait ) and ( min-height: 1024px ) { bottom: x(6.5); }
+        .fs-carousel-page {
+            outline: 0;
+        }
+    }
+}
+
+#ss-footer {
+    @include clearfix;
+    transition: top .3s ease-out;
+    position: fixed;
+    width: 100vw;
+    left: 50%;
+    bottom: 0; top: auto;
+    height: x(5);
+    margin: 0 0 0 -50vw;
+    background-color: $sc-grey-dark;
+
+    @media screen and (max-width: 767px) {
+        bottom: auto; top: 50vh;
+        height: 50vh;
+        margin: 0 0 0 -50vw;
+        padding: 0 0 x(1) 0;
+        overflow: hidden;
+
+        &.is-hidden {
+            transition: top .3s ease-out;
+            top: 100vh;
+            margin: x(-1) 0 0 -50vw;
+        }
+    }
+
+    @media screen and ( orientation: portrait ) and ( min-height: 1024px ) {
+        height: x(6);
+    }
+
+    a, p {
+        color: $white;
+        margin: 0;
+        font-size: 9px;
+        line-height: 12px;
+    }
+
+    .footer-toggle {
+
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: block;
+        width: 100%;
+        height: x(1);
+        line-height: x(1);
+        text-align: center;
+        font-family: $ff-sans-regular;
+        z-index: 1000;
+        background-color: $sc-grey-dark;
+
+        .toggle-icon {
+            font-family: $ff-font-icon;
+            transition: transform .2s ease-out .2s;
+            transform: rotate(180deg);
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        @media screen and (min-width: 768px) { display: none; }
+    }
+
+    &.is-hidden .footer-toggle {
+        .toggle-icon {
+            transition: transform .2s ease-out .2s;
+            transform: rotate(0deg);
+        }
+    }
+
+    .foot-wrapper {
+        width: r(59);
+        height: 100%;
+        margin: 0 auto;
+        overflow: scroll;
+        @media screen and (max-width: 479px) and (min-width: 0) { width: 100%; }
+        @media screen and (max-width: 767px) and (min-width: 480px) { width: r(26); margin: 0 auto; }
+        @media screen and (max-width: 980px) and (min-width: 768px) { width: r(35); margin: 0 auto; }
+        @media screen and (max-width: 1800px) and (min-width: 1250px) { width: r(71); margin: 0 auto; }
+        @media screen and (max-width: 767px) { padding: x(2) 0 0 0; }
+        @media screen and ( orientation: portrait ) and ( min-height: 1024px ) { padding-top: x(.5); }
+        &.test { background-color: aliceblue; }
+    }
+
+    .foot2,
+    .foot1 {
+        @include clearfix;
+        position: relative;
+        display: block;
+        float: left;
+        height: x(5);
+        padding: x(1) x(.25);
+
+        &:last-of-type {
+            clear: right;
+            margin-bottom: 0;
+        }
+    }
+
+    .foot1 {
+        width: 20%;
+        @media screen and (max-width: 767px) {
+            width: 100%;
+            height: auto;
+            padding: 0 x(1);
+            margin: 0 0 x(1) 0;
+        }
+    }
+    .foot2 {
+        width: 30%;
+        @media screen and (max-width: 767px) {
+            width: 100%;
+            height: auto;
+            padding: 0 x(1);
+            margin: 0 0 x(1) 0;
+        }
+    }
+
+    .reversed-r {
+        display: inline-block;
+        transform: scaleX(-1);
+    }
+
+    .f-copyright {}
+
+    .f-mandatory {
+        position: absolute;
+        width: 100%;
+        bottom: x(.5);
+        @media screen and (max-width: 767px) {
+            position: static;
+            margin: 12px 0 0 0;
+        }
+    }
+
+    .f-company-name {
+        margin: 0 0 12px 0;
+    }
+
+    .f-info {
+        display: block;
+        margin: 0 0 12px 0;
+
+        .f-info-key {
+            margin: 0 1em 0 0;
+        }
+    }
+
+    .devby {
+        margin: 0 0 4px 0;
+        font-size: 8px;
+        line-height: 8px;
+        letter-spacing: 0.1em;
+    }
+    .devby-logo {
+
+        @include clearfix;
+        position: relative;
+
+        .devby-logo-img {
+            width: r(5);
+            position: relative;
+        }
+
+        .devby-text {
+            display: block;
+            width: 100%;
+            margin-top: -3px;
+        }
     }
 }

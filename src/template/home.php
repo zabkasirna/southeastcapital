@@ -395,6 +395,8 @@ get_header(); ?>
             >
             <div class="bgi"></div>
 
+            <?php if ( $_item_val[ 'title' ] !== '' &&  $_item_val[ 'body' ] !== '' ) : ?>
+
             <div class="si-content-outer">
                 <div class="si-content"
                      style="<?php echo $_item_val[ 'bgc' ] ?>"
@@ -403,6 +405,8 @@ get_header(); ?>
                     <p class="sic-body"><?php echo $_item_val[ 'body' ]; ?></p>
                 </div>
             </div>
+
+            <?php endif; ?>
         </div>
 
     <?php endforeach; ?>

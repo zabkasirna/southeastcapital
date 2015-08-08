@@ -1,5 +1,5 @@
 var Logo = {
-    injectSVG,
+    injectSVG: injectSVG,
     insertToNav: insertToNav,
     releaseFromNav: releaseFromNav
 };

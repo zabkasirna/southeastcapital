@@ -74,7 +74,7 @@ var Signature = require('./signature')
 
         // Logo
         Logo.injectSVG();
-        console.log(MQ.bp.l.min, MQ.getViewportW() );
+
         if ( MQ.getViewportW() > 980 ) Logo.insertToNav( true );
         else Logo.releaseFromNav( true );
 
@@ -90,6 +90,7 @@ var Signature = require('./signature')
         // SECSlideshow
         SECSlideshow.initImage();
         SECSlideshow.initSlideshow();
+        SECSlideshow.initFooter();
 
         // Home
         Home.layout();

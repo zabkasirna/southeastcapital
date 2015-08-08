@@ -1,6 +1,7 @@
 var SECSlideshow = {
     initImage: initImage,
-    initSlideshow: initSlideshow
+    initSlideshow: initSlideshow,
+    initFooter: initFooter
 };
 
 function initImage() {
@@ -32,7 +33,8 @@ function initSlideshow() {
     ,   _carouselOptions = {
             infinite: true,
             autoAdvance: true,
-            controls: false
+            controls: false,
+            autoTime: 9000
         }
     ;
 
@@ -42,6 +44,19 @@ function initSlideshow() {
     });
 
     return true;
+}
+
+function initFooter() {
+    if ( !$('#ss-footer').length );
+
+    var $el = $('#ss-footer')
+    ,   $toggler = $el.find('.footer-toggle')
+
+    $toggler.on('click', function(e) {
+        e.preventDefault();
+        $el.toggleClass('is-hidden')
+        ;
+    })
 }
 
 module.exports = SECSlideshow;
