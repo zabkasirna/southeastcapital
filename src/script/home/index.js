@@ -48,8 +48,6 @@ function layout() {
 
             $el = ( $el.length ) ? $el : $('#header-nav .menu-item a[href="#projects"]');
 
-            console.log($el);
-
             _self.setActiveLink( $el );
         }
     });

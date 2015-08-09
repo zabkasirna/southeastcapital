@@ -4,6 +4,8 @@ var SECLocation = {
 
 function init() {
 
+    if ( !$('#sec_map').length ) return;
+
     var mapStyles = 
         [
             {

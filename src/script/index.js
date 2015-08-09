@@ -56,7 +56,7 @@ var Signature = require('./signature')
 ,   Logo = require('./logo')
 ,   Home = require('./home')
 ,   Excitement = require('./excitement')
-// ,   SECLocation = require('./sec-location')
+,   SECLocation = require('./sec-location')
 ,   Contact = require('./contact')
 ,   SECSlideshow = require('./sec-slideshow')
 ;
@@ -100,7 +100,7 @@ var Signature = require('./signature')
         Excitement.Single.initGallery();
 
         // SECLocation
-        // SECLocation.init();
+        SECLocation.init();
         
         // Contact
         Contact.init();
