@@ -32,7 +32,7 @@ class SEC_Walker extends Walker_Nav_Menu {
         }
 
         $item_output = $args->before;
-        $item_output .= '<a'. $attributes .'><span>';
+        $item_output .= '<a'. $attributes .'><span class="inner">';
 
         $item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
         $item_output .= '</span></a>';
