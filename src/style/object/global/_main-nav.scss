@@ -52,13 +52,14 @@
                         left: 15%;
                         width: 70%;
                     }
-                    background-color: $sc-copper;
+                    background-color: rgba($sc-copper, 0);
                 }
             }
 
             &.is-active > .inner:before {
                 width: 100%;
                 margin: 0 0 0 -50%;
+                background-color: rgba($sc-copper, 1);
             }
         }
 

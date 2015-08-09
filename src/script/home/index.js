@@ -5,11 +5,13 @@ var Masterplan = require('../masterplan'),
 var Home = {
     init: init,
     layout: layout,
-    initLargeNav: initLargeNav,
+    setActiveLink: setActiveLink,
+    initActiveLink: initActiveLink,
+    activeLink: $(),
     initConcept: initConcept,
     initProject: initProject,
     initMasterplan: initMasterplan,
-    initExcitement: initExcitement,
+    initExcitement: initExcitement
 };
 
 function init() {
@@ -25,36 +27,72 @@ function layout() {
     if ( !$('#js-fullpage').length ) return;
 
     var _self = this;
+    _self.initActiveLink();
+    _self.setActiveLink();
 
     // Fullpage JS
     var $fpEl = $('#js-fullpage');
     $fpEl.fullpage({
         sectionSelector: '.home-section',
         anchors: ['concept', 'projects', 'masterplan', 'exciting', 'updates', 'location', 'contact'],
-        // autoScrolling: false,
         normalScrollElements: '.bodycopy, .home-section#hsUpdate .loop',
         onLeave: function( index, nextIndex, direction ) {
-            // console.log( 'index:', index, 'direction:', direction, 'nextIndex:', nextIndex );
+            var _testString = '#' + $fpEl
+                .children('.home-section')
+                .eq( nextIndex - 1 )
+                .data('anchor')
+
+            ,   $navItems = $('#header-nav').children( '.menu-item' )
+            ,   $el = $('#header-nav .menu-item a[href="' + _testString + '"]')
+            ;
+
+            $el = ( $el.length ) ? $el : $('#header-nav .menu-item a[href="#projects"]');
+
+            console.log($el);
+
+            _self.setActiveLink( $el );
         }
     });
-
-    _self.initLargeNav()
 }
 
-function initLargeNav() {
+function setActiveLink( $el ) {
 
     if ( !$('#header-nav').find( '.menu-item' ).length || MQ.getViewportW() < MQ.bp.l.min ) return;
     
-    // var $navItems = $('#header-nav').find( '.menu-item' );
+    var _self = this
+    ,   $navItems = $('#header-nav').find( '.menu-item' )
+    ;
 
-    // $navItems.each( function( i ) {
-    //     var $navLink = $(this).find( 'a' );
-    //     $navLink.on( 'click', function( e ) {
-    //         var $el = $(this);
-    //         console.log( $el.text().length );
-    //     });
-    // });
+    $navItems
+        .children('a')
+        .removeClass('is-active');
 
+    _self.activeLink = ( $el instanceof jQuery )
+        ? $el
+        : $navItems.first().children('a')
+    ;
+
+    _self.activeLink.addClass('is-active');
+}
+
+function initActiveLink( hasInitialized ) {
+    if ( hasInitialized ) return;
+    if ( !$('#header-nav').find( '.menu-item' ).length ) return;
+
+    var _self = this
+    ,   $navItems = $('#header-nav').find( '.menu-item' )
+    ;
+
+    $navItems.each( function( i ) {
+        var $navLink = $(this).find( 'a' );
+        $navLink.on( 'click', function( e ) {
+            $navItems
+                .children('a')
+                .removeClass('is-active');
+
+            _self.activeLink = $(this).addClass('is-active');
+        });
+    });
 }
 
 function initConcept() {
