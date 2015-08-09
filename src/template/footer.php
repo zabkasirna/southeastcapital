@@ -10,6 +10,7 @@
 
 <?php /*debuggrr(get_current_template());*/ ?>
 
+<?php if ( get_field( 'is_sec_slideshow', 'option' ) ) : ?>
 <div id="ss-footer" class="is-hidden" >
     <div class="foot-wrapper">
         <div class="foot2">
@@ -51,6 +52,7 @@
     <a href="#" class="footer-toggle"><span class="fa fa-arrow-up toggle-icon"></span></a>
 
 </div>
+<?php endif; ?>
 
 <?php wp_footer(); ?>
 
