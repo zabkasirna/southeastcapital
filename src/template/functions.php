@@ -14,6 +14,9 @@ require_once( 'rdt-sec15.php' );
 // Load theme's acf options page
 require_once( 'Theme_Options/theme_options.php' );
 
+// Load theme's custom walker
+require_once( 'SEC_Walker.php' );
+
 // Conf at theme launch
 function sec_conf() {
 

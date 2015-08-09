@@ -1,12 +1,15 @@
-var Masterplan = require('../masterplan');
+var Masterplan = require('../masterplan'),
+    MQ = require( '../mq' );
+;
 
 var Home = {
     init: init,
     layout: layout,
+    initLargeNav: initLargeNav,
     initConcept: initConcept,
     initProject: initProject,
     initMasterplan: initMasterplan,
-    initExcitement: initExcitement
+    initExcitement: initExcitement,
 };
 
 function init() {
@@ -21,14 +24,37 @@ function init() {
 function layout() {
     if ( !$('#js-fullpage').length ) return;
 
-    var $fpEl = $('#js-fullpage');
+    var _self = this;
 
+    // Fullpage JS
+    var $fpEl = $('#js-fullpage');
     $fpEl.fullpage({
         sectionSelector: '.home-section',
         anchors: ['concept', 'projects', 'masterplan', 'exciting', 'updates', 'location', 'contact'],
         // autoScrolling: false,
-        normalScrollElements: '.bodycopy, .home-section#hsUpdate .loop'
+        normalScrollElements: '.bodycopy, .home-section#hsUpdate .loop',
+        onLeave: function( index, nextIndex, direction ) {
+            // console.log( 'index:', index, 'direction:', direction, 'nextIndex:', nextIndex );
+        }
     });
+
+    _self.initLargeNav()
+}
+
+function initLargeNav() {
+
+    if ( !$('#header-nav').find( '.menu-item' ).length || MQ.getViewportW() < MQ.bp.l.min ) return;
+    
+    // var $navItems = $('#header-nav').find( '.menu-item' );
+
+    // $navItems.each( function( i ) {
+    //     var $navLink = $(this).find( 'a' );
+    //     $navLink.on( 'click', function( e ) {
+    //         var $el = $(this);
+    //         console.log( $el.text().length );
+    //     });
+    // });
+
 }
 
 function initConcept() {
@@ -121,7 +147,7 @@ function initExcitement() {
                     .attr('class', 'hsc-body has-leave')
                 ;
 
-                console.log( 'enter', $hit.closest('.hsc-body').index() );
+                // console.log( 'enter', $hit.closest('.hsc-body').index() );
             },
             function() {
                 $hit.closest('.hsc-body')
@@ -130,7 +156,7 @@ function initExcitement() {
                     .attr('class', 'hsc-body has-entered')
                 ;
 
-                console.log( 'leave', $hit.closest('.hsc-body').index() );
+                // console.log( 'leave', $hit.closest('.hsc-body').index() );
             }
         );
     });

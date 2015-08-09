@@ -121,6 +121,7 @@
                 'items_wrap'      => '<ul id="%1$s">%3$s</ul>',
                 'link_before'     => '',
                 'after'           => '',
+                'walker'          => new SEC_Walker()
             );
 
             wp_nav_menu( $nav_main_defaults );
