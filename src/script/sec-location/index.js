@@ -1,13 +1,20 @@
 var SECLocation = {
-    init: init
+    init: init,
+    hasInitialized: false
 };
 
-function init() {
+function init( hasInitialized ) {
 
     if ( !$('#sec_map').length ) return;
 
-    var mapStyles = 
-        [
+    var _self = this;
+
+    var secCoord = {
+            lat: -6.187222,
+            lon: 106.819202
+        }
+
+    ,   mapStyles =  [
             {
                 "featureType": "all",
                 "elementType": "geometry",
@@ -189,24 +196,36 @@ function init() {
                 ]
             }
         ]
-    ;
 
-    var mapOptions = {
+    ,   mapOptions = {
         zoom: 15,
-        center: new google.maps.LatLng(-6.187222, 106.819202),
+        center: new google.maps.LatLng(secCoord.lat, secCoord.lon),
         styles: mapStyles,
         scrollwheel: false
-    };
+    }
 
-    var mapElement = $('#sec_map')[0];
+    ,   marker = {
+            lat: secCoord.lat,
+            lng: secCoord.lon,
+            title: 'Southeast Capital',
+            infoWindow: {
+                content: '<p style="color:#B05158; margin: 0 auto; text-align: center;" >Southeast Capital</p>'
+            }
+        }
 
-    var map = new google.maps.Map(mapElement, mapOptions);
+    ,   map = !_self.hasInitialized ? new GMaps({
+            div: '#sec_map',
+            lat: secCoord.lat,
+            lng: secCoord.lon,
+            options: mapOptions
+        }) : map
+    ;
 
-    var marker = new google.maps.Marker({
-        position: new google.maps.LatLng(40.6700, -73.9400),
-        map: map,
-        title: 'Southeast Capital'
-    });
+    if ( !_self.hasInitialized ) map.addMarker( marker );
+
+    // console.log( _self.hasInitialized );
+
+    _self.hasInitialized = true;
 }
 
 module.exports = SECLocation;

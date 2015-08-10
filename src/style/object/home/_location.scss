@@ -1,4 +1,63 @@
+@include keyframes( sec_preloader_key ) {
+    0% {
+        width: 0;
+        margin: 0 0 0 0;
+    }
+    50% {
+        width: x(6);
+        margin: 0 0 0 x(-3);
+    }
+    100% {
+        width: 0;
+        margin: 0 0 0 0;
+    }
+}
+
 .home-section#hsLocation {
+    .sec-map-preloader {
+        z-index: 1;
+        color: $white;
+        position: absolute;
+        width: x(6);
+        height: 16px;
+        left: 50%;
+        margin: 0 0 0 x(-3);
+
+        p {
+            position: absolute;
+            width: x(6);
+            height: 16px;
+            text-transform: uppercase;
+            margin: 0;
+
+            .smp-text {
+                margin: 0;
+                color: currentColor;
+                font-size: 10px;
+                line-height: 14px;
+                height: 14px;
+                display: inline-block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                text-align: center;
+                width: 100%;
+            }
+            .faux-border {
+                -webkit-animation: sec_preloader_key 1s ease-out 0s infinite;
+                -moz-animation: sec_preloader_key 1s ease-out 0s infinite;
+                -o-animation: sec_preloader_key 1s ease-out 0s infinite;
+                animation: sec_preloader_key 1s ease-out 0s infinite;
+                display: inline-block;
+                height: 1px;
+                background-color: currentColor;
+                position: absolute;
+                left: 50%;
+                bottom: 0;
+            }
+        }
+    }
+
     #sec_map {
         position: absolute;
         top: 0;
@@ -6,5 +65,6 @@
         margin: 0 0 0 -50vw;
         width: 100vw;
         height: 100vh;
+        z-index: 100;
     }
 }

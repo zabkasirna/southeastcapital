@@ -295,6 +295,9 @@ get_header(); ?>
             </section>
 
             <section class="home-section" id="hsLocation" data-anchor="location">
+                <div class="sec-map-preloader">
+                    <p><span class="smp-text">Loading google map ...</span><span class="faux-border"></span></p>
+                </div>
                 <div id="sec_map"></div>
             </section>
 

@@ -100,7 +100,7 @@ var Signature = require('./signature')
         Excitement.Single.initGallery();
 
         // SECLocation
-        SECLocation.init();
+        // SECLocation.init();
         
         // Contact
         Contact.init();

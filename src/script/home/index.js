@@ -1,5 +1,6 @@
-var Masterplan = require('../masterplan'),
-    MQ = require( '../mq' );
+var Masterplan = require('../masterplan')
+,   MQ = require( '../mq' )
+,   SECLocation = require( '../sec-location' )
 ;
 
 var Home = {
@@ -49,6 +50,10 @@ function layout() {
             $el = ( $el.length ) ? $el : $('#header-nav .menu-item a[href="#projects"]');
 
             _self.setActiveLink( $el );
+
+            // Set Google Maps on Location Section
+            if ( _testString === '#location' && !SECLocation.hasInitialized )
+                SECLocation.init( SECLocation.hasInitialized );
         }
     });
 }
