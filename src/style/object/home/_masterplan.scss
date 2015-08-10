@@ -1,22 +1,57 @@
 .home-section#hsMasterplan {
 
+    max-width: 100vw;
+    max-height: 100vh;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    margin: 0 0 0 -50vw;
+    left: 50%;
+
     .hsc-body {
-        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -50vh 0 0 -50vw;
+        max-width: 100vw;
+        max-height: 100vh;
+        width: 100vw;
         height: 100vh;
-        display: table;
+        overflow: hidden;
     }
 
     .mp-svg-wrapper {
-        position: relative;
-        z-index: 9999;
-        display: table-cell;
-        vertical-align: middle;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -50vh 0 0 -50vw;
+        max-width: 100vw;
+        max-height: 100vh;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        z-index: 9998;
+    }
+
+    .mp-zoom-wrapper {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -50vh 0 0 -50vw;
+        max-width: 100vw;
+        max-height: 100vh;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
     }
 }
 
 .home-section#hsMasterplan .mp-svg-wrapper {
 
-    .spot:hover { cursor: pointer; }
+    // transform: scale(2);
+
+    .spot:hover { cursor: default; }
 
     .no-spot { pointer-events: none; }
 
@@ -63,11 +98,45 @@
     .is-hovered {
         .mp-path {
             stroke-width: 6px;
+            cursor: default;
         }
 
         .mp_label {
             transition: transform .3s ease-out;
             transform: translate( 0, 0 );
+        }
+    }
+}
+
+.home-section#hsMasterplan .mp-controls {
+    z-index: 9999;
+    width: x(3.5);
+    height: x(2);
+    position: absolute;
+    bottom: x(2);
+    left: 50%;
+    margin: 0 0 0 x(-1.75);
+    padding: x(.5);
+    background-color: rgba( $sc-grey, .1 );
+
+    .mp-zoom-btn {
+        display: inline-block;
+        max-width: x(1);
+        max-height: x(1);
+        width: x(1);
+        height: x(1);
+        overflow: hidden;
+        line-height: x(1);
+        text-align: center;
+        border-radius: x(.5);
+        border: 1px solid $sc-copper;
+        color: $sc-copper;
+
+        &.zoom-in {
+            margin: 0 x(.25) 0 0;
+        }
+        &.zoom-out {
+            margin: 0 0 0 x(.25);
         }
     }
 }

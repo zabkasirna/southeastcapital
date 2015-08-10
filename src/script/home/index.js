@@ -156,6 +156,7 @@ function initProject() {
 
 function initMasterplan() {
     Masterplan.setup();
+    Masterplan.initZoom();
 }
 
 function initExcitement() {

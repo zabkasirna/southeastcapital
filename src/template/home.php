@@ -143,8 +143,14 @@ get_header(); ?>
 
             <section class="home-section" id="hsMasterplan" data-anchor="masterplan">
                 <div class="hsc-body">
-                    <div class="mp-svg-wrapper">
-                        <?php include( get_stylesheet_directory() . '/masterplan-svg.php' ); ?>
+                    <div class="mp-zoom-wrapper">
+                        <div class="mp-svg-wrapper">
+                            <?php include( get_stylesheet_directory() . '/masterplan-svg.php' ); ?>
+                        </div>
+                    </div>
+                    <div class="mp-controls">
+                        <a href="#" class="mp-zoom-btn zoom-in"><span class="fa fa-plus"></span></a><a
+                           href="#" class="mp-zoom-btn zoom-out"><span class="fa fa-minus"></span></a>
                     </div>
                 </div>
             </section>

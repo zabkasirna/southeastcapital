@@ -1,5 +1,6 @@
 var Masterplan = {
-    setup: setup
+    setup: setup,
+    initZoom: initZoom
 };
 
 function inject() {
@@ -44,6 +45,22 @@ function setup() {
         var $parent = $el.closest('.mp-area');
         $parent[0].removeClass('is-hovered');
     }
+}
+
+function initZoom() {
+    var $mp = $('.mp-zoom-wrapper')
+    ,   $in = $('.mp-zoom-btn.zoom-in')
+    ,   $out = $('.mp-zoom-btn.zoom-out')
+    ;
+
+    if ( !$mp.length || !$in.length || !$out.length ) return;
+
+    console.log( $mp );
+
+    $mp.panzoom({
+        $zoomIn: $in,
+        $zoomOut: $out
+    });
 }
 
 module.exports = Masterplan;
