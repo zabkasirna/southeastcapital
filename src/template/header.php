@@ -101,7 +101,7 @@
         <div id="logo" >
             <div class="faux-bg"><div class="faux-arrow"></div></div>
 
-            <a class="logo-anchor" href="<?php echo home_url( '/' ); ?>">
+            <a class="logo-anchor" href="<?php echo home_url( '/' ) . '#intro'; ?>">
                 <img
                     class="js-svg-injector logo-img"
                     src="<?php echo get_template_directory_uri() . '/uploads/images/logo/logo.svg'; ?>"

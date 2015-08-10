@@ -49,7 +49,7 @@ get_header();
 
         <div id="js-fullpage">
 
-            <section class="home-section" id="hsConcept" data-anchor="concept" >
+            <section class="home-section" id="hsConcept" data-anchor="intro" >
 
                 <div class="hs-bg">
                     <div class="bgi-outer">
@@ -85,7 +85,7 @@ get_header();
                 </div>
             </section>
 
-            <section class="home-section" id="hsProject" data-anchor="projects">
+            <section class="home-section" id="hsProject" data-anchor="concept">
                 <div class="hs-bg">
                     <div class="bgi"
                         data-src="<?php echo $project_bgi; ?>"
@@ -110,7 +110,7 @@ get_header();
                                         <p class="bodycopy"><?php echo $project_body; ?></p>
                                     </div>
 
-                                    <a class="hsc-btn" href="#masterplan">Find More<span class="gt">&gt;</span></a>
+                                    <!-- <a class="hsc-btn" href="#masterplan">Find More<span class="gt">&gt;</span></a> -->
                                 </div>
                             </div>
                         </div>
@@ -118,7 +118,7 @@ get_header();
                 </div>
             </section>
 
-            <section class="home-section" id="hsMasterplan" data-anchor="masterplan">
+            <section class="home-section" id="hsMasterplan" data-anchor="projects">
                 <div class="hsc-body">
                     <div class="mp-zoom-wrapper">
                         <div class="mp-svg-wrapper">

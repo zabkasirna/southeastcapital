@@ -29,14 +29,13 @@ function layout() {
 
     var _self = this;
     _self.initActiveLink();
-    _self.setActiveLink();
+    // _self.setActiveLink();
 
     // Fullpage JS
     var $fpEl = $('#js-fullpage');
     $fpEl.fullpage({
         sectionSelector: '.home-section',
-        anchors: ['concept', 'projects', 'masterplan', 'exciting', 'updates', 'location', 'contact'],
-        normalScrollElements: '.bodycopy, .home-section#hsUpdate .loop, .home-section#hsUpdate',
+        normalScrollElements: '.bodycopy, .home-section#hsUpdate .loop',
         onLeave: function( index, nextIndex, direction ) {
             var _testString = '#' + $fpEl
                 .children('.home-section')
@@ -47,7 +46,7 @@ function layout() {
             ,   $el = $('#header-nav .menu-item a[href="' + _testString + '"]')
             ;
 
-            $el = ( $el.length ) ? $el : $('#header-nav .menu-item a[href="#projects"]');
+            $el = ( $el.length ) ? $el : $();
 
             _self.setActiveLink( $el );
 
@@ -55,7 +54,7 @@ function layout() {
             if ( _testString === '#location' && !SECLocation.hasInitialized )
                 SECLocation.init( SECLocation.hasInitialized );
 
-            if ( _testString === '#masterplan' && !SECLocation.hasInitialized ) {
+            if ( _testString === '#projects' ) {
                 $('.mp-zoom-wrapper').addClass('is-active');
             }
         }
@@ -76,7 +75,7 @@ function setActiveLink( $el ) {
 
     _self.activeLink = ( $el instanceof jQuery )
         ? $el
-        : $navItems.first().children('a')
+        : $()
     ;
 
     _self.activeLink.addClass('is-active');
