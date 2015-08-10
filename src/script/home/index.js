@@ -113,8 +113,7 @@ function initConcept() {
 
     $el.background({
         "source": {
-            "0px": _bgiSrc,
-            "980px": _bgiSrc
+            "0px": _bgiSrc
         }
     });
 

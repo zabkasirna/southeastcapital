@@ -60,17 +60,11 @@ function sec_scripts_and_styles() {
         // jquery
         wp_register_script( 'sec-jquery', get_template_directory_uri() . '/script/vendor/jquery/dist/jquery.js', array(), '', true );
 
-        // isotope
-        // wp_register_script( 'sec-isotope', get_template_directory_uri() . '/script/vendor/isotope/dist/isotope.pkgd.js', array( 'sec-jquery' ), '', true );
-        // wp_register_script( 'sec-isotope-fitrows', get_template_directory_uri() . '/script/vendor/isotope/js/layout-modes/fit-rows.js', array( 'sec-jquery', 'sec-isotope' ), '', true );
-        // wp_register_script( 'sec-isotope-masonry', get_template_directory_uri() . '/script/vendor/isotope/js/layout-modes/masonry.js', array( 'sec-jquery', 'sec-isotope' ), '', true );
-        // wp_register_script( 'sec-isotope-vertical', get_template_directory_uri() . '/script/vendor/isotope/js/layout-modes/vertical.js', array( 'sec-jquery', 'sec-isotope' ), '', true );
-
         // svg-injector
         wp_register_script( 'sec-svg-injector', get_template_directory_uri() . '/script/vendor/svg-injector/svg-injector.js', array(), '', true );
 
-        // chroma
-        // wp_register_script( 'sec-chroma', get_template_directory_uri() . '/script/vendor/chroma-js/chroma.js', array(), '', true );
+        // imagesloaded
+        wp_register_script( 'sec-imagesloaded', get_template_directory_uri() . '/script/vendor/imagesloaded/imagesloaded.pkgd.js', array( 'sec-jquery' ), '', true );
 
         // waypoints
         wp_register_script( 'sec-waypoints', get_template_directory_uri() . '/script/vendor/waypoints/lib/jquery.waypoints.js', array( 'sec-jquery' ), '', true );
@@ -108,6 +102,7 @@ function sec_scripts_and_styles() {
         wp_enqueue_script( 'sec-modernizr' );
         wp_enqueue_script( 'sec-jquery' );
         wp_enqueue_script( 'sec-svg-injector' );
+        wp_enqueue_script( 'sec-imagesloaded' );
         wp_enqueue_script( 'sec-waypoints' );
         wp_enqueue_script( 'sec-waypoints-inview' );
         wp_enqueue_script( 'sec-verge' );
