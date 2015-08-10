@@ -23,14 +23,53 @@ $line1: x(1.5);
         color: $sc-copper;
     }
 
+    .hsc-head {
+        @media screen and ( max-height: 815px ) { display: none; }
+    }
+
+    .hsc-body {
+        width: 100%;
+        @media screen and ( max-width: 980px ) and ( max-height: 648px ) {
+            max-height: x(14);
+            overflow: scroll;
+        }
+    }
+
     .hsch-first {
-        min-height: x(4);
+        // min-height: x(4);
         height: x(4);
+
+        @media screen and ( max-width: 768px ) {
+            // min-height: x(2);
+            height: x(2);            
+        }
+
         .text {
             position: fixed;
             left: 0;
             font-family: $ff-sans-heavy;
             letter-spacing: 0.05em;
+            width: auto;
+            text-align: left;
+
+            max-width: 7em;
+            width: 7em;
+
+            @media screen and ( max-width: 768px ) {
+                line-height: 2rem;
+                font-size: 1.5rem;
+                text-align: center;
+                max-width: 100%;
+                width: 100%;
+            }
+        }
+    }
+
+    .hsch-second {
+        @media screen and ( max-width: 768px ) {
+            max-width: 100%;
+            width: 100%;
+            text-align: center;
         }
     }
 
@@ -38,14 +77,42 @@ $line1: x(1.5);
 
     .control-group-row {
         @include clearfix;
-        margin-bottom: x(1.5);
+        margin: 0 0 x(1.5) 0;
         &.test { background-color: aliceblue; }
+
+        @media screen and ( max-width: 980px ) {
+            margin: 0 0 0 0;
+        }
+
+        @media screen and ( max-width: 479px ) {
+            margin: 0 x(1);
+        }
+
+        .control-wrapper {
+            margin: 0 0 0 0;
+
+            // @media screen and ( max-width: 980px ) and ( min-height: 980px ) {
+            @media screen and ( max-width: 980px ) and ( min-height: 649px ) {
+                margin: 0 0 x(2) 0;
+            }
+            @media screen and ( max-width: 980px ) and ( max-height: 648px ) {
+                margin: 0 0 x(1) 0;
+            }
+            
+            &.control-size-large {
+                margin: 0 0 x(1) 0;
+            }
+        }
     }
 
     .faux-label {
         position: relative;
         height: $line1;
         margin-bottom: -$line1;
+
+        @media screen and ( max-width: 980px ) and ( max-height: 648px ) {
+            display: none;
+        }
 
         .faux-label-inner {
             position: relative;
@@ -137,6 +204,21 @@ $line1: x(1.5);
            color: $sc-copper;
         }
     }
+
+    .control-submit {
+        display: block;
+        height: x(1.5);
+        line-height: x(1.5);
+        text-decoration: none;
+        text-align: right;
+
+        span {
+            display: inline-block;
+            background-color: $white;
+            border: 2px solid $sc-copper;
+            padding: 0 1em;
+        }
+    }
     
     .fs-dropdown {
         margin: 0;
@@ -156,20 +238,6 @@ $line1: x(1.5);
                 border-right: 6px solid transparent;
                 border-top: 6px solid $sc-copper;
             }
-            // &:after {
-            //     content: "";
-            //     position: absolute;
-            //     top: 0;
-            //     right: 0;
-            //     max-height: x(1.5);
-            //     height: x(1.5);
-            //     max-width: x(1.5);
-            //     width: x(1.5);
-            //     border: 0;
-            //     margin: 0;
-            //     background: url('uploads/images/arrow/select-arrow_v.png') no-repeat;
-            //     background-color: aliceblue;
-            // }
         }
 
         .fs-dropdown-open,

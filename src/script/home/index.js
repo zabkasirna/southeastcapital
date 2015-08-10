@@ -35,7 +35,7 @@ function layout() {
     var $fpEl = $('#js-fullpage');
     $fpEl.fullpage({
         sectionSelector: '.home-section',
-        normalScrollElements: '.bodycopy, .home-section#hsProject .hsc-body-content, .home-section#hsUpdate .loops',
+        normalScrollElements: '.bodycopy, .home-section#hsProject .hsc-body-content, .home-section#hsUpdate .loops, .home-section#hsContact .hsc-body',
         normalScrollElementTouchThreshold: 12,
         onLeave: function( index, nextIndex, direction ) {
             var _testString = '#' + $fpEl

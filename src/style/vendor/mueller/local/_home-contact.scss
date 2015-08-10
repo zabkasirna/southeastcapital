@@ -12,15 +12,15 @@
             @extend .g-d-9;
             @extend .g-hr-9;
             @extend .g-l-9;
-            @extend .g-tp-5;
-            @extend .g-hl-5;
-            @extend .g-h-5;
-            @extend .g-d-push1;
+            @extend .g-tp-4;
+            @extend .g-hl-6;
+            @extend .g-h-6;
+            // @extend .g-d-push1;
             @extend .g-hr-push1;
             @extend .g-l-push1;
             @extend .g-tp-push1;
-            @extend .g-hl-push1;
-            @extend .g-h-push1;
+            // @extend .g-hl-push1;
+            // @extend .g-h-push1;
             @extend .g-all-fl;
         }
     }
@@ -34,13 +34,13 @@
         @extend .g-all-l;
 
         .control-size-narrow {
-            @extend .g-d-7;
+            @extend .g-d-6;
             @extend .g-hr-7;
             @extend .g-l-7;
             @extend .g-tp-6;
             @extend .g-hl-6;
             @extend .g-h-6;
-            @extend .g-d-prepend1;
+            // @extend .g-d-prepend1;
             @extend .g-l-prepend1;
             @extend .g-hr-prepend1;
 
@@ -49,13 +49,13 @@
         }
 
         .control-size-large {
-            @extend .g-d-14;
+            @extend .g-d-6;
             @extend .g-hr-14;
             @extend .g-l-14;
             @extend .g-tp-6;
             @extend .g-hl-6;
             @extend .g-h-6;
-            @extend .g-d-prepend1;
+            // @extend .g-d-prepend1;
             @extend .g-l-prepend1;
             @extend .g-hr-prepend1;
             @extend .g-all-fl;

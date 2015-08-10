@@ -294,11 +294,11 @@ get_header();
                 <div class="faux-bg"></div>
                 <div class="hsc-head">
                     <div class="hsch-first">
-                        <h3 class="h2 text">CONNECT <br>WITH US!</h3>
+                        <h3 class="h2 text">CONNECT WITH US!</h3>
                     </div>
                     <p class="hsch-second">Please complete your contact details <br/>we'll get back to you soon!</p>
                 </div>
-                <div class="hsc-body" >
+                <form class="hsc-body" >
                     <div class="control-group-row">
                         <div class="control-wrapper control-size-narrow">
                             <div class="faux-label"><span class="faux-label-inner">First Name</span></div>
@@ -346,7 +346,11 @@ get_header();
                                 ></textarea>
                         </div>
                     </div>
-                </div>
+
+                    <div class="control-group-row">
+                        <a class="control-submit" href="javascript:void(0);"><span>SUBMIT</span></a>
+                    </div>
+                </form>
             </section>
         </div>
 
