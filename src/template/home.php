@@ -94,13 +94,13 @@ get_header();
                 <div class="hs-content">
                     <div class="inner">
                         <div class="hsc-title">
-                            <div class="bgi-outer">
+                            <div class="bgi-outer is-preloading">
                                 <div class="bgi"
                                     data-src='<?php echo bloginfo('template_url') . "/uploads/images/living/connected.png"; ?>'
                                 ></div>
                             </div>
                         </div>
-                        <div class="hsc-body-outer">
+                        <div class="hsc-body-outer is-preloading">
                             <div class="hsc-body-inner">
                                 <div class="hsc-body">
                                     <div class="hsc-body-content">

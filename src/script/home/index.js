@@ -35,7 +35,8 @@ function layout() {
     var $fpEl = $('#js-fullpage');
     $fpEl.fullpage({
         sectionSelector: '.home-section',
-        normalScrollElements: '.bodycopy, .home-section#hsUpdate .loop',
+        normalScrollElements: '.bodycopy, .home-section#hsProject .hsc-body-content, .home-section#hsUpdate .loops',
+        normalScrollElementTouchThreshold: 12,
         onLeave: function( index, nextIndex, direction ) {
             var _testString = '#' + $fpEl
                 .children('.home-section')
@@ -56,6 +57,18 @@ function layout() {
 
             if ( _testString === '#projects' ) {
                 $('.mp-zoom-wrapper').addClass('is-active');
+            }
+
+            switch ( _testString ) {
+                case '#concept': 
+                    $( '#hsProject .is-preloading' ).removeClass( 'is-preloading' );
+                break;
+                case '#location': 
+                    if ( !SECLocation.hasInitialized ) SECLocation.init( SECLocation.hasInitialized );
+                break;
+                case '#projects': 
+                    $('.mp-zoom-wrapper').addClass('is-active');
+                break;
             }
         }
     });
