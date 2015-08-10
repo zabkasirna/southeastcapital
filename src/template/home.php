@@ -5,52 +5,9 @@
  * @since 0.0.0
  */
 
-get_header(); ?>
+require_once( 'hex2rgba.php' );
 
-<?php
-    /**
-     * [http://mekshq.com/how-to-convert-hexadecimal-color-code-to-rgb-or-rgba-using-php/]
-     * @param  String  $color   the hex
-     * @param  boolean $opacity 0 to 1
-     * @return String           rgba( r, g, b, a )
-     */
-    function hex2rgba($color, $opacity = false) {
-     
-        $default = 'rgb(0,0,0)';
-     
-        //Return default if no color provided
-        if(empty($color))
-              return $default; 
-     
-        //Sanitize $color if "#" is provided 
-            if ($color[0] == '#' ) {
-                $color = substr( $color, 1 );
-            }
-     
-            //Check if color has 6 or 3 characters and get values
-            if (strlen($color) == 6) {
-                    $hex = array( $color[0] . $color[1], $color[2] . $color[3], $color[4] . $color[5] );
-            } elseif ( strlen( $color ) == 3 ) {
-                    $hex = array( $color[0] . $color[0], $color[1] . $color[1], $color[2] . $color[2] );
-            } else {
-                    return $default;
-            }
-     
-            //Convert hexadec to rgb
-            $rgb =  array_map('hexdec', $hex);
-     
-            //Check if opacity is set(rgba or rgb)
-            if($opacity){
-                if(abs($opacity) > 1)
-                    $opacity = 1.0;
-                $output = 'rgba('.implode(",",$rgb).','.$opacity.')';
-            } else {
-                $output = 'rgb('.implode(",",$rgb).')';
-            }
-     
-            //Return rgb(a) color string
-            return $output;
-    }
+get_header();
 ?>
 
 <?php
@@ -61,9 +18,16 @@ get_header(); ?>
 <?php if ( !$is_sec_slideshow ) : ?>
 
 <?php
-    /*---- {{ DATA: CONCEPT IMAGE }} ----*/
-    $concept_bgi = get_field( 'concept_bgi', 'option' )['url'];
-    // debuggrr( $concept_bgi );
+    /*---- {{ DATA: CONCEPT SLIDESHOW }} ----*/
+    $concept_slide_items = get_field( 'concept_slide_items', 'option' );
+    $_csi = array();
+
+    foreach ($concept_slide_items as $concept_slide_item_key => $concept_slide_item_val) {
+        $_csi[] = array(
+            'bgi' => $concept_slide_item_val['concept_image']['url'],
+            'body' => $concept_slide_item_val['concept_body']
+        );
+    }
 
     /*---- {{ DATA: PROJECT IMAGE }} ----*/
     $project_bgi = get_field( 'project_bgi', 'option' )['url'];
@@ -84,25 +48,38 @@ get_header(); ?>
     >
 
         <div id="js-fullpage">
-            <section class="home-section" id="hsConcept" data-anchor="concept">
+
+            <section class="home-section" id="hsConcept" data-anchor="concept" >
+
                 <div class="hs-bg">
-                    <div class="bgi"
-                        data-src="<?php echo $concept_bgi; ?>"
-                    ></div>
+                    <div class="bgi-outer">
+                        <?php foreach ( $_csi as $_csi_key => $_csi_val ) : ?>
+
+                        <div class="bgi" data-src="<?php echo $_csi_val['bgi']; ?>"></div>
+
+                        <?php endforeach; ?>
+                    </div>
                     <div class="content-faux-bg"></div>
                     <div class="preloader" >
                         <?php include( get_stylesheet_directory() . '/preloader.svg' ); ?>
                     </div>
                 </div>
                 <div class="hs-content">
-                    <div class="inner">
-                        <div class="hsc-title">
-                            <p class="hsc-title-text"><span
-                                class="t-1">Life</span><span
-                                class="t-2">Reimagined</span>
-                            </p>
+                    <div class="hsc-title">
+                        <p class="hsc-title-text"><span
+                            class="t-1">Life</span><span
+                            class="t-2">Reimagined</span>
+                        </p>
+                    </div>
+                    <div class="hsc-body">
+                        <?php foreach ( $_csi as $_csi_key => $_csi_val ) : ?>
+
+                        <div class="inner">
+                            <p class="hsc-body-text"><span><?php echo $_csi_val['body']; ?></span></p>
                         </div>
-                        <p class="hsc-body">Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur.</p>
+
+                        <?php endforeach; ?>
+
                         <!-- <a class="hsc-btn" href="javascript:void(0);">Find More<span class="gt">&gt;</span></a> -->
                     </div>
                 </div>

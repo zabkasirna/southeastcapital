@@ -105,24 +105,60 @@ function initActiveLink( hasInitialized ) {
 function initConcept() {
     if ( !$('#hsConcept').length ) return;
 
-    var $el = $('#hsConcept .bgi')
-    ,   _bgiSrc = $el.attr('data-src')
-    ,   $preloader = $el.closest('.hs-bg').find('.preloader')
-    ,   $title = $el.closest('#hsConcept').find('.hsc-title')
+    var _carouselOptions = {
+            infinite: true,
+            autoAdvance: true,
+            controls: false,
+            autoTime: 9000
+        }
+    ,   $bgiOuter = $('.bgi-outer')
+    ,   $preloader = $bgiOuter.closest('.hs-bg').find('.preloader')
+    ,   $title = $bgiOuter.closest('#hsConcept').find('.hsc-title')
     ;
 
-    $el.background({
-        "source": {
-            "0px": _bgiSrc
-        }
-    });
+    // CAROUSEL
+    $bgiOuter.carousel( _carouselOptions );
 
-    $el.imagesLoaded()
+    // BGI
+    $bgiOuter.find('.bgi').each(
+        function( i ) {
+            var $bgi = $(this)
+            ,   _bgiSrc = $bgi.data( 'src' )
+            ;
+
+            $bgi.background({
+                source: {
+                    '0px': _bgiSrc
+                }
+            });
+        }
+    );
+
+    // imagesLoaded
+    $bgiOuter.imagesLoaded()
         .done( function() {
             $preloader.addClass('has-loaded');
             $title.addClass('has-loaded');
         });
-    ;
+
+    // var $el = $('#hsConcept .bgi')
+    // ,   _bgiSrc = $el.attr('data-src')
+    // ,   $preloader = $el.closest('.hs-bg').find('.preloader')
+    // ,   $title = $el.closest('#hsConcept').find('.hsc-title')
+    // ;
+
+    // $el.background({
+    //     "source": {
+    //         "0px": _bgiSrc
+    //     }
+    // });
+
+    // $el.imagesLoaded()
+    //     .done( function() {
+    //         $preloader.addClass('has-loaded');
+    //         $title.addClass('has-loaded');
+    //     });
+    // ;
 }
 
 function initProject() {
