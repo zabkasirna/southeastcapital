@@ -36,7 +36,7 @@ function layout() {
     $fpEl.fullpage({
         sectionSelector: '.home-section',
         anchors: ['concept', 'projects', 'masterplan', 'exciting', 'updates', 'location', 'contact'],
-        normalScrollElements: '.bodycopy, .home-section#hsUpdate .loop',
+        normalScrollElements: '.bodycopy, .home-section#hsUpdate .loop, .home-section#hsUpdate',
         onLeave: function( index, nextIndex, direction ) {
             var _testString = '#' + $fpEl
                 .children('.home-section')

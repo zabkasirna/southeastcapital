@@ -33,7 +33,8 @@
     "svg-injector": "~1.1.3",
     "verge": "~1.9.1",
     "fullpage.js": "~2.6.7",
-    "gmaps": "~0.4.18"
+    "gmaps": "~0.4.18",
+    "jquery.panzoom": "~2.0.5"
   },
   "overrides": {
     "modernizr": {
