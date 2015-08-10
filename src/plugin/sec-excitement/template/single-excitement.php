@@ -16,6 +16,10 @@
         role="main"
     >
 
+        <div class="sex-goto-home">
+            <a href='<?php echo esc_url( home_url( '/' ) ); ?>' class="sex-goto-home-link"><span class="fa fa-home"></span><span class="text">to home</span></a>
+        </div>
+
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
         <?php
