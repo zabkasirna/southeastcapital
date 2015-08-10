@@ -140,25 +140,6 @@ function initConcept() {
             $preloader.addClass('has-loaded');
             $title.addClass('has-loaded');
         });
-
-    // var $el = $('#hsConcept .bgi')
-    // ,   _bgiSrc = $el.attr('data-src')
-    // ,   $preloader = $el.closest('.hs-bg').find('.preloader')
-    // ,   $title = $el.closest('#hsConcept').find('.hsc-title')
-    // ;
-
-    // $el.background({
-    //     "source": {
-    //         "0px": _bgiSrc
-    //     }
-    // });
-
-    // $el.imagesLoaded()
-    //     .done( function() {
-    //         $preloader.addClass('has-loaded');
-    //         $title.addClass('has-loaded');
-    //     });
-    // ;
 }
 
 function initProject() {
@@ -174,25 +155,20 @@ function initProject() {
 
     $el1.background({
         "source": {
-            "0px": _bgi1Src,
-            "980px": _bgi1Src
+            "0px": _bgi1Src
         }
     });
-
-    // console.log( $title, $el2, _bgi2Src );
-    // console.log( $el1.closest('#hsProject').find('.hs-content') );
 
     $el2.background({
         "source": {
-            "0px": _bgi2Src,
-            "980px": _bgi2Src
+            "0px": _bgi2Src
         }
     });
 
-    $el1.on('loaded.background', function(e) {
-        $preloader.addClass('has-loaded');
-        // $title.addClass('has-loaded');
-    });
+    // $el1.on('loaded.background', function(e) {
+    //     $preloader.addClass('has-loaded');
+    //     $title.addClass('has-loaded');
+    // });
 }
 
 function initMasterplan() {

@@ -37,8 +37,18 @@
             transform: translateY(-50%);
             position: relative;
             top: 50%;
-            width: 120vw;
-            margin: 0 0 0 -10vw;
+
+            width: 110vw;
+            margin: 0 0 0 -5vw;
+
+            @media screen and ( min-aspect-ratio: 4/3 ) {
+                width: 100vw;
+                margin: 0 0 0 0;
+            }
+            @media screen and ( min-aspect-ratio: 5/3 ) {
+                width: 90vw;
+                margin: 0 0 0 5vw;
+            }
         }
     }
 
