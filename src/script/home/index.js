@@ -144,12 +144,13 @@ function initConcept() {
 function initProject() {
     if ( !$('#hsProject').length ) return;
 
-    var $el1 = $('#hsProject .hs-bg .bgi')
+    var $section = $('#hsProject')
+    ,   $el1 = $section.find('.hs-bg .bgi')
     ,   _bgi1Src = $el1.attr('data-src')
-    ,   $preloader = $el1.closest('.hs-bg').find('.preloader')
-    ,   $title = $el1.closest('#hsProject').find('.hs-content .hsc-title')
+    ,   $title = $section.find('.hs-content .hsc-title')
     ,   $el2 = $title.find('.bgi')
     ,   _bgi2Src = $el2.attr('data-src')
+    ,   $preloader = $section.find('.preloader')
     ;
 
     $el1.background({
@@ -164,10 +165,10 @@ function initProject() {
         }
     });
 
-    // $el1.on('loaded.background', function(e) {
-    //     $preloader.addClass('has-loaded');
-    //     $title.addClass('has-loaded');
-    // });
+    $section.imagesLoaded()
+        .done( function() {
+            $preloader.addClass('has-loaded');
+        });
 }
 
 function initMasterplan() {

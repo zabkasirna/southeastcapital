@@ -66,7 +66,7 @@
     $body_class = array();
 
     // Add preload toggler to body class
-    $body_class[] = 'is-preload';
+    // $body_class[] = 'is-preload';
 
     // Add Debuggrr toggler to body class
     if( get_field( 'field_debuggrr_toggler', 'options' ) ) :

@@ -90,9 +90,6 @@ get_header();
                     <div class="bgi"
                         data-src="<?php echo $project_bgi; ?>"
                     ></div>
-                    <div class="preloader" >
-                        <?php include( get_stylesheet_directory() . '/preloader.svg' ); ?>
-                    </div>
                 </div>
                 <div class="hs-content">
                     <div class="inner">
@@ -115,6 +112,9 @@ get_header();
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="preloader" >
+                    <?php include( get_stylesheet_directory() . '/preloader.svg' ); ?>
                 </div>
             </section>
 
