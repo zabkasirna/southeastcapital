@@ -15,7 +15,7 @@ get_header(); ?>
 
     <?php if ( have_posts() ) : ?>
 
-        <div class="loop-outer">
+        <div class="loop-outer" style="display: none;" >
             <?php while ( have_posts() ) : the_post(); ?>
 
             <?php // LOOP ?>
