@@ -31,15 +31,17 @@
             vertical-align: middle;
 
             .hsc-title {
+                transition: all .3s ease-out .3s;
+
                 position: fixed;
-                top: x(-5);
+                top: x(-15);
                 left: 0;
                 width: 50%;
                 height: 100%;
 
                 pointer-events: none;
-                display: none;
-                &.has-loaded { display: table; }
+                display: table;
+                color: rgba($white, 0);
 
                 @media screen and ( max-width: 980px ) {
                     top: x(-6);
@@ -81,10 +83,22 @@
                             content: '';
                             display: block;
                             position: absolute;
-                            top: 0; left: 0.2em; right: 0.15em;
+                            top: x(-15); left: 0.2em; right: 0.15em;
                             height: 2px;
                             background-color: $white;
                         }
+                    }
+                }
+
+                &.has-loaded {
+                    transition: all .3s ease-out .3s;
+
+                    color: rgba($white, 1);
+                    top: x(-5);
+
+                    .hsc-title-text > span.t-2:before {
+                        transition: top .5s ease-out .3s;
+                        top: 0;
                     }
                 }
             }

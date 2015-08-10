@@ -55,7 +55,7 @@ function initZoom() {
 
     if ( !$mp.length || !$in.length || !$out.length ) return;
 
-    console.log( $mp );
+    // console.log( $mp );
 
     $mp.panzoom({
         $zoomIn: $in,

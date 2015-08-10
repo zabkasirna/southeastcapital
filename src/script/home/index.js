@@ -117,10 +117,12 @@ function initConcept() {
         }
     });
 
-    $el.on('loaded.background', function(e) {
-        $preloader.addClass('has-loaded');
-        $title.addClass('has-loaded');
-    });
+    $el.imagesLoaded()
+        .done( function() {
+            $preloader.addClass('has-loaded');
+            $title.addClass('has-loaded');
+        });
+    ;
 }
 
 function initProject() {
