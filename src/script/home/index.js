@@ -111,7 +111,7 @@ function initConcept() {
             controls: false,
             autoTime: 9000
         }
-    ,   $bgiOuter = $('.bgi-outer')
+    ,   $bgiOuter = $('#hsConcept .bgi-outer')
     ,   $preloader = $bgiOuter.closest('.hs-bg').find('.preloader')
     ,   $title = $bgiOuter.closest('#hsConcept').find('.hsc-title')
     ;
@@ -197,7 +197,7 @@ function initProject() {
 
 function initMasterplan() {
     Masterplan.setup();
-    Masterplan.initZoom();
+    // Masterplan.initZoom();
 }
 
 function initExcitement() {

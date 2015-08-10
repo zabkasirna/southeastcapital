@@ -125,10 +125,15 @@ get_header();
                             <?php include( get_stylesheet_directory() . '/masterplan-svg.php' ); ?>
                         </div>
                     </div>
+                    <?php
+                        $has_mp_controls = false;
+                        if ( $no_mp_controls ) :
+                    ?>
                     <div class="mp-controls">
                         <a href="#" class="mp-zoom-btn zoom-in"><span class="fa fa-plus"></span></a><a
                            href="#" class="mp-zoom-btn zoom-out"><span class="fa fa-minus"></span></a>
                     </div>
+                    <?php endif; ?>
                 </div>
             </section>
 
