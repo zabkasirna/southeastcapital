@@ -54,6 +54,10 @@ function layout() {
             // Set Google Maps on Location Section
             if ( _testString === '#location' && !SECLocation.hasInitialized )
                 SECLocation.init( SECLocation.hasInitialized );
+
+            if ( _testString === '#masterplan' && !SECLocation.hasInitialized ) {
+                $('.mp-zoom-wrapper').addClass('is-active');
+            }
         }
     });
 }

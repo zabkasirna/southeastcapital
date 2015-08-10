@@ -44,6 +44,14 @@
         width: 100vw;
         height: 100vh;
         overflow: hidden;
+
+        transition: opacity .3s ease-out .3s;
+        opacity: 0;
+
+        &.is-active {
+            transition: opacity .3s ease-out .3s;
+            opacity: 1;
+        }
     }
 }
 
