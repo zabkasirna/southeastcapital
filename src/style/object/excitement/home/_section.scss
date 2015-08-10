@@ -20,15 +20,15 @@
         overflow: hidden;
         position: absolute;
 
-        transition: width .3s linear;
+        transition: width .1s ease-out;
 
         &.has-entered {
-            transition: width .3s linear;
+            transition: width .1s ease-out;
             width: 65%;
             // max-width: 65%;
         }
         &.has-leave {
-            transition: width .3s linear;
+            transition: width .1s ease-out;
             width: 35%;
             // max-width: 35%;
         }

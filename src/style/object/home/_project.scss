@@ -33,8 +33,12 @@
         margin-top: x(-2);
         @media screen and (max-width: 980px) {
             height: 50vh;
-            margin-top: -25vh;
+            top: 50vh;
         }
+        // @media screen and (max-width: 479px) {
+        //     height: 50vh;
+        //     top: 50vh;
+        // }
     }
 
     .hsc-body-inner {
@@ -70,6 +74,10 @@
         -moz-column-gap: 0;
         column-gap: 0;
 
+        @media screen and (max-width: 980px) {
+            padding: x(1);
+        }
+
         @media screen and (min-width: 981px) {
             -webkit-columns: 2 r(10);
             -moz-columns: 2 r(10);
@@ -80,9 +88,21 @@
         }
 
         .bodycopy {
-            max-height: 80%;
-            @media screen and (max-width: 980px) {
+            max-height: 70%;
+            @media screen and (max-width: 980px) and (min-width: 480px) {
                 overflow: scroll;
+                font-size: r(1);
+                line-height: r(1.5);
+                max-height: 80%;
+                // border-bottom: 1px solid $sc-grey;
+            }
+
+            @media screen and (max-width: 479px) {
+                overflow: scroll;
+                font-size: r(0.8);
+                line-height: r(1.5);
+                max-height: 75%;
+                // border-bottom: 1px solid $sc-grey;
             }
         }
     }
@@ -117,7 +137,7 @@
         .bgi-outer {
 
             position: absolute;
-            top: 50%;
+            top: 50%; left: auto;
             overflow: hidden;
             max-width: 75%;
             width: 75%;
@@ -129,6 +149,7 @@
                 max-height: x(15);
                 height: x(15);
                 margin-top: x(-9.5);
+                left: auto;
             }
 
             @media screen and (max-width: 980px) and (min-width: 768px) {
@@ -136,21 +157,27 @@
                 width: 100%;
                 max-height: x(7);
                 height: x(7);
-                margin-top: x(-3.5);
+                top: x(8);
+                margin: 0;
+                left: auto;
             }
             @media screen and (max-width: 767px) and (min-width: 480px) {
                 max-width: 100%;
                 width: 100%;
                 max-height: x(5);
                 height: x(5);
-                margin-top: x(-2.5);
+                top: x(5);
+                margin: 0;
+                left: auto;
             }
             @media screen and (max-width: 479px) and (min-width: 0) {
-                max-width: 100%;
-                width: 100%;
+                max-width: x(12);
+                width: x(12);
                 max-height: x(4);
                 height: x(4);
-                margin-top: x(-2);
+                left: 50%;
+                top: x(4);
+                margin: 0 0 0 x(-6);
             }
 
             .bgi {
