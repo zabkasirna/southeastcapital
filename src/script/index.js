@@ -84,7 +84,7 @@ var Signature = require('./signature')
             var resizeTimer = setTimeout(function() {
                 if ( MQ.getViewportW() > 980 ) Logo.insertToNav();
                 else Logo.releaseFromNav();
-            });
+            }, 250);
         });
 
         // SECSlideshow

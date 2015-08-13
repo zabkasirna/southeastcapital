@@ -210,7 +210,8 @@ function init( hasInitialized ) {
             title: 'Southeast Capital',
             infoWindow: {
                 content: '<p style="color:#B05158; margin: 0 auto; text-align: center;" >Southeast Capital</p>'
-            }
+            },
+            icon: '/'
         }
 
     ,   map = !_self.hasInitialized ? new GMaps({
