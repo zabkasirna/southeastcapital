@@ -56,46 +56,16 @@
                 }
             }
 
+            &:hover > .inner:before,
             &.is-active > .inner:before {
                 width: 100%;
                 margin: 0 0 0 -50%;
                 background-color: rgba($sc-copper, 1);
             }
-        }
-
-        &.active,
-        &.current-menu-parent,
-        &.current-menu-ancestor,
-        &:hover {
-            & > a {
+            &:hover > .inner:before,{
+                background-color: rgba($sc-grey, 1);
             }
         }
-    }
-
-    // ------ {{ on load }} ------ //
-    
-    & > li {
-    }
-}
-
-#nav-lists > .menu-item > .sub-menu {
-
-    & > .menu-item {
-
-        & > a {
-        }
-        
-        &.active,
-        &:hover {
-            & > a {
-
-            }
-        }
-    }
-}
-
-#nav-lists > .menu-item-has-children:hover > .sub-menu {
-    & > .menu-item {
     }
 }
 
