@@ -14,6 +14,7 @@
         // ------ {{ anchor }} ------ //
 
         & > a {
+            @include s-transition( color .3s linear .3s );
             display: block;
             color: $link-color;
             text-decoration: none;
@@ -64,6 +65,13 @@
             }
             &:hover > .inner:before,{
                 background-color: rgba($sc-grey, 1);
+            }
+
+            *[data-section="#exciting"] &,
+            *[data-section="#updates"] &,
+            *[data-section="#location"] & {
+                @include s-transition( color .3s linear .3s );
+                color: $sc-grey-dark;
             }
         }
     }

@@ -29,7 +29,12 @@ function layout() {
 
     var _self = this;
     _self.initActiveLink();
-    // _self.setActiveLink();
+
+    function setBodyDataSection ( section ) {
+        var $body = $('body');
+        if ( !$body.data( 'section' ) || !section ) return;
+        $body.attr('data-section', section);
+    }
 
     // Fullpage JS
     var $fpEl = $('#js-fullpage');
@@ -51,23 +56,23 @@ function layout() {
 
             _self.setActiveLink( $el );
 
-            // Set Google Maps on Location Section
-            if ( _testString === '#location' && !SECLocation.hasInitialized )
-                SECLocation.init( SECLocation.hasInitialized );
-
-            if ( _testString === '#projects' ) {
-                $('.mp-zoom-wrapper').addClass('is-active');
-            }
+            setBodyDataSection( _testString );
 
             switch ( _testString ) {
                 case '#concept': 
                     $( '#hsProject .is-preloading' ).removeClass( 'is-preloading' );
                 break;
+                case '#projects': 
+                    $('.mp-zoom-wrapper').addClass('is-active');
+                break;
+                case '#exciting': 
+                break;
+                case '#updates': 
+                break;
                 case '#location': 
                     if ( !SECLocation.hasInitialized ) SECLocation.init( SECLocation.hasInitialized );
                 break;
-                case '#projects': 
-                    $('.mp-zoom-wrapper').addClass('is-active');
+                case '#contact': 
                 break;
             }
         }

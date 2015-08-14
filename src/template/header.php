@@ -79,6 +79,9 @@
 
 <body
     <?php body_class( $body_class ); ?>
+    <?php if ( is_home() ) : ?>
+        data-section="#intro"
+    <?php endif; ?>
 >
 
 <div id="page" class="hfeed site">
