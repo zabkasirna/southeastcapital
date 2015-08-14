@@ -52,10 +52,10 @@
 }
 
 // @arg $motions: ease | linear | ease-in | ease-out | ease-in-out | cubic-bezier()
-@mixin transition-timing-function ($motions...) {
+@mixin s-transition-timing-function ($motions...) {
     transition-timing-function: $motions
 }
 
-@mixin transition-delay ($times...) {
+@mixin s-transition-delay ($times...) {
     transition-delay: $times
 }

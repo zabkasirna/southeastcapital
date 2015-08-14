@@ -54,6 +54,7 @@ var Signature = require('./signature')
 ,   PHPDebugger = require('./php-debugger')
 ,   MQ = require('./mq')
 ,   Logo = require('./logo')
+,   MainNav = require('./nav')
 ,   Home = require('./home')
 ,   Excitement = require('./excitement')
 ,   SECLocation = require('./sec-location')
@@ -74,6 +75,9 @@ var Signature = require('./signature')
 
         // Logo
         Logo.injectSVG();
+
+        // Nav
+        MainNav.init();
 
         if ( MQ.getViewportW() > 980 ) Logo.insertToNav( true );
         else Logo.releaseFromNav( true );

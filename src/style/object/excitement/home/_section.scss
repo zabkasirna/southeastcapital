@@ -109,7 +109,7 @@
 
             .bgi {
                 @inclute s-transition( all .5s );
-                @include s-grayscale( true, 0 );
+                @include s-grayscale( true, .2 );
                 opacity: 1;
             }
         }

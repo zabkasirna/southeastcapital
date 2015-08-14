@@ -11,12 +11,19 @@
 
     & > li {
 
+        *[data-section="#exciting"] &,
+        *[data-section="#updates"] &,
+        *[data-section="#location"] & {
+            @include s-transition( color .3s linear .3s );
+            color: $sc-grey-dark;
+        }
+
         // ------ {{ anchor }} ------ //
 
         & > a {
             @include s-transition( color .3s linear .3s );
             display: block;
-            color: $link-color;
+            color: currentColor;
             text-decoration: none;
             text-transform: uppercase;
             margin: 0;
@@ -48,11 +55,6 @@
                     width: 0%;
                     height: 2px;
                     margin: 0 0 0 0%;
-
-                    // @media screen and (min-width: 1799px) {
-                    //     left: 15%;
-                    //     width: 70%;
-                    // }
                     background-color: rgba($sc-copper, 0);
                 }
             }
@@ -66,12 +68,64 @@
             &:hover > .inner:before,{
                 background-color: rgba($sc-grey, 1);
             }
+        }
 
-            *[data-section="#exciting"] &,
-            *[data-section="#updates"] &,
-            *[data-section="#location"] & {
-                @include s-transition( color .3s linear .3s );
-                color: $sc-grey-dark;
+        &:hover {
+            .sub-menu {
+                @include s-transition( all .6s );
+                @include s-translate( 0, 0 );
+                opacity: 1;
+            }
+        }
+    }
+}
+
+#nav-lists .sub-menu {
+    @include s-transition( all .2s );
+    @include s-translate( 0, -200% );
+    padding: x(.5) 0 0 0;
+    list-style: none outside none;
+    opacity: 0;
+
+    & > .menu-item {
+
+        a {
+            @include s-transition( color .3s linear .3s );
+            color: currentColor;
+            text-transform: uppercase;
+            white-space: nowrap;
+            // ------ {{* local *}} ------ //
+            font-size: 11px;
+            font-family: SansBold;
+            letter-spacing: .1em;
+            line-height: x(1.5);
+            height: x(1.5);
+            text-align: center;
+
+            // faux-border
+            & > .inner {
+
+                display: inline-block;
+                position: relative;
+
+                &:before {
+                    transition: all .3s ease-in-out;
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    bottom: 0;
+                    // left: 50%;
+                    width: 0%;
+                    height: 1px;
+                    margin: 0 0 0 0;
+                    background-color: rgba($sc-copper, 0);
+                }
+            }
+
+            &:hover > .inner:before {
+                width: 100%;
+                // margin: 0 0 0 -50%;
+                background-color: rgba($sc-copper, 1);
             }
         }
     }
