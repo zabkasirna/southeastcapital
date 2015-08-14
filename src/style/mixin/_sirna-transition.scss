@@ -24,11 +24,19 @@
 
 @mixin s-transition ($properties...) {
     @if length($properties) >= 1 {
+        -webkit-transition: $properties;
+        -moz-transition: $properties;
+        -ms-transition: $properties;
+        -o-transition: $properties;
         transition: $properties;
     }
 
     @else {
         $properties: all 0.15s ease-out 0s;
+        -webkit-transition: $properties;
+        -moz-transition: $properties;
+        -ms-transition: $properties;
+        -o-transition: $properties;
         transition: $properties;
     }
 }

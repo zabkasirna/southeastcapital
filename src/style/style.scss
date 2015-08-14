@@ -6,6 +6,9 @@ $old: false;
 /* ------ {{ normalize }} ------ */
 @import "vendor/normalize/normalize";
 
+/* ------ {{ vendor-prefix }} ------ */
+@import "base/prefix";
+
 /* ------ {{ compass-mixins }} ------ */
 @import "vendor/compass-mixins/lib/compass";
 @import "vendor/compass-mixins/lib/compass/layout";
@@ -23,6 +26,7 @@ $old: false;
 @import "mixin/sirna-font-icon";
 @import "mixin/sirna-media-query";
 @import "mixin/sirna-transition";
+@import "mixin/sirna-filter";
 @import "mixin/sec-layout";
 @import "mixin/sec-btn";
 
