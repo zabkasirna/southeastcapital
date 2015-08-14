@@ -94,7 +94,9 @@
     width: 100vw;
     left: 50%;
     bottom: 0; top: auto;
+    max-height: x(5);
     height: x(5);
+    overflow: hidden;
     margin: 0 0 0 -50vw;
     background-color: $sc-grey-dark;
 
@@ -228,10 +230,15 @@
 
     .f-info {
         display: block;
-        margin: 0 0 12px 0;
+        margin: 0;
 
         .f-info-key {
             margin: 0 1em 0 0;
+        }
+
+        &:first-of-type {
+            @media screen and ( min-width: 981px ) { margin-top: x(1); }
+            @media screen and ( max-width: 980px ) and ( min-width: 769px ) { margin-top: x(1.5); }
         }
     }
 

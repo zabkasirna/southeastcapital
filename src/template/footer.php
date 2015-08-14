@@ -18,7 +18,7 @@
             <p class="f-mandatory hidden">DESIGN - CODE BY <span class="reversed-r">R</span>+R</p>
         </div>
         <div class="foot1">
-            <p class="f-company-name">PT SAYANA INTERGA PROPERTI</p>
+            <p class="f-company-name">PT SAYANA INTEGRA PROPERTI</p>
             <p class="f-company-address">TRIVO BUILDING <br>JL. KH WAHID HASYIM NO. 157 <br> Jakarta 10240, Indonesia</p>
         </div>
         <div class="foot2">
@@ -45,7 +45,7 @@
                 ><img class="devby-logo-img"
                     src='<?php echo get_template_directory_uri() . '/uploads/images/logo/trivo.png'; ?>'
                     alt="trivo"
-                ><span class="devby-text">trivo.id</span></a>
+                ></a>
         </div>
     </div>
 
