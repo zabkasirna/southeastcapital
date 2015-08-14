@@ -108,14 +108,15 @@
 
             .item-title {
                 margin: 0;
+                line-height: r(2);
             }
         }
 
         .item-body {
             & > p {
                 color: $black;
-                line-height: r(1);
-                font-size: 11px;
+                line-height: r(1.5);
+                font-size: 13px;
                 letter-spacing: 0.05em;
                 margin: 0;
             }

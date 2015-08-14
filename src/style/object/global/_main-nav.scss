@@ -11,11 +11,21 @@
 
     & > li {
 
+        @include s-transition( all .3s linear .3s );
+        padding-top: 0;
+        color: #EAEAEA;
+
+        *[data-section="#intro"] & {
+            @include s-transition( all .3s linear .3s );
+            color: $white;
+        }
+
         *[data-section="#exciting"] &,
         *[data-section="#updates"] &,
         *[data-section="#location"] & {
-            @include s-transition( color .3s linear .3s );
-            color: $sc-grey-dark;
+            @include s-transition( all .3s linear .3s );
+            color: darken( $sc-grey-dark, 5 );
+            padding-top: r(.5);
         }
 
         // ------ {{ anchor }} ------ //
@@ -29,6 +39,7 @@
             margin: 0;
             position: relative;
             overflow: visible;
+            white-space: nowrap;
 
             // ------ {{* local *}} ------ //
             font-size: 11px;
