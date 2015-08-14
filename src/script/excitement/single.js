@@ -49,7 +49,13 @@ function initGallery() {
                 }
             });
 
+            $modal.appendTo( $('#page') );
             $modal.addClass('is-active');
+
+            var $modalOverlay = $modal.find('.modal-overlay');
+            $modalOverlay.one('click', function(e) {
+                $modalClose.trigger('click');
+            })
 
         });
 
@@ -61,6 +67,7 @@ function initGallery() {
                 .find('.modal-img')
                 .remove()
             ;
+            $modal.appendTo( $('#main') );
         })
 
     });

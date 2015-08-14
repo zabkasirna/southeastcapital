@@ -16,10 +16,6 @@
         role="main"
     >
 
-        <div class="sex-goto-home">
-            <a href='<?php echo esc_url( home_url( '/' ) ); ?>' class="sex-goto-home-link"><span class="fa fa-home"></span><span class="text">to home</span></a>
-        </div>
-
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
         <?php
@@ -43,9 +39,30 @@
                 // debuggrr( $_x_galls );
 
             endif;
+
+            /**------------------------------------------------------**\
+             * DATA: EXCITEMENT SIBLING
+             **------------------------------------------------------**/
+            if ( get_field( 'excitement_sibling' ) ) {
+                $_excitement_sibling = get_field( 'excitement_sibling' );
+                $_excitement_sibling_permalink = get_post_permalink( $_excitement_sibling->ID );
+                $_excitement_sibling_title = $_excitement_sibling->post_title;
+                debuggrr( $_excitement_sibling_permalink );
+                debuggrr( $_excitement_sibling_title );
+            }
         ?>
 
-            <div class="excitement-header"></div>
+            <div class="excitement-header">
+                <div class="eh-links">
+                    <a
+                        href='<?php echo esc_url( home_url( '/' ) ) . "/#exciting"; ?>'
+                        class="eh-link-sibling"
+                        ><span class="fa fa-home"></span><span class="text">back to home</span></a>
+                    <a class="eh-link-sibling" href='<?php echo $_excitement_sibling_permalink; ?>'
+                        ><span class="fa fa-angle-left"></span><span class="text"><?php echo $_excitement_sibling_title; ?></span></a>
+                </div>
+                <h1 class="eh-title" ><span><?php echo the_title(); ?></span></h1>
+            </div>
 
         <?php
             /**------------------------------------------------------**\
@@ -81,9 +98,6 @@
             <div class="excitement-modal">
                 <div class="modal-overlay"></div>
                 <div class="modal-content">
-                    <a href="#"
-                        class="modal-close"
-                    ><span>&times;</span></a>
                     <div class="modal-body">
                         <div class="title">
                             <p></p>
@@ -92,6 +106,9 @@
                             <p></p>
                         </div>
                     </div>
+                    <a href="#"
+                        class="modal-close"
+                    ><span>&times;</span></a>
                 </div>
             </div>
 
