@@ -99,6 +99,7 @@ sftp-config.json
 note/*
 !note/structure.TODO
 screenshots/*
+test/*
 
 # You got the idea
 secret/*
