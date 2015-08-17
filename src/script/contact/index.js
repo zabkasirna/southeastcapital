@@ -44,12 +44,7 @@ function init() {
         .on('focusin', function(e) {
             $xx.addClass('is-focus')
                 .siblings('.faux-label').addClass('is-focus');
-        })
-        // .on('focusout', function(e) {
-        //     $xx.removeClass('is-focus')
-        //         .siblings('.faux-label').removeClass('is-focus');
-        // });
-
+        });
 }
 
 module.exports = Contact;

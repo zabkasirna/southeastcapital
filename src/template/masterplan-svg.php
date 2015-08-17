@@ -30,10 +30,10 @@
             </clipPath>
         
             <g class="mp_label">
-                <rect x="137" y="218" class="txt-rect-0" width="210" height="84"/>
-                <rect x="130" y="213" class="txt-rect-1" width="222" height="96"/>
-                <text transform="matrix(1 0 0 1 200.4963 254.1121)">
-                    <tspan x="0" y="0" >OFFICE </tspan><tspan x="-27.023" y="32">BUILDINGS</tspan>
+                <rect x="215" y="202" class="txt-rect-0" width="160" height="56"></rect>
+                <rect x="208" y="197" class="txt-rect-1" width="174" height="68"></rect>
+                <text transform="matrix(1 0 0 1 246 238)">
+                    <tspan x="0" y="0" >PHASE 4</tspan>
                 </text>
             </g>
         
@@ -83,11 +83,11 @@
             </clipPath>
         
             <g class="mp_label">
-                <rect x="843" y="912" class="txt-rect-0" width="262" height="84"/>
-                <rect x="836" y="907" class="txt-rect-1" width="274" height="96"/>
+                <rect x="843" y="912" class="txt-rect-0" width="160" height="56"></rect>
+                <rect x="836" y="907" class="txt-rect-1" width="174" height="68"></rect>
                 <text transform="matrix(1 0 0 1 870.8293 948.1121)">
-                    <tspan x="0" y="0" >BOTANICO MALL </tspan>
-                    <tspan x="13.476" y="32" >&amp; RESIDENCES</tspan>
+                    <tspan x="0" y="0">PHASE 2</tspan>
+                    
                 </text>
             </g>
         
@@ -110,11 +110,10 @@
             </clipPath>
         
             <g class="mp_label">
-                <rect x="1291" y="88" class="txt-rect-0" width="262" height="84"/>
-                <rect x="1284" y="83" class="txt-rect-1" width="274" height="96"/>
-                <text transform="matrix(1 0 0 1 1364.905 122.1121)">
-                    <tspan x="0" y="0" >PHASE 3 </tspan>
-                    <tspan x="-44.916" y="32" >DEVELOPMENT</tspan>
+                <rect x="1291" y="88" class="txt-rect-0" width="160" height="56"></rect>
+                <rect x="1284" y="83" class="txt-rect-1" width="174" height="68"></rect>
+                <text transform="matrix(1 0 0 1 1318 124)">
+                    <tspan x="0" y="0" >PHASE 3</tspan>
                 </text>
             </g>
         

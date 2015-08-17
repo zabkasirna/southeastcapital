@@ -57,7 +57,7 @@
                     <a
                         href='<?php echo esc_url( home_url( '/' ) ) . "/#exciting"; ?>'
                         class="eh-link-sibling"
-                        ><span class="fa fa-home"></span><span class="text">back to home</span></a>
+                        ><span class="fa fa-home"></span><span class="text">home</span></a>
                     <a class="eh-link-sibling" href='<?php echo $_excitement_sibling_permalink; ?>'
                         ><span class="fa fa-angle-left"></span><span class="text"><?php echo $_excitement_sibling_title; ?></span></a>
                 </div>

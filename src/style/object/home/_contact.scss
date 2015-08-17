@@ -6,7 +6,12 @@ $line1: x(1.5);
 
 .home-section#hsContact {
 
-    // padding: x(3) 0 0 0;
+    // FORMSTONE
+    @media screen and (max-height: x(23)) {
+        & > .fp-tableCell {
+            vertical-align: bottom;
+        }
+    }
 
     .faux-bg {
         position: absolute;
@@ -15,12 +20,16 @@ $line1: x(1.5);
         margin: 0 0 0 -50vw;
         width: 100vw;
         height: 100vh;
-        background-color: $white;
+        background-color: $sc-grey-dark;
         z-index: -1;
     }
 
-    * {
-        color: $sc-copper;
+    .hsc-head {
+        color: $white;
+
+        .hsc-head, .hsc-body {
+            p, h2, h3 { color: currentColor; }
+        }
     }
 
     .hsc-head {
@@ -95,11 +104,7 @@ $line1: x(1.5);
         .control-wrapper {
             margin: 0 0 0 0;
 
-            // @media screen and ( max-width: 980px ) and ( min-height: 980px ) {
-            @media screen and ( max-width: 980px ) and ( min-height: 649px ) {
-                margin: 0 0 x(2) 0;
-            }
-            @media screen and ( max-width: 980px ) and ( max-height: 648px ) {
+            @media screen and ( max-width: 980px ) {
                 margin: 0 0 x(1) 0;
             }
             
@@ -114,7 +119,7 @@ $line1: x(1.5);
         height: $line1;
         margin-bottom: -$line1;
 
-        @media screen and ( max-width: 980px ) and ( max-height: 648px ) {
+        @media screen and ( max-width: 980px ) {
             display: none;
         }
 
@@ -137,6 +142,7 @@ $line1: x(1.5);
             .faux-label-inner {
                 transition: top .1s linear;
                 top: -$line1;
+                color: $white;
             }
         }
     }
@@ -167,8 +173,8 @@ $line1: x(1.5);
             width: 100%;
             line-height: x(1.5);
             background-color: $white;
-            // border: 2px solid rgba($white, 0);
             pointer-events: none;
+            color: $sc-copper;
         }
 
         &.one-liner.is-focus {
@@ -200,12 +206,11 @@ $line1: x(1.5);
         @include border-radius(0);
         width: 100%;
         background-color: $white;
-        color: $sc-copper;
-        &::-webkit-input-placeholder,
-        &:-moz-placeholder,
-        &::-moz-placeholder,
-        &:-ms-input-placeholder {  
-           color: $sc-copper;
+        color: $sc-grey-dark;
+        resize: vertical;
+        
+        @include s-placeholder {
+            color: $sc-copper;
         }
     }
 
@@ -310,6 +315,7 @@ $line1: x(1.5);
         width: 100%;
         overflow: hidden;
         line-height: $line1;
+        color: $sc-copper;
         background-color: $white;
         border: 2px solid $sc-copper;
         z-index: 10;

@@ -126,7 +126,8 @@ function initConcept() {
             infinite: true,
             autoAdvance: true,
             controls: false,
-            autoTime: 9000
+            autoTime: 9000,
+            pagination: true
         }
     ,   $bgiOuter = $('#hsConcept .bgi-outer')
     ,   $preloader = $bgiOuter.closest('.hs-bg').find('.preloader')
@@ -134,7 +135,25 @@ function initConcept() {
     ;
 
     // CAROUSEL
-    $bgiOuter.carousel( _carouselOptions );
+    var $_carousel = $bgiOuter.carousel( _carouselOptions )
+    ,   $_pagination = $_carousel.find('.fs-carousel-pagination')
+    ,   $_newPaginationTarget = $_carousel.closest('.hs-bg').next()
+    ;
+    // @HACK: THIS IS FUCKING HACK. Find a better way please!
+    $_pagination.appendTo( $_newPaginationTarget );
+    var $_paginationBtn = $_pagination.find('button')
+    ,   _paginationLn = $_paginationBtn.length
+    ;
+
+    // @TODO: Bug on FORMSTONE/CAROUSEL
+    // for ( var _pi = 0; _pi < _paginationLn; _pi ++ ) {
+    //     $($_paginationBtn[ _pi ]).on('click', function(e) {
+    //         e.preventDefault();
+    //         console.log( $(this).index() );
+    //         // $_carousel.carousel( 'jump', $(this).index() );
+    //         // $_carousel.carousel( 'jump', 2 );
+    //     })
+    // }
 
     // BGI
     $bgiOuter.find('.bgi').each(

@@ -8,6 +8,11 @@
         display: none;
     }
 
+    // @HACK: BE MORE DYNAMIC PLEASE
+    // body[data-section="#contact"] & {
+    //     max-height: x(5);
+    // }
+
 
     & > li {
 
@@ -21,8 +26,7 @@
         }
 
         *[data-section="#exciting"] &,
-        *[data-section="#updates"] &,
-        *[data-section="#location"] & {
+        *[data-section="#updates"] & {
             @include s-transition( all .3s linear .3s );
             color: darken( $sc-grey-dark, 5 );
             padding-top: r(.5);
@@ -48,7 +52,6 @@
             line-height: x(1.5);
             height: x(1.5);
             text-align: center;
-            // padding: 0 8px;
 
             // faux-border
             & > .inner {
@@ -76,9 +79,11 @@
                 margin: 0 0 0 -50%;
                 background-color: rgba($sc-copper, 1);
             }
-            &:hover > .inner:before,{
-                background-color: rgba($sc-grey, 1);
-            }
+
+            // @temp
+            // &:hover > .inner:before,{
+            //     background-color: rgba($sc-grey, 1);
+            // }
         }
 
         &:hover {
@@ -86,19 +91,36 @@
                 @include s-transition( all .6s );
                 @include s-translate( 0, 0 );
                 opacity: 1;
+                pointer-events: all;
+                z-index: 1;
+
+                & > .menu-item {
+                    height: x(1.5);
+                }
             }
         }
     }
 }
 
 #nav-lists .sub-menu {
-    @include s-transition( all .2s );
-    @include s-translate( 0, -200% );
+    // @include s-transition( all .2s );
+    @include s-translate( 0, 100% );
+    position: relative;
     padding: x(.5) 0 0 0;
     list-style: none outside none;
     opacity: 0;
+    pointer-events: none;
+    z-index: -100;
+
+    // @todo make dynamic
+    @media screen and ( min-width: $min-hr-h ) { left: 55px; }
+    @media screen and ( max-width: $max-l-h - 1px ) and ( min-width: $min-tp-h ) { left: 30px; }
+    @media screen and ( max-width: $max-tp-h - 1px ) and ( min-width: $max-hl-h ) { left: 19px; }
 
     & > .menu-item {
+
+        // @include s-transition( height .05s linear .6s );
+        height: 0;
 
         a {
             @include s-transition( color .3s linear .3s );
@@ -135,19 +157,23 @@
 
             &:hover > .inner:before {
                 width: 100%;
-                // margin: 0 0 0 -50%;
                 background-color: rgba($sc-copper, 1);
             }
         }
     }
 }
 
+// @todo More Dynamic please!
+// SINGLE-EXCITEMENT
 .single-excitement #nav-lists {
     & > .menu-item {
         visibility: hidden;
+        max-height: 1px;
+        height: 1px;
     }
 }
 
+// SEC-SS
 #main-header.is-secss {
     #nav-lists > .menu-item {
         visibility: hidden;

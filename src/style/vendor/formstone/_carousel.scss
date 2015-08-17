@@ -296,10 +296,10 @@
   padding: 0;
   text-align: center;
 }
-.fs-carousel-enabled .fs-carousel-pagination.fs-carousel-visible {
+.fs-carousel-pagination.fs-carousel-visible {
   display: block;
 }
-.fs-carousel-enabled .fs-carousel-page {
+.fs-carousel-page {
   border: 0;
   cursor: pointer;
   display: inline-block;
@@ -308,16 +308,17 @@
   height: 10px;
   background: #333333;
   border-radius: 100%;
+  outline: none;
   margin: 0 3px;
   opacity: 0.5;
   overflow: hidden;
   text-indent: 200%;
   white-space: nowrap;
 }
-.no-opacity .fs-carousel-enabled .fs-carousel-page {
+.no-opacity .fs-carousel-page {
   text-indent: -999px;
 }
-.fs-carousel-enabled .fs-carousel-page.fs-carousel-active {
+.fs-carousel-page.fs-carousel-active {
   opacity: 1;
 }
 .fs-carousel-enabled.fs-carousel-rtl {

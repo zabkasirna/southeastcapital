@@ -3,14 +3,8 @@ var MainNav = {
 };
 
 function init() {
-    if ( !$('#nav-lists').length ) return;
-
-    var $navProject = $('#nav-lists').find('a[href="#projects"]')
-    ;
-
-    $navProject.on('click', function(e) {
-        console.log( e );
-    });
+    // @TODO What is this???
+    return false;
 }
 
 module.exports = MainNav;
