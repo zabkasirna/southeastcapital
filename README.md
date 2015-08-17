@@ -25,10 +25,12 @@ GLOBAL:
         ✓ Main Nav > change color depends on current bg @beyond-cbp @done (15-08-14 12:03)
         ✓ Main Nav > link font-size 11px @beyond-cbp @done (15-08-14 12:05)
         ✓ Main Nav > add submenu for Projects > [Refer to 'Projects Menu Structure'] @abp @done (15-08-14 12:53)
+        ✓ Main Nav > make active & hover have same color @beyond-cbp @done (15-08-18 00:28)
+        ✓ Main Nav > submenu > correct alignment @beyond-cbp @done (15-08-18 00:43)
         □ Logo > correct proportion @below-cbp
-        □ All elements > add transitiion when entering visible section @abp
+        ✓ All elements > add transitiion when entering visible section @abp @done (15-08-18 04:14)
         □ Footer > add footer inside contact section @abp
-        □ Footer > text > correct mistypes, align company phone & address side by side @abp
+        ✓ Footer > text > correct mistypes, align company phone & address side by side @abp @done (15-08-18 04:15)
         x Remove fullpage scroll @below-cbp @cancelled (15-08-14 12:06)
         □ All Buttons > Use SEC-BUTTON style @abp
         □ SEC-BUTTON > correct styling, switch filled/transparent on hover in/out @abp
@@ -39,12 +41,14 @@ SECTION:
         ✓ Body > text > add ability to print data from admin @beyond-l @be @done (15-08-13 15:22)
         ✓ Body > text > temporary remove @beyond-l @be @done (15-08-14 11:31)
         ✓ Body > BG > Full viewport @abp @done (15-08-14 11:31)
+        ✓ Body > Slider > add UI Controller @done (15-08-18 04:15)
     □ /PROJECT
         ✓ Title > correct overflow @beyond-l @done (15-08-10 13:31)
         ✓ Title + Body > change into horizontal layout @below-cbp @done (15-08-10 13:31)
         □ Body > title > change png image into svg clip path @abp
     □ /MASTERPLAN
         ✓ MasterplanSVG > change width to filled up the viewport @below-l @beyond-hl @done (15-08-10 14:59)
+        ✓ MasterplanSVG > change wordings @abp @done (15-08-18 04:16)
     □ /EXCITEMENT
         □ Body > Correct transition to use transform translate @abp
         □ Body > Add another hit area (center), to trigger back to default state @abp
@@ -52,21 +56,23 @@ SECTION:
         □ /SINGLE-EXCITEMENT
             ✓ Page Header > Add theming, follows current design @abp @done (15-08-14 15:51)
             ✓ Back button > Link to /Excitement, with active state @abp @done (15-08-14 15:51)
+            ✓ Back button > Change wordings @abp @done (15-08-18 04:17)
             ✓ Modal > Full Screen [Layout refer to Sketches] @abp @done (15-08-14 15:51)
             □ Modal > Add slider @abp
     □ /LOCATION
         □ Map > Height = Width Fullscreen @below-cbp
         □ Map > Enable zoom pan @below-cbp
+        ✓ Map > change main-nav color to white @abp @done (15-08-18 04:18)
     □ /NEWS
         ✓ Post Item > add various layout @below-l @done (15-08-10 14:58)
         ✓ Post Item > all sample Post must have thumbnail image @abp @done (15-08-14 12:58)
-        □ Post Item > Title line-height 2rem @abp
-        □ Post Item > Body Font: 13px / 1.5rem @abp
-        □ Post Item > image ratio 1:0.6 @abp
-        □ Single Post Page > add theme style @abp
+        ✓ Post Item > Title line-height 2rem @abp @done (15-08-18 04:20)
+        ✓ Post Item > Body Font: 13px / 1.5rem @abp @done (15-08-18 04:20)
+        ✓ Post Item > image ratio 1:0.6 @abp @done (15-08-18 04:20)
+        ✓ Single Post Page > add theme style @abp @done (15-08-18 04:20)
     □ /CONTACT
         □ Form > add implementation of ContactForm7 @abp @be
-        □ Color > Invert from white to grey, SC-Copper to white @abp
+        ✓ Color > Invert from white to grey, SC-Copper to white @abp @done (15-08-18 04:20)
         □ Subject field > Fix bug @abp
         □ Message field > Same style / interaction like other fields @abp
 
