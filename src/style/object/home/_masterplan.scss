@@ -34,7 +34,7 @@
         z-index: 9998;
 
         & > svg {
-            transform: translateY(-50%);
+            @include s-translate( 0 ,-50% );
             position: relative;
             top: 50%;
 
@@ -63,11 +63,11 @@
         height: 100vh;
         overflow: hidden;
 
-        transition: opacity .3s ease-out .3s;
+        @include transition( opacity .3s ease-out .3s );
         opacity: 0;
 
         &.is-active {
-            transition: opacity .3s ease-out .3s;
+            @include transition( opacity .3s ease-out .3s );
             opacity: 1;
         }
     }
@@ -75,19 +75,17 @@
 
 .home-section#hsMasterplan .mp-svg-wrapper {
 
-    // transform: scale(2);
-
     .spot:hover { cursor: default; }
 
     .no-spot { pointer-events: none; }
 
     .mp-area {
-        transition: opacity .5s ease-out;
+        @include transition( opacity .5s ease-out );
         opacity: 0;
     }
 
     .is-hovered {
-        transition: opacity .5s ease-out;
+        @include transition( opacity .5s ease-out );
         opacity: 1;
     }
 
@@ -99,8 +97,8 @@
 
     .mp_label {
 
-        transition: transform .3s ease-out;
-        transform: translate( 0, 48px );
+        @include s-transition( transform .3s ease-out );
+        @include s-translate( 0, 48px );
 
         .txt-rect-0 {
             fill:#B05158;
@@ -128,8 +126,8 @@
         }
 
         .mp_label {
-            transition: transform .3s ease-out;
-            transform: translate( 0, 0 );
+            @include s-transition( transform .3s ease-out );
+            @include s-translate( 0, 0 );
         }
     }
 }

@@ -24,8 +24,9 @@ $logo-offset-top: 6px;
             padding-bottom: 50%;
             width: 57.7%;
             z-index: -1;
-            transform-origin: 0 0;
-            transform: rotate(-30deg) skewX(30deg);
+
+            @include s-transform-origin ( 0 0 );
+            @include s-transform( rotate(-30deg) skewX(30deg) );
         }
     }
 

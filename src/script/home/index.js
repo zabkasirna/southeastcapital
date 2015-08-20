@@ -12,7 +12,8 @@ var Home = {
     initConcept: initConcept,
     initProject: initProject,
     initMasterplan: initMasterplan,
-    initExcitement: initExcitement
+    initExcitement: initExcitement,
+    initNews: initNews
 };
 
 function init() {
@@ -22,6 +23,7 @@ function init() {
     _self.initProject();
     _self.initMasterplan();
     _self.initExcitement();
+    _self.initNews();
 }
 
 function layout() {
@@ -256,6 +258,13 @@ function initExcitement() {
             }
         );
     });
+}
+
+function initNews() {
+    if ( !$('.loops', '#hsUpdate ').length ) return;
+
+    var $newsLoopWrapper = $('.loops', '#hsUpdate ');
+    $newsLoopWrapper.scrollbar();
 }
 
 module.exports = Home;

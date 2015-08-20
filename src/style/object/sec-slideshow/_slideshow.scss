@@ -55,9 +55,8 @@
 
             position: relative;
             top: 50%;
-            -webkit-transform: translateY(-50%);
-            -ms-transform: translateY(-50%);
-            transform: translateY(-50%);
+
+            @include s-translate( 0, -50% );
 
             p, h2 {
                 margin: 0;
@@ -108,7 +107,7 @@
         overflow: hidden;
 
         &.is-hidden {
-            transition: top .3s ease-out;
+            @include s-transition( top .3s ease-out );
             top: 100vh;
             margin: x(-1) 0 0 -50vw;
         }
@@ -141,8 +140,8 @@
 
         .toggle-icon {
             font-family: $ff-font-icon;
-            transition: transform .2s ease-out .2s;
-            transform: rotate(180deg);
+            @include s-transition( transform .2s ease-out .2s );
+            @include s-rotate( 180 );
         }
 
         &:hover {
@@ -154,8 +153,8 @@
 
     &.is-hidden .footer-toggle {
         .toggle-icon {
-            transition: transform .2s ease-out .2s;
-            transform: rotate(0deg);
+            @include s-transition( transform .2s ease-out .2s );
+            @include s-rotate( 0 );
         }
     }
 
@@ -163,11 +162,10 @@
         width: r(59);
         height: 100%;
         margin: 0 auto;
-        overflow: scroll;
-        @media screen and (max-width: 479px) and (min-width: 0) { width: 100%; }
-        @media screen and (max-width: 767px) and (min-width: 480px) { width: r(26); margin: 0 auto; }
-        @media screen and (max-width: 980px) and (min-width: 768px) { width: r(35); margin: 0 auto; }
-        @media screen and (max-width: 1800px) and (min-width: 1250px) { width: r(71); margin: 0 auto; }
+        @media screen and (max-width: 479px) and (min-width: 0) { width: 100%; overflow: scroll; }
+        @media screen and (max-width: 767px) and (min-width: 480px) { width: r(26); margin: 0 auto; overflow: scroll; }
+        @media screen and (max-width: 980px) and (min-width: 768px) { width: r(35); margin: 0 auto; overflow: hidden; }
+        @media screen and (max-width: 1800px) and (min-width: 1250px) { width: r(71); margin: 0 auto; overflow: hidden; }
         @media screen and (max-width: 767px) { padding: x(2) 0 0 0; }
         @media screen and ( orientation: portrait ) and ( min-height: 1024px ) { padding-top: x(.5); }
         &.test { background-color: aliceblue; }
@@ -209,10 +207,13 @@
 
     .reversed-r {
         display: inline-block;
-        transform: scaleX(-1);
+        @include s-scale( -1 );
     }
 
-    .f-copyright {}
+    .f-copyright {
+        position: absolute;
+        bottom: x(1);
+    }
 
     .f-mandatory {
         position: absolute;

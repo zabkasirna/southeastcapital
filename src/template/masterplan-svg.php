@@ -56,11 +56,10 @@
             </clipPath>
         
             <g class="mp_label">
-                <rect x="315" y="62" class="txt-rect-0" width="234" height="84"/>
-                <rect x="308" y="57" class="txt-rect-1" width="246" height="96"/>
-                <text transform="matrix(1 0 0 1 326.9851 98.1121)">
-                    <tspan x="0" y="0" >CAPITAL GARDEN </tspan>
-                    <tspan x="33.18" y="32" >RESIDENCES</tspan>
+                <rect x="315" y="62" class="txt-rect-0" width="274" height="56"></rect>
+                <rect x="308" y="57" class="txt-rect-1" width="286" height="68"></rect>
+                <text transform="matrix(1 0 0 1 324 98)">
+                    <tspan x="0" y="0">GARDEN RESIDENCES</tspan>
                 </text>
             </g>
         

@@ -5,6 +5,17 @@
     height: 40vh;
     color: $sc-copper;
 
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: x(.5);
+        left: x(.5);
+        right: x(.5);
+        background-color: $sc-copper;
+        height: 1px;
+    }
+
 
     @media screen and ( max-width: 980px ) {
         margin: x(3) 0 0 0;

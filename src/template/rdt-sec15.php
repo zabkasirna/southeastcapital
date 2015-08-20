@@ -57,6 +57,11 @@ function sec_scripts_and_styles() {
         // modernizr
         wp_register_script( 'sec-modernizr', get_template_directory_uri() . '/script/vendor/modernizr/modernizr.js', array(), '', false );
 
+        // vminpoly
+        wp_register_script( 'sec-vp-tokenizer', get_template_directory_uri() . '/script/vendor/vminpoly/tokenizer.js', array(), '', true );
+        wp_register_script( 'sec-vp-parser', get_template_directory_uri() . '/script/vendor/vminpoly/parser.js', array(), '', true );
+        wp_register_script( 'sec-vminpoly', get_template_directory_uri() . '/script/vendor/vminpoly/vminpoly.js', array( 'sec-vp-tokenizer', 'sec-vp-parser' ), '', true );
+
         // jquery
         wp_register_script( 'sec-jquery', get_template_directory_uri() . '/script/vendor/jquery/dist/jquery.js', array(), '', true );
 
@@ -80,7 +85,7 @@ function sec_scripts_and_styles() {
         wp_register_script( 'sec-fullpagejs', get_template_directory_uri() . '/script/vendor/fullpage.js/jquery.fullPage.js', array( 'sec-jquery' ), '', true );
 
         // jquery panzoom
-        wp_register_script( 'sec-panzoom', get_template_directory_uri() . '/script/vendor/jquery.panzoom/dist/jquery.panzoom.js', array( 'sec-jquery' ), '', true );
+        wp_register_script( 'sec-scrollbar', get_template_directory_uri() . '/script/vendor/jquery.scrollbar/jquery.scrollbar.js', array( 'sec-jquery' ), '', true );
 
         // formstone
         wp_register_script( 'sec-formstone-core', get_template_directory_uri() . '/script/vendor/formstone/dist/js/core.js', array( 'sec-jquery' ), '', true );
@@ -100,6 +105,9 @@ function sec_scripts_and_styles() {
 
         // enqueue scripts
         wp_enqueue_script( 'sec-modernizr' );
+        wp_enqueue_script( 'sec-vp-tokenizer' );
+        wp_enqueue_script( 'sec-vp-parser' );
+        wp_enqueue_script( 'sec-vminpoly' );
         wp_enqueue_script( 'sec-jquery' );
         wp_enqueue_script( 'sec-svg-injector' );
         wp_enqueue_script( 'sec-imagesloaded' );
@@ -107,7 +115,7 @@ function sec_scripts_and_styles() {
         wp_enqueue_script( 'sec-waypoints-inview' );
         wp_enqueue_script( 'sec-verge' );
         wp_enqueue_script( 'sec-transit' );
-        wp_enqueue_script( 'sec-panzoom' );
+        wp_enqueue_script( 'sec-scrollbar' );
         wp_enqueue_script( 'sec-fullpagejs' );
         wp_enqueue_script( 'sec-formstone-core' );
         wp_enqueue_script( 'sec-formstone-mediaquery' );

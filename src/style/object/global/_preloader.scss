@@ -24,7 +24,7 @@
         margin: 0 auto;
         position: relative;
         top: 50%;
-        transform: translateY( -50% );
+        @include s-transform( translateY( -50% ) );
     }
 
     &.has-loaded {

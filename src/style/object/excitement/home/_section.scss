@@ -138,7 +138,7 @@
         .hsex-btn {
             right: 0;
             left: auto;
-            .high-arrow-svg { transform: scaleX(-1); }
+            .high-arrow-svg { @include transform( scaleX(-1) ); }
         }
 
         .faux-hit {

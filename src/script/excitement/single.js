@@ -69,8 +69,10 @@ function initGallery() {
             ;
             $modal.appendTo( $('#main') );
         })
-
     });
+
+    var $scrollArea = $('.inner', '.loop-excitement-gall');
+    $scrollArea.scrollbar();
 }
 
 module.exports = ExcitementSingle;
