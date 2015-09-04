@@ -1,7 +1,8 @@
 var SECSlideshow = {
     initImage: initImage,
     initSlideshow: initSlideshow,
-    initFooter: initFooter
+    initFooter: initFooter,
+    initContact: initContact
 };
 
 function initImage() {
@@ -57,6 +58,28 @@ function initFooter() {
         $el.toggleClass('is-hidden')
         ;
     })
+}
+
+function initContact() {
+    if ( !$('.contact-toggle').length && !$('.contact-form-wrapper').length ) return;
+
+    var $toggleEl = $('.contact-toggle')
+    ,   $formEl = $('.contact-form-wrapper')
+    ,   $selectEl = $formEl.find('.wpcf7-select')
+    ,   $closeEl = $('.contact-close', $formEl ) 
+    ;
+
+    $toggleEl.on( 'click', function(e) {
+        e.preventDefault();
+        $formEl.toggleClass( 'open' );
+    });
+
+    $selectEl.dropdown();
+
+    $closeEl.on( 'click', function(e) {
+        e.preventDefault();
+        $toggleEl.trigger('click');
+    });
 }
 
 module.exports = SECSlideshow;

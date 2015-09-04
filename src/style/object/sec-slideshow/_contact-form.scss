@@ -1,0 +1,195 @@
+.contact-toggle {
+  display: block;
+  text-align: center;
+  color: #B05158;
+  text-transform: uppercase;
+  transition-property: all;
+  transition-duration: .1s;
+  transition-delay: .2s;
+  transition-easing-function: ease-out;
+  background-color: rgba(176, 81, 88, 0);
+  color: #FFF;
+  background-color: #B05158;
+  display: block;
+  position: fixed;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 7.5rem;
+  height: 2.25rem;
+  line-height: 2.25rem;
+  text-align: center;
+  font-size: 13px; 
+  @media screen and (max-width: 767px){
+    left: 50vw;
+    right: auto;
+    top: x(4);
+    margin: 0 0 0 -60px; 
+  }
+}
+
+  .contact-toggle:before,
+  .contact-toggle:after {
+    transition-property: top, right, bottom, left;
+    transition-duration: .25s;
+    transition-timing-function: ease-out;
+    content: "";
+    display: block;
+    position: absolute;
+    border: 1px solid #B05158;
+    pointer-events: none; }
+  .contact-toggle:before {
+    top: -3px;
+    right: -6px;
+    bottom: -3px;
+    left: -6px; }
+  .contact-toggle:after {
+    top: -6px;
+    right: -3px;
+    bottom: -6px;
+    left: -3px; }
+  .contact-toggle:hover {
+    transition-property: background-color, color;
+    transition-duration: .1s;
+    transition-delay: .2s;
+    transition-easing-function: ease-out;
+    background-color: #b05158;
+    color: #FFF; }
+    .contact-toggle:hover:before,
+    .contact-toggle:hover:after {
+      transition-property: top, right, bottom, left;
+      transition-duration: .5s;
+      transition-timing-function: ease-out; }
+    .contact-toggle:hover:before {
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0; }
+    .contact-toggle:hover:after {
+      top: -3px;
+      right: -3px;
+      bottom: -3px;
+      left: -3px; }
+  .contact-toggle:visited {
+    color: #FFF; }
+  .contact-toggle:focus {
+    color: #FFF; }
+  .contact-toggle:hover {
+    color: #FFF; }
+  .contact-toggle:active {
+    color: #FFF; }
+  .contact-toggle > span {
+    display: block;
+    position: relative;
+    top: 1px; }
+
+.contact-form-wrapper {
+  position: fixed;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  top: 50%;
+  left: 50%;
+  margin: -50vh 0 0 -50vw;
+  background: rgba(0, 0, 0, 0.75); }
+
+  .contact-form-wrapper.open {
+    display: block; }
+
+  .contact-form-wrapper .contact-form {
+    position: absolute;
+    width: 350px;
+    top: 50%;
+    left: 50%;
+    margin: -222px 0 0 -175px;
+  }
+
+  .contact-form-wrapper .wpcf7 {
+    background-color: #34343E;
+    position: relative;
+    width: 100%;
+    padding: 1.5rem 0; }
+    .contact-form-wrapper .wpcf7 .control-group {
+      padding: 0 1.5rem; }
+      .contact-form-wrapper .wpcf7 .control-group input, .contact-form-wrapper .wpcf7 .control-group textarea {
+        width: 302px; }
+      .contact-form-wrapper .wpcf7 .control-group input[type='text'], .contact-form-wrapper .wpcf7 .control-group input[type='email'], .contact-form-wrapper .wpcf7 .control-group textarea {
+        border: 0 none;
+        outline: 0 none;
+        font-size: 14px;
+        line-height: 1.5rem;
+        height: 1.875rem;
+        padding: 0.1875rem 0.375rem;
+        margin: 0;
+        border: 2px solid #B05158; }
+      .contact-form-wrapper .wpcf7 .control-group textarea {
+        height: 6rem;
+        display: block; }
+      .contact-form-wrapper .wpcf7 .control-group .wpcf7-submit {
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        /* placing */
+        margin-top: 0.75rem;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        /* end of placing */
+        background-color: #FFF;
+        border: 2px solid #B05158;
+        /*    border-radius: 50px;*/
+        color: #B05158;
+        font-size: 14px;
+        line-height: 1.5rem;
+        height: 1.875rem;
+        padding: 0.1875rem 0.375rem;
+        outline-style: none;
+        cursor: pointer;
+        text-transform: uppercase; }
+        .contact-form-wrapper .wpcf7 .control-group .wpcf7-submit:hover {
+          -webkit-transition: all 0.3s;
+          -moz-transition: all 0.3s;
+          -ms-transition: all 0.3s;
+          -o-transition: all 0.3s;
+          transition: all 0.3s;
+          background-color: #B05158;
+          color: #FFF; }
+      .contact-form-wrapper .wpcf7 .control-group label {
+        margin-top: 5px;
+        display: block; }
+    .contact-form-wrapper .wpcf7 .wpcf7-response-output {
+      border: 2px solid #B05158;
+      margin: 1.5rem auto 0;
+      padding: 0.1875rem 0.375rem;
+      width: 302px;
+      max-width: 302px;
+      overflow: hidden;
+      font-size: 13px;
+      text-align: center;
+      line-height: 1.5rem;
+      height: 1.875rem; }
+
+    .contact-close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: block;
+      width: 1.5rem;
+      height: 1.5rem;
+      line-height: 1rem;
+      padding: .25rem;
+      color: #FFF;
+
+    }
+    .contact-close:visited {
+      color: #FFF; }
+    .contact-close:focus {
+      color: #FFF; }
+    .contact-close:hover {
+      color: #B05158; }
+    .contact-close:active {
+      color: #FFF; }
+    .contact-close:hover, .contact-close:active, .contact-close:focus {
+      text-decoration: none;
+      outline: transparent none 0; }

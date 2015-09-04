@@ -14,7 +14,7 @@
 <div id="ss-footer" class="is-hidden" >
     <div class="foot-wrapper">
         <div class="foot2">
-            <p class="f-temp">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos id tenetur cupiditate quisquam amet. Repudiandae.</p>
+            <!-- <p class="f-temp">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos id tenetur cupiditate quisquam amet. Repudiandae.</p> -->
             <p class="f-copyright">COPYRIGHT &copy; 2015. ALLRIGHTS RESERVED. TRIVO GROUP</p>
         </div>
         <div class="foot1">

@@ -95,6 +95,7 @@ var Signature = require('./signature')
         SECSlideshow.initImage();
         SECSlideshow.initSlideshow();
         SECSlideshow.initFooter();
+        SECSlideshow.initContact();
 
         // Home
         Home.layout();
