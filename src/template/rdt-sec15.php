@@ -97,8 +97,8 @@ function sec_scripts_and_styles() {
         wp_register_script( 'sec-formstone-dropdown', get_template_directory_uri() . '/script/vendor/formstone/dist/js/dropdown.js', array( 'sec-jquery', 'sec-formstone-core', 'sec-formstone-touch' ), '', true );
 
         // google map API & GMaps.js
-        wp_register_script('sec-google-maps-api', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCtOSYUVdF-oELojMbyd_WD73PiRbBV5gk&sensor=true', array(), '3.15', true);
-        wp_register_script('sec-gmaps', get_template_directory_uri() . '/script/vendor/gmaps/gmaps.js', array('sec-google-maps-api'), '', true);
+        // wp_register_script('sec-google-maps-api', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCtOSYUVdF-oELojMbyd_WD73PiRbBV5gk&sensor=true', array(), '3.15', true);
+        // wp_register_script('sec-gmaps', get_template_directory_uri() . '/script/vendor/gmaps/gmaps.js', array('sec-google-maps-api'), '', true);
 
         // site
         wp_register_script( 'sec-js', get_template_directory_uri() . '/script/main.js', array( 'sec-jquery' ), '', true );
@@ -124,8 +124,8 @@ function sec_scripts_and_styles() {
         wp_enqueue_script( 'sec-formstone-carousel' );
         wp_enqueue_script( 'sec-formstone-bg' );
         wp_enqueue_script( 'sec-formstone-dropdown' );
-        wp_enqueue_script( 'sec-google-maps-api' );
-        wp_enqueue_script( 'sec-gmaps' );
+        // wp_enqueue_script( 'sec-google-maps-api' );
+        // wp_enqueue_script( 'sec-gmaps' );
         wp_enqueue_script( 'sec-js' );
 
         // dequeue scripts

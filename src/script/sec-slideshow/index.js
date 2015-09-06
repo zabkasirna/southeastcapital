@@ -82,4 +82,8 @@ function initContact() {
     });
 }
 
+function initAgency() {
+    if ( !$('.agent-toggle').length ) return;
+}
+
 module.exports = SECSlideshow;

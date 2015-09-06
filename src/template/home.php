@@ -6,6 +6,7 @@
  */
 
 require_once( 'hex2rgba.php' );
+require_once( 'Phone_Sanitize.php' );
 
 get_header();
 ?>
@@ -376,7 +377,37 @@ get_header();
             );
         }
 
-        debuggrr( $_ssi );
+        // debuggrr( $_ssi );
+    ?>
+
+    <?php
+        /**------------------------------------------------------**\
+         * DATA: AGENT_LISTS
+         **------------------------------------------------------**/
+
+        $_sec_agent_lists = get_field('agent_lists', 'option');
+        $_aal = array();
+
+        foreach ( $_sec_agent_lists as $_sal_key => $_sal_val ) {
+            $_sal[] = array(
+                'agent_region'      => $_sal_val['agent_region'],
+                'agency_name'       => $_sal_val['agency_name'],
+                'agency_picture'    => $_sal_val['agency_picture']['sizes']['thumbnail'],
+                'agent_name'        => $_sal_val['agent_name'],
+                'agent_picture'     => $_sal_val['agent_picture']['sizes']['thumbnail'],
+                'agent_info'        => $_sal_val['agent_info'],
+                'agent_phone'       => $_sal_val['agent_phone'],
+                'agent_fax'         => $_sal_val['agent_fax'],
+                'agent_mail'        => $_sal_val['agent_mail']
+            );
+        }
+        debuggrr($_sal);
+    ?>
+
+    <?php
+        /**------------------------------------------------------**\
+         * VIEW: SLIDESHOW
+         **------------------------------------------------------**/
     ?>
 
     <?php if ( array_filter( $_ssi ) ) : ?>
@@ -408,7 +439,104 @@ get_header();
 
     </div>
 
-    <?php endif ?>
+    <?php
+        /**------------------------------------------------------**\
+         * VIEW: AGENT_LISTS
+         **------------------------------------------------------**/
+    ?>
+
+    <?php if ( array_filter( $_sal) ) : ?>
+    
+    <div id="sec_agents" class="" >
+
+        <div class="sec-agents-overlay"></div>
+
+        <div class="sec-agent-lists">
+
+            <div class="agent-lists-header">
+                <div class="header-title">
+                    <p>Our Representative Agents</p>
+                </div>
+            </div>
+        <?php foreach ( $_sal as $_sal_key => $_sal_val ) : ?>
+
+            <div class="agent-list">
+                <div class="agent-left">
+                    <div class="img-wrapper agency-picture">
+                        <img
+                            src='<?php echo $_sal_val['agency_picture']; ?>'
+                            alt='<?php echo $_sal_val['agency_name']; ?>'
+                        >
+                    </div>
+                </div>
+                <div class="agent-right">
+                    <div class="agent-meta-row">
+                        <div class="img-wrapper agent-picture agent-meta-key">
+                            <img
+                                src='<?php echo $_sal_val['agent_picture']; ?>'
+                                alt='<?php echo $_sal_val['agent_name']; ?>'
+                            >
+                        </div>
+                        <div class="agent-meta-val">
+                            <p class="agent-name"><?php echo $_sal_val['agent_name']; ?></p>
+                            <p class="agent-sub"><?php echo $_sal_val['agent_info']; ?></p>
+                        </div>
+                    </div>
+                    <div class="agent-meta-row">
+                        <?php
+                            $_agent_region = "";
+                            switch ($_sal_val['agent_region']) {
+                                case 'region_a': $_agent_region = 'Jakarta Barat'; break;
+                                case 'region_b': $_agent_region = 'Jakarta Pusat'; break;
+                                case 'region_c': $_agent_region = 'Jakarta Selatan'; break;
+                                case 'region_d': $_agent_region = 'Jakarta Timur'; break;
+                                case 'region_e': $_agent_region = 'Jakarta Utara'; break;
+                                
+                                default:
+                                    $_agent_region = 'DKI JAKARTA';
+                                    break;
+                            }
+                        ?>
+                        <div class="agent-meta-key"><p>Region <span class="colon">:</span></p></div>
+                        <div class="agent-meta-val"><p><?php echo $_agent_region; ?></p></div>
+                    </div>
+                    <div class="agent-meta-row">
+                        <?php
+                            $_agent_raw_phone = $_sal_val['agent_phone'];
+                            $_agent_sane_phone = sanitize_phone( $_agent_raw_phone );
+                        ?>
+                        <div class="agent-meta-key"><p>Phone <span class="colon">:</span></p></div>
+                        <div class="agent-meta-val"><a
+                            href="tel:<?php echo $_agent_sane_phone; ?>"
+                            ><?php echo $_sal_val['agent_phone']; ?></a></div>
+                    </div>
+                    <div class="agent-meta-row">
+                        <?php
+                            $_agent_raw_fax = $_sal_val['agent_fax'];
+                            $_agent_sane_fax = sanitize_phone( $_agent_raw_fax );
+                        ?>
+                        <div class="agent-meta-key"><p>Fax <span class="colon">:</span></p></div>
+                        <div class="agent-meta-val"><a
+                            href="tel:<?php echo $_agent_sane_fax; ?>"
+                            ><?php echo $_sal_val['agent_fax']; ?></a></div>
+                    </div>
+                    <div class="agent-meta-row">
+                        <div class="agent-meta-key"><p>Email <span class="colon">:</span></p></div>
+                        <div class="agent-meta-val"><a
+                                href='<?php echo "mailto:" . $_sal_val['agent_mail'] . "\?Subject=Hello, SOUTHEAST" ?>'
+                            ><?php echo $_sal_val['agent_mail']; ?></a></div>
+                    </div>
+                </div>
+            </div>
+
+        <?php endforeach; ?>
+        </div>
+        <a href="#" class="sec-agent-close"><span class="fa fa-close"></span></a>
+    </div>
+
+    <?php endif; ?>
+
+    <?php endif; ?>
 
 <?php endif; ?>
 

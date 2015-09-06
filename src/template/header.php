@@ -190,7 +190,8 @@
             wp_nav_menu( $nav_main_defaults );
         ?>
 
-        <a class="contact-toggle" href="#"><span>CONTACT US</span></a>
+        <!-- <a class="contact-toggle" href="#"><span>CONTACT US</span></a> -->
+        <a class="agent-toggle" href="#"><span>CONTACT</span></a>
 
         <div class="contact-form-wrapper">
             <div class="contact-form">

@@ -93,12 +93,14 @@
     width: 100vw;
     left: 50%;
     bottom: 0; top: auto;
-    max-height: x(5);
     height: x(5);
     overflow: hidden;
     margin: 0 0 0 -50vw;
     background-color: $sc-grey-dark;
 
+    @media screen and (min-width: 768px) {
+        max-height: x(5);
+    }
     @media screen and (max-width: 767px) {
         bottom: auto; top: 50vh;
         height: 50vh;
